@@ -5,7 +5,8 @@ require_once __DIR__ . '/ProductController.php';
 require_once __DIR__ . '/CategoryController.php';
 require_once __DIR__ . '/UserController.php';
 require_once __DIR__ . '/AdminController.php';
-require_once __DIR__ . '/ApiController.php';
+require_once __DIR__ . '/CartController.php';
+require_once __DIR__ . '/OrderController.php';
 
 class Router {
     private $routes = [];
@@ -40,7 +41,7 @@ class Router {
             // API routes
             'api/products/search' => ['controller' => 'ApiController', 'action' => 'searchProducts'],
             'api/products/by-category' => ['controller' => 'ApiController', 'action' => 'getProductsByCategory'],
-            'api/products/add-to-cart' => ['controller' => 'ApiController', 'action' => 'addToCart'],
+            // 'api/products/add-to-cart' => ['controller' => 'ApiController', 'action' => 'addToCart'], // Disabled - use api/cart/add instead
             'api/categories/all' => ['controller' => 'ApiController', 'action' => 'getAllCategories'],
             'api/categories/get' => ['controller' => 'ApiController', 'action' => 'getCategoryById'],
             'api/home/search' => ['controller' => 'ApiController', 'action' => 'quickSearch'],
@@ -91,6 +92,14 @@ class Router {
             'user/profile' => ['controller' => 'UserController', 'action' => 'profile'],
             'user/update-profile' => ['controller' => 'UserController', 'action' => 'updateProfile'],
             
+            // Cart routes
+            'cart' => ['controller' => 'CartController', 'action' => 'showCart'],
+            
+            // Order routes
+            'checkout' => ['controller' => 'OrderController', 'action' => 'showCheckout'],
+            'order' => ['controller' => 'OrderController', 'action' => 'showOrder'],
+            'orders' => ['controller' => 'OrderController', 'action' => 'showUserOrders'],
+            
             // Admin upload routes
             'admin/upload-image' => ['controller' => 'AdminController', 'action' => 'uploadImage'],
         ];
@@ -112,6 +121,12 @@ class Router {
         $routeKey = $page;
         if ($action) {
             $routeKey .= '/' . $action;
+        }
+        
+        // Check if this is an API route
+        if (strpos($routeKey, 'api/') === 0) {
+            $this->handleApiRoute($routeKey);
+            return;
         }
         
         // Check if route exists
@@ -136,8 +151,9 @@ class Router {
             return;
         }
         
-        // Create controller instance
-        $controller = new $controllerName();
+        // Create controller instance with database connection
+        global $conn;
+        $controller = new $controllerName($conn);
         
         // Check if action exists
         if (!method_exists($controller, $actionName)) {
@@ -151,6 +167,52 @@ class Router {
         } catch (Exception $e) {
             $this->handleError($e->getMessage());
         }
+    }
+    
+    // Handle API routes
+    private function handleApiRoute($routeKey) {
+        global $conn;
+        
+        // Ensure session is started for API routes
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        // Map API routes to controllers
+        $apiRoutes = [
+            'api/cart/add' => ['CartController', 'addToCart'],
+            'api/cart/update' => ['CartController', 'updateCart'],
+            'api/cart/remove' => ['CartController', 'removeFromCart'],
+            'api/cart/get' => ['CartController', 'getCart'],
+            'api/cart/clear' => ['CartController', 'clearCart'],
+            'api/order/create' => ['OrderController', 'createOrder'],
+            'api/order/apply-coupon' => ['OrderController', 'applyCoupon'],
+            'api/order/calculate-shipping' => ['OrderController', 'calculateShipping'],
+            'api/order/cancel' => ['OrderController', 'cancelOrder']
+        ];
+        
+        if (isset($apiRoutes[$routeKey])) {
+            $controllerName = $apiRoutes[$routeKey][0];
+            $actionName = $apiRoutes[$routeKey][1];
+            
+            if (class_exists($controllerName)) {
+                $controller = new $controllerName($conn);
+                if (method_exists($controller, $actionName)) {
+                    try {
+                        $controller->$actionName();
+                        return;
+                    } catch (Exception $e) {
+                        http_response_code(500);
+                        echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+                        return;
+                    }
+                }
+            }
+        }
+        
+        // API route not found
+        http_response_code(404);
+        echo json_encode(['success' => false, 'message' => 'API endpoint not found']);
     }
     
     // Find matching route

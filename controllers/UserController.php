@@ -5,8 +5,11 @@ require_once __DIR__ . '/../models/User.php';
 class UserController extends BaseController {
     private $userModel;
     
-    public function __construct() {
+    public function __construct($conn = null) {
         parent::__construct();
+        if ($conn) {
+            $this->conn = $conn;
+        }
         $this->userModel = new User($this->conn);
     }
     

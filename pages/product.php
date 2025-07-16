@@ -1176,9 +1176,12 @@ unset($relatedProduct);
                         <div class="product-options-section mb-2">
                             <?php foreach ($productOptions as $option): ?>
                             <div class="option-group mb-2">
-                                <div class="option-title mb-2" style="font-size: 0.9rem; color: #222; font-weight: 600;">
-                                    <?php echo htmlspecialchars($option['name']); ?>
-                                </div>
+                                                            <div class="option-title mb-2" style="font-size: 0.9rem; color: #222; font-weight: 600;">
+                                <?php echo htmlspecialchars($option['name']); ?>
+                                <?php if ($option['is_required']): ?>
+                                    <span class="text-danger">*</span>
+                                <?php endif; ?>
+                            </div>
                                 <div class="option-values">
                                     <?php foreach ($option['values'] as $value): ?>
                                     <label class="option-value-btn me-2 mb-2 <?php echo ($value['stock_quantity'] <= 0) ? 'disabled' : ''; ?>" style="
@@ -1201,7 +1204,8 @@ unset($relatedProduct);
                                                class="d-none"
                                                data-stock="<?php echo $value['stock_quantity']; ?>"
                                                data-value-id="<?php echo $value['id']; ?>"
-                                               <?php echo ($value['stock_quantity'] <= 0) ? 'disabled' : ''; ?>>
+                                               <?php echo ($value['stock_quantity'] <= 0) ? 'disabled' : ''; ?>
+                                               <?php echo ($option['is_required']) ? 'required' : ''; ?>>
                                         <?php echo htmlspecialchars($value['value']); ?>
                                         <?php if ($value['stock_quantity'] <= 0): ?>
                                             <span class="badge bg-secondary ms-1">Hết hàng</span>
@@ -1509,10 +1513,7 @@ unset($relatedProduct);
     </div>
 </section>
 
-<!-- Floating Wishlist Button -->
-<div class="floating-wishlist">
-    <i class="fas fa-heart"></i>
-</div>
+
 
 <script>
 // Product Image Gallery
@@ -1579,9 +1580,12 @@ function selectColor(element, colorName) {
     element.classList.add('selected');
     
     // Update the color title
-    const colorTitle = element.closest('.option-group').querySelector('.option-title');
-    if (colorTitle) {
-        colorTitle.textContent = colorName;
+    const optionGroup = element.closest('.option-group');
+    if (optionGroup) {
+        const colorTitle = optionGroup.querySelector('.option-title');
+        if (colorTitle) {
+            colorTitle.textContent = colorName;
+        }
     }
 }
 
@@ -1657,16 +1661,23 @@ document.addEventListener('DOMContentLoaded', function() {
 // Cart Functions
 function addToCart() {
     const quantity = document.getElementById('quantity').value;
+    const productId = <?php echo $product_id; ?>;
+    
+    console.log('Adding to cart:', { productId, quantity });
     
     // Validate required options
     const requiredOptions = document.querySelectorAll('input[required]');
     let isValid = true;
     let missingOptions = [];
     
+    console.log('Required options found:', requiredOptions.length);
+    
     requiredOptions.forEach(input => {
         if (!input.checked) {
-            const optionName = input.closest('.option-group').querySelector('label').textContent.trim();
-            missingOptions.push(optionName);
+            const optionName = input.closest('.option-group').querySelector('.option-title').textContent.trim();
+            // Remove the asterisk (*) from the option name
+            const cleanOptionName = optionName.replace(/\s*\*$/, '');
+            missingOptions.push(cleanOptionName);
             isValid = false;
         }
     });
@@ -1676,20 +1687,61 @@ function addToCart() {
         return;
     }
     
+    // If no required options, check if there are any options at all
+    if (requiredOptions.length === 0 && productOptions.length > 0) {
+        console.log('No required options, but there are options available');
+        // For now, let's proceed without requiring options
+    }
+    
     // Get selected options
     const selectedOptions = {};
     productOptions.forEach(option => {
         const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
         if (selectedValue) {
-            selectedOptions[option.name] = {
-                value: selectedValue.value,
-                valueId: selectedValue.getAttribute('data-value-id')
-            };
+            selectedOptions[option.name] = selectedValue.value;
         }
     });
     
     console.log('Selected options:', selectedOptions);
-    alert('Đã thêm ' + quantity + ' sản phẩm vào giỏ hàng với các tùy chọn đã chọn!');
+    
+    // Prepare data for API
+    const cartData = {
+        product_id: productId,
+        quantity: parseInt(quantity),
+        selected_options: Object.keys(selectedOptions).length > 0 ? selectedOptions : null
+    };
+    
+    console.log('Sending cart data:', cartData);
+    
+    // Send request to API
+    fetch('index.php?page=api/cart/add', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(cartData)
+    })
+    .then(response => {
+        console.log('Response status:', response.status);
+        return response.json();
+    })
+    .then(data => {
+        console.log('Response data:', data);
+        if (data.success) {
+            alert(data.message);
+            // Update cart count in header if exists
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = data.cart_count;
+            }
+        } else {
+            alert('Lỗi: ' + data.message);
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Có lỗi xảy ra khi thêm vào giỏ hàng');
+    });
 }
 
 function buyNow() {
@@ -1702,8 +1754,10 @@ function buyNow() {
     
     requiredOptions.forEach(input => {
         if (!input.checked) {
-            const optionName = input.closest('.option-group').querySelector('label').textContent.trim();
-            missingOptions.push(optionName);
+            const optionName = input.closest('.option-group').querySelector('.option-title').textContent.trim();
+            // Remove the asterisk (*) from the option name
+            const cleanOptionName = optionName.replace(/\s*\*$/, '');
+            missingOptions.push(cleanOptionName);
             isValid = false;
         }
     });

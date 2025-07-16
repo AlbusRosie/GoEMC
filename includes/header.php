@@ -83,8 +83,24 @@ require_once __DIR__ . '/helpers.php';
                             <!-- Cart -->
                             <a href="index.php?page=cart" class="btn btn-link text-dark p-0 position-relative">
                                 <i class="fas fa-shopping-cart fs-5"></i>
-                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
-                                    0
+                                <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
+                                    <?php
+                                    // Hiển thị số lượng sản phẩm trong giỏ hàng
+                                    global $conn;
+                                    if ($conn) {
+                                        if (isset($_SESSION['user_id'])) {
+                                            require_once __DIR__ . '/../models/Cart.php';
+                                            $cart = new Cart($conn);
+                                            echo $cart->getCartCount($_SESSION['user_id']);
+                                        } else {
+                                            require_once __DIR__ . '/../models/Cart.php';
+                                            $cart = new Cart($conn);
+                                            echo $cart->getCartCount(null, session_id());
+                                        }
+                                    } else {
+                                        echo '0';
+                                    }
+                                    ?>
                                 </span>
                             </a>
                         </div>
@@ -115,9 +131,6 @@ require_once __DIR__ . '/helpers.php';
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                                Khuyến mãi <i class="fas fa-chevron-down ms-1"></i>
-                            </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="index.php?page=products&sale=1">Sản phẩm giảm giá</a></li>
                                 <li><a class="dropdown-item" href="index.php?page=products&featured=1">Sản phẩm nổi bật</a></li>
@@ -127,7 +140,7 @@ require_once __DIR__ . '/helpers.php';
                             <a class="nav-link" href="index.php?page=contact">Liên hệ</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.php?page=about">Về MOHO</a>
+                            <a class="nav-link" href="index.php?page=about">Về EMCWood</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="index.php?page=stores">Cửa hàng</a>

@@ -11,8 +11,11 @@ class AdminController extends BaseController {
     private $userModel;
     private $orderModel;
     
-    public function __construct() {
+    public function __construct($conn = null) {
         parent::__construct();
+        if ($conn) {
+            $this->conn = $conn;
+        }
         $this->productModel = new Product($this->conn);
         $this->categoryModel = new Category($this->conn);
         $this->userModel = new User($this->conn);

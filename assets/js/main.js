@@ -1,8 +1,8 @@
 // Main JavaScript for MOHO Website
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Product Card Click Handler
-    const productCards = document.querySelectorAll('.product-card');
+    // Product Card Click Handler (for cards without direct links)
+    const productCards = document.querySelectorAll('.product-card:not(:has(.product-link))');
     productCards.forEach(card => {
         card.addEventListener('click', function() {
             const productId = this.getAttribute('data-product-id');
@@ -43,20 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Floating Wishlist Handler
-    const floatingWishlist = document.querySelector('.floating-wishlist');
-    if (floatingWishlist) {
-        floatingWishlist.addEventListener('click', function() {
-            this.classList.toggle('active');
-            if (this.classList.contains('active')) {
-                this.style.background = '#28a745';
-                this.innerHTML = '<i class="fas fa-heart"></i>';
-            } else {
-                this.style.background = '#dc3545';
-                this.innerHTML = '<i class="far fa-heart"></i>';
-            }
-        });
-    }
+
     
     // Mobile Menu Toggle
     const navbarToggler = document.querySelector('.navbar-toggler');
@@ -100,42 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     images.forEach(img => imageObserver.observe(img));
     
-    // Back to Top Button
-    const backToTopBtn = document.createElement('button');
-    backToTopBtn.innerHTML = '<i class="fas fa-chevron-up"></i>';
-    backToTopBtn.className = 'back-to-top';
-    backToTopBtn.style.cssText = `
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        width: 40px;
-        height: 40px;
-        background: var(--accent-color);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        z-index: 1000;
-        transition: all 0.3s ease;
-    `;
-    
-    document.body.appendChild(backToTopBtn);
-    
-    window.addEventListener('scroll', function() {
-        if (window.pageYOffset > 300) {
-            backToTopBtn.style.display = 'block';
-        } else {
-            backToTopBtn.style.display = 'none';
-        }
-    });
-    
-    backToTopBtn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    });
+
     
     // Utility Functions
     function isValidEmail(email) {

@@ -7,8 +7,11 @@ class CategoryController extends BaseController {
     private $categoryModel;
     private $productModel;
     
-    public function __construct() {
+    public function __construct($conn = null) {
         parent::__construct();
+        if ($conn) {
+            $this->conn = $conn;
+        }
         $this->categoryModel = new Category($this->conn);
         $this->productModel = new Product($this->conn);
     }

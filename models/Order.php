@@ -2,186 +2,254 @@
 require_once __DIR__ . '/../config/database.php';
 
 class Order {
-    private $pdo;
+    private $conn;
     
-    public function __construct($pdo) {
-        $this->pdo = $pdo;
+    public function __construct($conn) {
+        $this->conn = $conn;
     }
     
-    // Lấy tất cả đơn hàng
-    public function getAll($limit = null, $offset = null, $status = null) {
-        $sql = "SELECT o.*, u.name as user_name, u.email as user_email 
-                FROM orders o 
-                LEFT JOIN users u ON o.user_id = u.id";
-        $params = [];
-        
-        if ($status) {
-            $sql .= " WHERE o.status = ?";
-            $params[] = $status;
-        }
-        
-        $sql .= " ORDER BY o.created_at DESC";
-        
-        if ($limit) {
-            $sql .= " LIMIT $limit";
-            if ($offset) {
-                $sql .= " OFFSET $offset";
-            }
-        }
-        
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute($params);
-        return $stmt->fetchAll();
-    }
-    
-    // Lấy đơn hàng theo ID
-    public function getById($id) {
-        $stmt = $this->pdo->prepare("SELECT o.*, u.name as user_name, u.email as user_email 
-                                    FROM orders o 
-                                    LEFT JOIN users u ON o.user_id = u.id 
-                                    WHERE o.id = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetch();
-    }
-    
-    // Lấy đơn hàng theo user ID
-    public function getByUserId($user_id, $limit = null, $offset = null) {
-        $sql = "SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC";
-        
-        if ($limit) {
-            $sql .= " LIMIT $limit";
-            if ($offset) {
-                $sql .= " OFFSET $offset";
-            }
-        }
-        
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$user_id]);
-        return $stmt->fetchAll();
-    }
-    
-    // Tạo đơn hàng mới
-    public function create($data) {
-        $this->pdo->beginTransaction();
-        
+    /**
+     * Tạo đơn hàng mới
+     */
+    public function createOrder($orderData) {
         try {
-            $sql = "INSERT INTO orders (user_id, guest_name, guest_email, guest_phone, 
-                    total, status, payment_status, payment_method, delivery_address, 
-                    freeshipcode, notes) 
-                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-            $stmt = $this->pdo->prepare($sql);
+            $this->conn->beginTransaction();
+            
+            // Tạo đơn hàng
+            $sql = "INSERT INTO orders (
+                user_id, guest_name, guest_email, guest_phone, 
+                total, subtotal, shipping_fee, discount_amount,
+                status, payment_status, payment_method,
+                delivery_address, delivery_city, delivery_district, delivery_ward,
+                delivery_notes, coupon_code, coupon_discount, notes
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            
+            $stmt = $this->conn->prepare($sql);
             $stmt->execute([
-                $data['user_id'] ?? null,
-                $data['guest_name'] ?? null,
-                $data['guest_email'] ?? null,
-                $data['guest_phone'] ?? null,
-                $data['total'],
-                $data['status'] ?? 'pending',
-                $data['payment_status'] ?? 'pending',
-                $data['payment_method'] ?? null,
-                $data['delivery_address'] ?? null,
-                $data['freeshipcode'] ?? null,
-                $data['notes'] ?? null
+                $orderData['user_id'],
+                $orderData['guest_name'],
+                $orderData['guest_email'],
+                $orderData['guest_phone'],
+                $orderData['total'],
+                $orderData['subtotal'],
+                $orderData['shipping_fee'],
+                $orderData['discount_amount'],
+                $orderData['status'],
+                $orderData['payment_status'],
+                $orderData['payment_method'],
+                $orderData['delivery_address'],
+                $orderData['delivery_city'],
+                $orderData['delivery_district'],
+                $orderData['delivery_ward'],
+                $orderData['delivery_notes'],
+                $orderData['coupon_code'],
+                $orderData['coupon_discount'],
+                $orderData['notes']
             ]);
             
-            $order_id = $this->pdo->lastInsertId();
+            $orderId = $this->conn->lastInsertId();
             
             // Thêm chi tiết đơn hàng
-            if (isset($data['items']) && is_array($data['items'])) {
-                foreach ($data['items'] as $item) {
-                    $this->addOrderDetail($order_id, $item);
-                }
+            foreach ($orderData['items'] as $item) {
+                $this->addOrderDetail($orderId, $item);
             }
             
-            $this->pdo->commit();
-            return $order_id;
+            // Thêm lịch sử trạng thái
+            $this->addOrderStatusHistory($orderId, 'pending', 'Đơn hàng được tạo');
             
-        } catch (Exception $e) {
-            $this->pdo->rollback();
-            throw $e;
+            $this->conn->commit();
+            return $orderId;
+            
+        } catch (PDOException $e) {
+            $this->conn->rollBack();
+            error_log("Error creating order: " . $e->getMessage());
+            return false;
         }
     }
     
-    // Cập nhật đơn hàng
-    public function update($id, $data) {
-        $sql = "UPDATE orders SET 
-                status = ?, 
-                payment_status = ?, 
-                payment_method = ?, 
-                delivery_address = ?, 
-                notes = ? 
-                WHERE id = ?";
-        $stmt = $this->pdo->prepare($sql);
+    /**
+     * Thêm chi tiết đơn hàng
+     */
+    private function addOrderDetail($orderId, $item) {
+        try {
+            $sql = "INSERT INTO order_details (
+                order_id, product_id, product_name, quantity, price, selected_options
+            ) VALUES (?, ?, ?, ?, ?, ?)";
+            
+            $stmt = $this->conn->prepare($sql);
         return $stmt->execute([
-            $data['status'] ?? 'pending',
-            $data['payment_status'] ?? 'pending',
-            $data['payment_method'] ?? null,
-            $data['delivery_address'] ?? null,
-            $data['notes'] ?? null,
-            $id
-        ]);
+                $orderId,
+                $item['product_id'],
+                $item['product_name'],
+                $item['quantity'],
+                $item['price'],
+                json_encode($item['selected_options'])
+            ]);
+        } catch (PDOException $e) {
+            error_log("Error adding order detail: " . $e->getMessage());
+            return false;
+        }
     }
     
-    // Xóa đơn hàng
-    public function delete($id) {
-        $this->pdo->beginTransaction();
-        
+    /**
+     * Thêm lịch sử trạng thái đơn hàng
+     */
+    public function addOrderStatusHistory($orderId, $status, $notes = '') {
         try {
-            // Xóa chi tiết đơn hàng trước
-            $stmt = $this->pdo->prepare("DELETE FROM order_details WHERE order_id = ?");
-            $stmt->execute([$id]);
+            $sql = "INSERT INTO order_status_history (order_id, status, notes) VALUES (?, ?, ?)";
+            $stmt = $this->conn->prepare($sql);
+            return $stmt->execute([$orderId, $status, $notes]);
+        } catch (PDOException $e) {
+            error_log("Error adding order status history: " . $e->getMessage());
+            return false;
+        }
+    }
+    
+    /**
+     * Cập nhật trạng thái đơn hàng
+     */
+    public function updateOrderStatus($orderId, $status, $notes = '') {
+        try {
+            $this->conn->beginTransaction();
             
-            // Xóa đơn hàng
-            $stmt = $this->pdo->prepare("DELETE FROM orders WHERE id = ?");
-            $stmt->execute([$id]);
+            // Cập nhật trạng thái đơn hàng
+            $sql = "UPDATE orders SET status = ?, updated_at = NOW() WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$status, $orderId]);
             
-            $this->pdo->commit();
+            // Thêm lịch sử trạng thái
+            $this->addOrderStatusHistory($orderId, $status, $notes);
+            
+            $this->conn->commit();
             return true;
             
-        } catch (Exception $e) {
-            $this->pdo->rollback();
-            throw $e;
+        } catch (PDOException $e) {
+            $this->conn->rollBack();
+            error_log("Error updating order status: " . $e->getMessage());
+            return false;
         }
     }
     
-    // Thêm chi tiết đơn hàng
-    public function addOrderDetail($order_id, $item) {
-        $sql = "INSERT INTO order_details (order_id, product_id, quantity, price) VALUES (?, ?, ?, ?)";
-        $stmt = $this->pdo->prepare($sql);
-        return $stmt->execute([
-            $order_id,
-            $item['product_id'],
-            $item['quantity'],
-            $item['price']
-        ]);
+    /**
+     * Lấy đơn hàng theo ID
+     */
+    public function getById($orderId) {
+        try {
+            $sql = "SELECT * FROM orders WHERE id = ?";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$orderId]);
+            $order = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($order) {
+                $order['details'] = $this->getOrderDetails($orderId);
+                $order['status_history'] = $this->getOrderStatusHistory($orderId);
+            }
+            
+            return $order;
+        } catch (PDOException $e) {
+            error_log("Error getting order: " . $e->getMessage());
+            return false;
+        }
     }
     
-    // Lấy chi tiết đơn hàng
-    public function getOrderDetails($order_id) {
-        $sql = "SELECT od.*, p.name as product_name, p.image_ as product_image 
+    /**
+     * Lấy chi tiết đơn hàng
+     */
+    private function getOrderDetails($orderId) {
+        try {
+            $sql = "SELECT od.*, p.image_ 
                 FROM order_details od 
                 LEFT JOIN products p ON od.product_id = p.id 
                 WHERE od.order_id = ?";
-        $stmt = $this->pdo->prepare($sql);
-        $stmt->execute([$order_id]);
-        return $stmt->fetchAll();
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$orderId]);
+            
+            $details = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+            foreach ($details as &$detail) {
+                $detail['selected_options_array'] = json_decode($detail['selected_options'], true);
+            }
+            
+            return $details;
+        } catch (PDOException $e) {
+            error_log("Error getting order details: " . $e->getMessage());
+            return [];
+        }
     }
     
-    // Cập nhật trạng thái đơn hàng
-    public function updateStatus($id, $status) {
-        $stmt = $this->pdo->prepare("UPDATE orders SET status = ? WHERE id = ?");
-        return $stmt->execute([$status, $id]);
+    /**
+     * Lấy lịch sử trạng thái đơn hàng
+     */
+    private function getOrderStatusHistory($orderId) {
+        try {
+            $sql = "SELECT * FROM order_status_history WHERE order_id = ? ORDER BY created_at ASC";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$orderId]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting order status history: " . $e->getMessage());
+            return [];
+        }
     }
     
-    // Cập nhật trạng thái thanh toán
-    public function updatePaymentStatus($id, $payment_status) {
-        $stmt = $this->pdo->prepare("UPDATE orders SET payment_status = ? WHERE id = ?");
-        return $stmt->execute([$payment_status, $id]);
+    /**
+     * Lấy đơn hàng của user
+     */
+    public function getByUserId($userId, $limit = null) {
+        try {
+            $sql = "SELECT * FROM orders WHERE user_id = ? ORDER BY created_at DESC";
+            
+            if ($limit) {
+                $sql .= " LIMIT " . (int)$limit;
+            }
+            
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$userId]);
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting user orders: " . $e->getMessage());
+            return [];
+        }
     }
     
-    // Đếm tổng số đơn hàng
-    public function count($status = null) {
-        $sql = "SELECT COUNT(*) FROM orders";
+    /**
+     * Lấy tất cả đơn hàng (cho admin)
+     */
+    public function getAll($page = 1, $limit = 20, $status = null) {
+        try {
+            $offset = ($page - 1) * $limit;
+            
+            $sql = "SELECT o.*, u.name as user_name, u.email as user_email 
+                    FROM orders o
+                    LEFT JOIN users u ON o.user_id = u.id";
+            
+            $params = [];
+            
+            if ($status) {
+                $sql .= " WHERE o.status = ?";
+                $params[] = $status;
+            }
+            
+            $sql .= " ORDER BY o.created_at DESC LIMIT ? OFFSET ?";
+            $params[] = $limit;
+            $params[] = $offset;
+            
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute($params);
+            
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting all orders: " . $e->getMessage());
+            return [];
+        }
+    }
+    
+    /**
+     * Đếm tổng số đơn hàng
+     */
+    public function getTotalCount($status = null) {
+        try {
+            $sql = "SELECT COUNT(*) as count FROM orders";
         $params = [];
         
         if ($status) {
@@ -189,96 +257,119 @@ class Order {
             $params[] = $status;
         }
         
-        $stmt = $this->pdo->prepare($sql);
+            $stmt = $this->conn->prepare($sql);
         $stmt->execute($params);
-        return $stmt->fetchColumn();
+            $result = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            return $result['count'];
+        } catch (PDOException $e) {
+            error_log("Error getting order count: " . $e->getMessage());
+            return 0;
+        }
     }
     
-    // Lấy tổng số đơn hàng (alias cho count)
-    public function getTotal($status = null) {
-        return $this->count($status);
-    }
-    
-    // Tính tổng doanh thu
-    public function getTotalRevenue($status = 'completed') {
-        $stmt = $this->pdo->prepare("SELECT SUM(total) FROM orders WHERE status = ? AND payment_status = 'paid'");
-        $stmt->execute([$status]);
-        return $stmt->fetchColumn() ?: 0;
-    }
-    
-    // Lấy đơn hàng theo ngày
-    public function getByDate($date) {
-        $stmt = $this->pdo->prepare("SELECT * FROM orders WHERE DATE(created_at) = ? ORDER BY created_at DESC");
-        $stmt->execute([$date]);
-        return $stmt->fetchAll();
-    }
-    
-    // Lấy đơn hàng theo khoảng thời gian
-    public function getByDateRange($start_date, $end_date) {
-        $stmt = $this->pdo->prepare("SELECT * FROM orders WHERE DATE(created_at) BETWEEN ? AND ? ORDER BY created_at DESC");
-        $stmt->execute([$start_date, $end_date]);
-        return $stmt->fetchAll();
-    }
-    
-    // Lấy thống kê đơn hàng
-    public function getStats() {
-        $stats = [];
+    /**
+     * Tính phí vận chuyển
+     */
+    public function calculateShippingFee($subtotal, $deliveryCity = null) {
+        // Logic tính phí vận chuyển
+        if ($subtotal >= 2000000) {
+            return 0; // Miễn phí vận chuyển cho đơn hàng từ 2 triệu
+        }
         
-        // Tổng số đơn hàng
-        $stmt = $this->pdo->query("SELECT COUNT(*) FROM orders");
-        $stats['total_orders'] = $stmt->fetchColumn();
+        // Phí vận chuyển cơ bản
+        $baseFee = 50000;
         
-        // Đơn hàng chờ xử lý
-        $stmt = $this->pdo->query("SELECT COUNT(*) FROM orders WHERE status = 'pending'");
-        $stats['pending_orders'] = $stmt->fetchColumn();
+        // Giảm phí cho TP.HCM và Hà Nội
+        if (in_array($deliveryCity, ['TP.HCM', 'Hà Nội'])) {
+            $baseFee = 30000;
+        }
         
-        // Đơn hàng đã hoàn thành
-        $stmt = $this->pdo->query("SELECT COUNT(*) FROM orders WHERE status = 'completed'");
-        $stats['completed_orders'] = $stmt->fetchColumn();
-        
-        // Tổng doanh thu
-        $stmt = $this->pdo->query("SELECT SUM(total) FROM orders WHERE status = 'completed' AND payment_status = 'paid'");
-        $stats['total_revenue'] = $stmt->fetchColumn() ?: 0;
-        
-        // Đơn hàng hôm nay
-        $stmt = $this->pdo->prepare("SELECT COUNT(*) FROM orders WHERE DATE(created_at) = CURDATE()");
-        $stmt->execute();
-        $stats['today_orders'] = $stmt->fetchColumn();
-        
-        return $stats;
+        return $baseFee;
     }
     
-    // Lấy trạng thái đơn hàng dạng text
-    public function getStatusText($status) {
-        return match($status) {
-            'pending' => 'Chờ xử lý',
-            'preparing' => 'Đang chuẩn bị',
-            'ready' => 'Sẵn sàng',
-            'served' => 'Đã phục vụ',
-            'cancelled' => 'Đã hủy',
-            'completed' => 'Hoàn thành',
-            default => 'Không xác định'
-        };
+    /**
+     * Áp dụng mã giảm giá
+     */
+    public function applyCoupon($couponCode, $subtotal) {
+        try {
+            $sql = "SELECT * FROM coupons 
+                    WHERE code = ? AND is_active = 1 
+                    AND valid_from <= NOW() AND valid_to >= NOW()
+                    AND (usage_limit IS NULL OR used_count < usage_limit)";
+            
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$couponCode]);
+            $coupon = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if (!$coupon) {
+                return ['success' => false, 'message' => 'Mã giảm giá không hợp lệ'];
+            }
+            
+            if ($subtotal < $coupon['min_order_amount']) {
+                return ['success' => false, 'message' => 'Đơn hàng tối thiểu ' . number_format($coupon['min_order_amount']) . 'đ'];
+            }
+            
+            $discount = 0;
+            
+            if ($coupon['discount_type'] === 'percentage') {
+                $discount = $subtotal * ($coupon['discount_value'] / 100);
+                if ($coupon['max_discount']) {
+                    $discount = min($discount, $coupon['max_discount']);
+                }
+            } else {
+                $discount = $coupon['discount_value'];
+            }
+            
+            return [
+                'success' => true,
+                'coupon' => $coupon,
+                'discount' => $discount
+            ];
+            
+        } catch (PDOException $e) {
+            error_log("Error applying coupon: " . $e->getMessage());
+            return ['success' => false, 'message' => 'Có lỗi xảy ra'];
+        }
     }
     
-    // Lấy trạng thái thanh toán dạng text
-    public function getPaymentStatusText($status) {
-        return match($status) {
-            'pending' => 'Chờ thanh toán',
-            'paid' => 'Đã thanh toán',
-            'failed' => 'Thanh toán thất bại',
-            default => 'Không xác định'
-        };
+    /**
+     * Cập nhật số lượng sử dụng mã giảm giá
+     */
+    public function updateCouponUsage($couponCode) {
+        try {
+            $sql = "UPDATE coupons SET used_count = used_count + 1 WHERE code = ?";
+            $stmt = $this->conn->prepare($sql);
+            return $stmt->execute([$couponCode]);
+        } catch (PDOException $e) {
+            error_log("Error updating coupon usage: " . $e->getMessage());
+            return false;
+        }
     }
     
-    // Lấy phương thức thanh toán dạng text
-    public function getPaymentMethodText($method) {
-        return match($method) {
-            'cash' => 'Tiền mặt',
-            'card' => 'Thẻ',
-            'online' => 'Trực tuyến',
-            default => 'Không xác định'
-        };
+    /**
+     * Lấy thống kê đơn hàng
+     */
+    public function getOrderStats() {
+        try {
+            $sql = "SELECT 
+                        COUNT(*) as total_orders,
+                        SUM(CASE WHEN status = 'pending' THEN 1 ELSE 0 END) as pending_orders,
+                        SUM(CASE WHEN status = 'confirmed' THEN 1 ELSE 0 END) as confirmed_orders,
+                        SUM(CASE WHEN status = 'shipping' THEN 1 ELSE 0 END) as shipping_orders,
+                        SUM(CASE WHEN status = 'completed' THEN 1 ELSE 0 END) as completed_orders,
+                        SUM(CASE WHEN status = 'cancelled' THEN 1 ELSE 0 END) as cancelled_orders,
+                        SUM(total) as total_revenue
+                    FROM orders 
+                    WHERE created_at >= DATE_SUB(NOW(), INTERVAL 30 DAY)";
+            
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute();
+            return $stmt->fetch(PDO::FETCH_ASSOC);
+        } catch (PDOException $e) {
+            error_log("Error getting order stats: " . $e->getMessage());
+            return [];
+        }
     }
 }
 ?> 

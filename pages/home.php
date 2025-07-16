@@ -202,6 +202,18 @@ unset($product);
     box-shadow: 0 15px 40px rgba(0,0,0,0.12);
 }
 
+.product-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+}
+
+.product-link:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
 .product-image {
     position: relative;
     height: 300px;
@@ -410,34 +422,7 @@ unset($product);
     letter-spacing: 0.3px;
 }
 
-/* Floating Action Button */
-.fab {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-    width: 70px;
-    height: 70px;
-    background: #1a1a1a;
-    color: white;
-    border-radius: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-    transition: background-color 0.3s ease;
-    z-index: 1000;
-    border: 1px solid #333;
-}
 
-.fab:hover {
-    background: #ff6b35;
-    color: white;
-}
-
-.fab i {
-    font-size: 1.6rem;
-}
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -533,32 +518,34 @@ unset($product);
         <div class="row">
             <?php foreach($newProducts as $product): ?>
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="product-card">
-                    <div class="product-image">
-                        <?php if (!empty($product['gallery'])): ?>
-                            <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                        <?php else: ?>
-                            <img src="assets/uploads/product-default.jpg" alt="No image">
-                        <?php endif; ?>
-                        
-                        <?php 
-                        $discountPercent = $productModel->getDiscountPercent($product);
-                        if($discountPercent > 0): 
-                        ?>
-                        <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
-                        <?php endif; ?>
-                    </div>
-                    
-                    <div class="product-info">
-                        <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
-                        <div class="product-price">
-                            <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
-                            <?php if($productModel->getDiscountPercent($product) > 0): ?>
-                            <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                <div class="product-card" data-product-id="<?php echo $product['id']; ?>">
+                    <a href="index.php?page=product&id=<?php echo $product['id']; ?>" class="product-link">
+                        <div class="product-image">
+                            <?php if (!empty($product['gallery'])): ?>
+                                <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <img src="assets/uploads/product-default.jpg" alt="No image">
+                            <?php endif; ?>
+                            
+                            <?php 
+                            $discountPercent = $productModel->getDiscountPercent($product);
+                            if($discountPercent > 0): 
+                            ?>
+                            <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
                             <?php endif; ?>
                         </div>
-                        <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
-                    </div>
+                        
+                        <div class="product-info">
+                            <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
+                            <div class="product-price">
+                                <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
+                                <?php if($productModel->getDiscountPercent($product) > 0): ?>
+                                <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -581,32 +568,34 @@ unset($product);
         <div class="row">
             <?php foreach($bestSellers as $product): ?>
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="product-card">
-                    <div class="product-image">
-                        <?php if (!empty($product['gallery'])): ?>
-                            <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
-                        <?php else: ?>
-                            <img src="assets/uploads/product-default.jpg" alt="No image">
-                        <?php endif; ?>
-                        
-                        <?php 
-                        $discountPercent = $productModel->getDiscountPercent($product);
-                        if($discountPercent > 0): 
-                        ?>
-                        <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
-                        <?php endif; ?>
-                    </div>
-                    
-                    <div class="product-info">
-                        <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
-                        <div class="product-price">
-                            <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
-                            <?php if($productModel->getDiscountPercent($product) > 0): ?>
-                            <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                <div class="product-card" data-product-id="<?php echo $product['id']; ?>">
+                    <a href="index.php?page=product&id=<?php echo $product['id']; ?>" class="product-link">
+                        <div class="product-image">
+                            <?php if (!empty($product['gallery'])): ?>
+                                <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <img src="assets/uploads/product-default.jpg" alt="No image">
+                            <?php endif; ?>
+                            
+                            <?php 
+                            $discountPercent = $productModel->getDiscountPercent($product);
+                            if($discountPercent > 0): 
+                            ?>
+                            <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
                             <?php endif; ?>
                         </div>
-                        <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
-                    </div>
+                        
+                        <div class="product-info">
+                            <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
+                            <div class="product-price">
+                                <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
+                                <?php if($productModel->getDiscountPercent($product) > 0): ?>
+                                <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
+                        </div>
+                    </a>
                 </div>
             </div>
             <?php endforeach; ?>
@@ -697,7 +686,4 @@ unset($product);
     </div>
 </section>
 
-<!-- Floating Action Button -->
-<a href="tel:090-123-4567" class="fab">
-    <i class="fas fa-phone-volume"></i>
-</a> 
+ 

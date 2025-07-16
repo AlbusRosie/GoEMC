@@ -4,6 +4,9 @@ require_once 'config/database.php';
 require_once 'config/config.php';
 require_once 'controllers/Router.php';
 
+// Đảm bảo biến $conn có sẵn globally
+global $conn;
+
 // Kiểm tra và xử lý lỗi
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

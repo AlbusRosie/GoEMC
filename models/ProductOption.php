@@ -10,11 +10,11 @@ class ProductOption {
     
     // Lấy tất cả options của sản phẩm
     public function getByProductId($product_id) {
-        $stmt = $this->pdo->prepare("SELECT * FROM product_options WHERE product_id = ?");
+        $stmt = $this->pdo->prepare("SELECT * FROM product_options WHERE product_id = ? ORDER BY id ASC");
         $stmt->execute([$product_id]);
         $options = $stmt->fetchAll();
         foreach ($options as &$option) {
-            $stmt2 = $this->pdo->prepare("SELECT * FROM product_option_values WHERE option_id = ?");
+            $stmt2 = $this->pdo->prepare("SELECT * FROM product_option_values WHERE option_id = ? ORDER BY id ASC");
             $stmt2->execute([$option['id']]);
             $option['values'] = $stmt2->fetchAll();
         }

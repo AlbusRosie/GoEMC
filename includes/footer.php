@@ -326,10 +326,7 @@
                     </div>
                     <div class="col-md-6">
                         <div class="payment-methods">
-                            <span class="payment-text">Thanh toán:</span>
-                            <i class="fab fa-cc-visa payment-icon"></i>
-                            <i class="fab fa-cc-mastercard payment-icon"></i>
-                            <i class="fab fa-cc-paypal payment-icon"></i>
+                            <span class="payment-text">EMCWood</span>
                         </div>
                     </div>
                 </div>
