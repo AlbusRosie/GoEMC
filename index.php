@@ -29,6 +29,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 
+// Nếu là POST và Content-Type là application/json thì parse body vào $_POST
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
+    $raw = file_get_contents('php://input');
+    $_POST = json_decode($raw, true) ?? [];
+}
+
 // Khởi tạo Router
 $router = new Router();
 

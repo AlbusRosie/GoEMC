@@ -113,7 +113,8 @@ class HomeController extends BaseController {
         
         $data = [
             'pageTitle' => '404 - Không tìm thấy trang',
-            'pageDescription' => 'Trang bạn đang tìm kiếm không tồn tại'
+            'pageDescription' => 'Trang bạn đang tìm kiếm không tồn tại',
+            'message' => 'Trang bạn đang tìm kiếm không tồn tại hoặc đã bị di chuyển.'
         ];
         
         $this->render('error', $data);

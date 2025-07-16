@@ -1245,6 +1245,7 @@ unset($relatedProduct);
                         
                         <!-- Action Buttons -->
                         <div class="product-action-row">
+                            <!-- Nút thêm vào giỏ hàng -->
                             <button class="btn-add-cart" onclick="addToCart()">THÊM VÀO GIỎ</button>
                             <button class="btn-buy-now" onclick="buyNow()">MUA NGAY</button>
                         </div>
@@ -1513,9 +1514,24 @@ unset($relatedProduct);
     </div>
 </section>
 
-
+<div id="cart-toast" style="
+    display:none;
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    background: #222;
+    color: #fff;
+    padding: 16px 28px;
+    border-radius: 8px;
+    font-size: 1rem;
+    z-index: 9999;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    transition: opacity 0.3s;
+"></div>
 
 <script>
+// Đảm bảo các hàm ở phạm vi global
+
 // Product Image Gallery
 let currentImageIndex = 0;
 const images = [
@@ -1534,11 +1550,9 @@ const images = [
 
 function setMainImage(thumbnail, imageSrc) {
     document.getElementById('mainImage').src = imageSrc;
-    
     // Update active thumbnail
     document.querySelectorAll('.thumbnail-image').forEach(img => img.classList.remove('active'));
     thumbnail.classList.add('active');
-    
     // Update current index
     currentImageIndex = images.indexOf(imageSrc);
 }
@@ -1549,10 +1563,8 @@ function changeImage(direction) {
     } else {
         currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
     }
-    
     const newImageSrc = images[currentImageIndex];
     document.getElementById('mainImage').src = newImageSrc;
-    
     // Update active thumbnail
     document.querySelectorAll('.thumbnail-image').forEach((img, index) => {
         if (index === currentImageIndex) {
@@ -1563,7 +1575,6 @@ function changeImage(direction) {
     });
 }
 
-// Quantity Controls
 function changeQuantity(delta) {
     const quantityInput = document.getElementById('quantity');
     let currentQuantity = parseInt(quantityInput.value);
@@ -1571,15 +1582,9 @@ function changeQuantity(delta) {
     quantityInput.value = currentQuantity;
 }
 
-// Color Selection
 function selectColor(element, colorName) {
-    // Remove selected class from all color options
     document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
-    
-    // Add selected class to clicked option
     element.classList.add('selected');
-    
-    // Update the color title
     const optionGroup = element.closest('.option-group');
     if (optionGroup) {
         const colorTitle = optionGroup.querySelector('.option-title');
@@ -1589,39 +1594,26 @@ function selectColor(element, colorName) {
     }
 }
 
-// Product Options Functions
 const productOptions = <?php echo json_encode($productOptions); ?>;
 const basePrice = <?php echo $product['price']; ?>;
 const salePrice = <?php echo $product['sale'] ?? 0; ?>;
 
-// Function to select option
 function selectOption(element, optionId, optionValue, valueId) {
-    // Check if option is disabled
     const radioInput = element.querySelector('input[type="radio"]');
     if (radioInput.disabled) {
-        return; // Don't allow selection of disabled options
+        return;
     }
-    
-    // Remove selected class from all options in this group
     const optionGroup = element.closest('.option-group');
     optionGroup.querySelectorAll('.option-value-btn').forEach(btn => {
         btn.classList.remove('selected');
     });
-    
-    // Add selected class to clicked option
     element.classList.add('selected');
-    
-    // Check the radio input
     radioInput.checked = true;
-    
-    // Update price
     updatePrice();
 }
 
 function updatePrice() {
     let totalAdjustment = 0;
-    
-    // Calculate total price adjustment from selected options
     productOptions.forEach(option => {
         const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
         if (selectedValue) {
@@ -1632,18 +1624,12 @@ function updatePrice() {
             }
         }
     });
-    
-    // Calculate final price
     const finalBasePrice = basePrice + totalAdjustment;
     const finalPrice = salePrice > 0 ? finalBasePrice - salePrice : finalBasePrice;
-    
-    // Update price display
     const priceElement = document.querySelector('.current-price');
     if (priceElement) {
         priceElement.textContent = finalPrice.toLocaleString('vi-VN') + '₫';
     }
-    
-    // Update original price if there's a sale
     if (salePrice > 0) {
         const originalPriceElement = document.querySelector('.original-price');
         if (originalPriceElement) {
@@ -1652,122 +1638,103 @@ function updatePrice() {
     }
 }
 
-// Initialize when page loads
 document.addEventListener('DOMContentLoaded', function() {
-    // Initial price update
     updatePrice();
+    handleStickyImages();
 });
 
-// Cart Functions
 function addToCart() {
+    console.log('addToCart called!');
     const quantity = document.getElementById('quantity').value;
     const productId = <?php echo $product_id; ?>;
-    
-    console.log('Adding to cart:', { productId, quantity });
-    
-    // Validate required options
-    const requiredOptions = document.querySelectorAll('input[required]');
-    let isValid = true;
-    let missingOptions = [];
-    
-    console.log('Required options found:', requiredOptions.length);
-    
-    requiredOptions.forEach(input => {
-        if (!input.checked) {
-            const optionName = input.closest('.option-group').querySelector('.option-title').textContent.trim();
-            // Remove the asterisk (*) from the option name
-            const cleanOptionName = optionName.replace(/\s*\*$/, '');
-            missingOptions.push(cleanOptionName);
-            isValid = false;
-        }
-    });
-    
-    if (!isValid) {
-        alert('Vui lòng chọn: ' + missingOptions.join(', '));
+    // Lấy màu sắc
+    let selectedColor = null;
+    const colorEl = document.querySelector('.color-option.selected');
+    if (colorEl) {
+        selectedColor = colorEl.getAttribute('data-color');
+    }
+    // Lấy các option khác
+    const selectedOptions = {};
+    if (selectedColor) {
+        selectedOptions['Màu sắc'] = selectedColor;
+    }
+    if (Array.isArray(productOptions)) {
+        productOptions.forEach(option => {
+            const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
+            if (selectedValue) {
+                selectedOptions[option.name] = selectedValue.value;
+            }
+        });
+    }
+    // Validate
+    if (!selectedColor && document.querySelector('.color-option')) {
+        console.log('Chưa chọn màu sắc!');
         return;
     }
-    
-    // If no required options, check if there are any options at all
-    if (requiredOptions.length === 0 && productOptions.length > 0) {
-        console.log('No required options, but there are options available');
-        // For now, let's proceed without requiring options
+    // Validate required options
+    let missingOptions = [];
+    if (Array.isArray(productOptions)) {
+        productOptions.forEach(option => {
+            if (option.is_required) {
+                const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
+                if (!selectedValue) missingOptions.push(option.name);
+            }
+        });
     }
-    
-    // Get selected options
-    const selectedOptions = {};
-    productOptions.forEach(option => {
-        const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
-        if (selectedValue) {
-            selectedOptions[option.name] = selectedValue.value;
-        }
-    });
-    
-    console.log('Selected options:', selectedOptions);
-    
-    // Prepare data for API
-    const cartData = {
-        product_id: productId,
-        quantity: parseInt(quantity),
-        selected_options: Object.keys(selectedOptions).length > 0 ? selectedOptions : null
-    };
-    
-    console.log('Sending cart data:', cartData);
-    
-    // Send request to API
+    if (missingOptions.length > 0) {
+        console.log('Thiếu option bắt buộc:', missingOptions);
+        return;
+    }
+    // Gửi request
+    console.log('Gửi request addToCart:', {productId, quantity, selectedOptions});
     fetch('index.php?page=api/cart/add', {
         method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(cartData)
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            product_id: productId,
+            quantity: parseInt(quantity),
+            selected_options: selectedOptions
+        })
     })
-    .then(response => {
-        console.log('Response status:', response.status);
-        return response.json();
+    .then(response => response.text())
+    .then(text => {
+      console.log('Raw response:', text);
+      return JSON.parse(text);
     })
     .then(data => {
-        console.log('Response data:', data);
+        console.log('Kết quả addToCart:', data);
         if (data.success) {
-            alert(data.message);
-            // Update cart count in header if exists
-            const cartCountElement = document.querySelector('.cart-count');
-            if (cartCountElement) {
-                cartCountElement.textContent = data.cart_count;
-            }
+            document.querySelectorAll('.cart-count').forEach(function(el) {
+                el.textContent = data.cart_count;
+                console.log('Cập nhật cart-count:', el, el.textContent);
+            });
+            if (typeof updateCartCount === 'function') updateCartCount();
         } else {
-            alert('Lỗi: ' + data.message);
+            console.log('Lỗi khi thêm vào giỏ hàng:', data.message);
         }
     })
     .catch(error => {
-        console.error('Error:', error);
-        alert('Có lỗi xảy ra khi thêm vào giỏ hàng');
+        console.log('Lỗi fetch addToCart:', error);
     });
 }
 
 function buyNow() {
     const quantity = document.getElementById('quantity').value;
-    
-    // Validate required options
     const requiredOptions = document.querySelectorAll('input[required]');
     let isValid = true;
     let missingOptions = [];
-    
     requiredOptions.forEach(input => {
         if (!input.checked) {
             const optionName = input.closest('.option-group').querySelector('.option-title').textContent.trim();
-            // Remove the asterisk (*) from the option name
             const cleanOptionName = optionName.replace(/\s*\*$/, '');
             missingOptions.push(cleanOptionName);
             isValid = false;
         }
     });
-    
     if (!isValid) {
-        alert('Vui lòng chọn: ' + missingOptions.join(', '));
+        // alert('Vui lòng chọn: ' + missingOptions.join(', '));
         return;
     }
-    
-    // Get selected options
     const selectedOptions = {};
     productOptions.forEach(option => {
         const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
@@ -1778,43 +1745,53 @@ function buyNow() {
             };
         }
     });
-    
-    console.log('Selected options for buy now:', selectedOptions);
-    alert('Chuyển đến trang thanh toán với ' + quantity + ' sản phẩm!');
+    // alert('Chuyển đến trang thanh toán với ' + quantity + ' sản phẩm!');
 }
 
-// Sticky Product Images Function
 function handleStickyImages() {
     const stickyContainer = document.querySelector('.product-images-sticky');
     const productInfoContainer = document.querySelector('.product-info-container');
-    
     if (!stickyContainer || !productInfoContainer) return;
-    
     const stickyRect = stickyContainer.getBoundingClientRect();
     const productInfoRect = productInfoContainer.getBoundingClientRect();
     const windowHeight = window.innerHeight;
-    
-    // Tính toán vị trí cuối của phần thông tin sản phẩm
     const productInfoEnd = productInfoRect.bottom;
     const stickyEnd = stickyRect.bottom;
-    
-    // Nếu phần thông tin sản phẩm đã cuộn hết (bottom < 0)
     if (productInfoEnd < 0) {
         stickyContainer.classList.add('sticky-end');
     } else {
         stickyContainer.classList.remove('sticky-end');
     }
 }
-
-// Thêm event listener cho scroll
 window.addEventListener('scroll', handleStickyImages);
 window.addEventListener('resize', handleStickyImages);
 
-// Chạy một lần khi trang load
-document.addEventListener('DOMContentLoaded', function() {
-    handleStickyImages();
-    
-    // Initial price update
-    updatePrice();
-});
+function showCartToast(message) {
+    var toast = document.getElementById('cart-toast');
+    if (!toast) return;
+    toast.textContent = message;
+    toast.style.display = 'block';
+    toast.style.opacity = 1;
+    setTimeout(function() {
+        toast.style.opacity = 0;
+        setTimeout(function() {
+            toast.style.display = 'none';
+        }, 400);
+    }, 2000);
+}
+
+// Thêm hàm updateCartCount nếu chưa có
+if (typeof updateCartCount !== 'function') {
+    function updateCartCount() {
+        fetch('index.php?page=api/cart/get')
+            .then(res => res.json())
+            .then(data => {
+                if (data.success) {
+                    document.querySelectorAll('.cart-count').forEach(function(el) {
+                        el.textContent = data.cart_count;
+                    });
+                }
+            });
+    }
+}
 </script> 

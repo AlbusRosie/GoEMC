@@ -83,7 +83,6 @@ require_once __DIR__ . '/helpers.php';
                                 <i class="fas fa-shopping-cart fs-5"></i>
                                 <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
                                     <?php
-                                    // Hiển thị số lượng sản phẩm trong giỏ hàng
                                     global $conn;
                                     if ($conn) {
                                         if (isset($_SESSION['user_id'])) {

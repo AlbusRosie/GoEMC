@@ -1,0 +1,1531 @@
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["3t2edj0cq5fqpkhcmn006oqrrv"]
+Pending order result: NULL
+Getting pending order: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["3t2edj0cq5fqpkhcmn006oqrrv"]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["3t2edj0cq5fqpkhcmn006oqrrv"]
+Pending order result: NULL
+No pending order found
+getCart: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["3t2edj0cq5fqpkhcmn006oqrrv"]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["3t2edj0cq5fqpkhcmn006oqrrv"]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=3t2edj0cq5fqpkhcmn006oqrrv
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào showCart ===
+showCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Getting pending order: userId=2, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+getCart: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=2, sessionId=oksedfinitucumaamef0h1tdgo
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [2]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["kstui2t5pesncbip16gboojj4d"]
+Pending order result: NULL
+Getting pending order: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["kstui2t5pesncbip16gboojj4d"]
+Pending order result: NULL
+=== Vào getCart ===
+getCart: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["kstui2t5pesncbip16gboojj4d"]
+Pending order result: NULL
+No pending order found
+getCart: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["kstui2t5pesncbip16gboojj4d"]
+Pending order result: NULL
+No pending order found
+Getting pending order: userId=, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND guest_phone = ?
+Params: ["kstui2t5pesncbip16gboojj4d"]
+Pending order result: NULL
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào showCart ===
+showCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Cart items: []
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: []
+cartTotal: 0
+cartCount: 0
+empty(cartItems): true
+=== End showCart ===
+Getting pending order: userId=7, sessionId=
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+=== Vào getCart ===
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+getCart: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Order ID: 3
+Found 0 items in cart
+Processed items: []
+Getting pending order: userId=7, sessionId=kstui2t5pesncbip16gboojj4d
+SQL: SELECT * FROM orders WHERE status = 'pending' AND user_id = ?
+Params: [7]
+Pending order result: {"id":3,"user_id":7,"guest_name":null,"guest_email":null,"guest_phone":null,"total":"0.00","subtotal":"0.00","shipping_fee":"0.00","discount_amount":"0.00","status":"pending","payment_status":"pending","payment_method":null,"delivery_address":null,"delivery_city":null,"delivery_district":null,"delivery_ward":null,"delivery_notes":null,"coupon_code":null,"coupon_discount":"0.00","notes":null,"created_at":"2025-07-16 21:29:37","updated_at":"2025-07-16 21:29:37"}
+Cart data: items=0, total=0, count=0
+Response: {"success":true,"cart_items":[],"cart_total":0,"cart_count":0}
+=== End getCart ===
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: [{"id":23,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:14:59","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":22,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:50","selected_options_array":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":21,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:12","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":19,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":20,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":18,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:04","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":17,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:56","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":16,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:16","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":14,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":15,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":13,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:42","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":9,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":10,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":11,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":12,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":7,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":8,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":6,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:15","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":5,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:56","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":4,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"OSLO\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:38","selected_options_array":{"Lo\u1ea1i":"OSLO","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":3,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:33","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":2,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:03:48","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}]
+cartTotal: 776314000
+cartCount: 22
+empty(cartItems): false
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: [{"id":23,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:14:59","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":22,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:50","selected_options_array":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":21,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:12","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":19,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":20,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":18,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:04","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":17,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:56","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":16,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:16","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":14,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":15,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":13,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:42","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":9,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":10,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":11,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":12,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":7,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":8,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":6,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:15","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":5,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:56","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":4,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"OSLO\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:38","selected_options_array":{"Lo\u1ea1i":"OSLO","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":3,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:33","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":2,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:03:48","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}]
+cartTotal: 776314000
+cartCount: 22
+empty(cartItems): false
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: [{"id":23,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:14:59","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":22,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:50","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":21,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:12","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":19,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":20,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":18,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:04","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":17,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:56","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":16,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:16","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":14,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":15,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":13,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:42","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":9,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":10,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":11,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":12,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":7,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":8,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":6,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:15","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":5,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:56","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":4,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"OSLO\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:38","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"OSLO","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":3,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:33","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":2,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:03:48","product_image":null,"product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}]
+cartTotal: 776314000
+cartCount: 22
+empty(cartItems): false
+=== Cart Page Debug ===
+cartItems type: array
+cartItems value: [{"id":23,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:14:59","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":22,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:50","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":21,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:12","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":19,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":20,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:05","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":18,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:14:04","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":17,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:56","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":16,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:11:16","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":14,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":15,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:44","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":13,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Kem\"}","created_at":"2025-07-17 01:10:42","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}},{"id":9,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":10,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":11,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":12,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:18","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":7,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":8,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:17","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":6,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"Tr\u1eafng\"}","created_at":"2025-07-17 01:08:15","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}},{"id":5,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:56","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":4,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"OSLO\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:38","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"OSLO","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":3,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:06:33","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}},{"id":2,"order_id":3,"product_id":9,"product_name":"Gh\u1ebf Sofa AURORA - MOHO Signature","quantity":1,"price":"35287000.00","selected_options":"{\"Lo\u1ea1i\": \"Milan\", \"M\u00e0u s\u1eafc\": \"N\u00e2u \u0111\u1eadm\"}","created_at":"2025-07-17 01:03:48","product_price":"40287000.00","product_sale":"5000000.00","product_stock":30,"product_category_id":3,"product_description":"<p><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0656f7d5.jpg\" width=\"2048\" height=\"2048\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e06573230.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658320c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065865ca.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e0658d357.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b3466.jpg\" width=\"2048\" height=\"1275\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065b8a56.jpg\" width=\"2048\" height=\"765\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c189c.jpg\" width=\"2048\" height=\"1457\"><img src=\"\/go\/assets\/uploads\/editor\/editor_1752555621_6875e065c6893.jpg\" width=\"2048\" height=\"1457\"><\/p>","product_size":"D250x S109x C77 cm","product_color":"[\"N\\u00e2u \\u0111\\u1eadm\",\"Tr\\u1eafng\",\"Kem\"]","product_main_images":null,"category_name":"N\u1ed9i th\u1ea5t g\u1ed7","product_image":"assets\/uploads\/product_1752552955_main_0.jpg","selected_options_array":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}]
+cartTotal: 776314000
+cartCount: 22
+empty(cartItems): false

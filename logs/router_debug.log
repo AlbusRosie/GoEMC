@@ -1,0 +1,2170 @@
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"products"}
+Page: products, Action: NULL
+Route key: products
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"20"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/add"}
+Page: api/cart/add, Action: NULL
+Route key: api/cart/add
+Detected API route, handling...
+Handling API route: api/cart/add
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::addToCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"product","id":"9"}
+Page: product, Action: NULL
+Route key: product
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'go.brands' doesn't exist
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.warranty' in 'field list'
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.warranty' in 'field list'
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Error executing method: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'p.warranty' in 'field list'
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"cart"}
+Page: cart, Action: NULL
+Route key: cart
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully

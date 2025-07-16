@@ -246,5 +246,13 @@ class ProductOption {
         
         return $result ? $result['stock_quantity'] : 0;
     }
+
+    // Lấy stock của option value
+    public function getOptionValueStock($option_id, $value) {
+        $stmt = $this->pdo->prepare("SELECT stock_quantity FROM product_option_values WHERE option_id = ? AND value = ?");
+        $stmt->execute([$option_id, $value]);
+        $row = $stmt->fetch();
+        return $row ? (int)$row['stock_quantity'] : 0;
+    }
 }
 ?> 

@@ -13,16 +13,23 @@ class BaseController {
     
     // Render view với data
     protected function render($view, $data = []) {
-        // Extract data thành variables
         extract($data);
-        
-        // Include view file
         $viewPath = __DIR__ . '/../pages/' . $view . '.php';
         if (file_exists($viewPath)) {
             include $viewPath;
         } else {
-            throw new Exception("View {$view} not found");
+            // Nếu không tìm thấy view, hiển thị lỗi đơn giản ra màn hình
+            echo "<div style='padding:40px;text-align:center;font-family:sans-serif;color:#c82333;background:#f8d7da;border-radius:12px;margin:40px auto;max-width:500px;'>";
+            echo "<h1>Không tìm thấy view: <code>{$view}</code></h1>";
+            if (isset($message)) echo "<p>" . htmlspecialchars($message) . "</p>";
+            echo "<a href='index.php' style='color:#721c24;'>Quay về trang chủ</a>";
+            echo "</div>";
         }
+    }
+    
+    // Render error view
+    public function renderError($message) {
+        $this->render('error', ['message' => $message]);
     }
     
     // Redirect

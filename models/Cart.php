@@ -1,4 +1,6 @@
 <?php
+require_once __DIR__ . '/../includes/helpers.php';
+
 class Cart {
     private $conn;
     public function __construct($conn) {
@@ -8,12 +10,13 @@ class Cart {
     // Lấy đơn hàng pending hiện tại (theo user hoặc session)
     public function getPendingOrder($userId = null, $sessionId = null) {
         $sql = "SELECT * FROM orders WHERE status = 'pending' AND ";
+        $params = [];
         if ($userId) {
             $sql .= "user_id = ?";
-            $params = [$userId];
+            $params[] = $userId;
         } else {
             $sql .= "guest_phone = ?";
-            $params = [$sessionId];
+            $params[] = $sessionId;
         }
         $stmt = $this->conn->prepare($sql);
         $stmt->execute($params);
@@ -22,53 +25,47 @@ class Cart {
 
     // Tạo đơn hàng pending mới
     public function createPendingOrder($userId = null, $sessionId = null) {
+        $guestPhone = $userId ? null : $sessionId;
         $sql = "INSERT INTO orders (user_id, guest_phone, total, subtotal, status, payment_status, created_at) VALUES (?, ?, 0, 0, 'pending', 'pending', NOW())";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute([$userId, $sessionId]);
+        $stmt->execute([$userId, $guestPhone]);
         $orderId = $this->conn->lastInsertId();
         return $this->getOrderById($orderId);
     }
 
-    // Lấy đơn hàng theo id
     public function getOrderById($orderId) {
         $stmt = $this->conn->prepare("SELECT * FROM orders WHERE id = ?");
         $stmt->execute([$orderId]);
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    // Thêm sản phẩm vào giỏ (order_details)
+    // Thêm sản phẩm vào giỏ
     public function addToCart($productId, $quantity, $selectedOptions = null, $userId = null, $sessionId = null) {
-        // Lấy hoặc tạo đơn pending
+        // Lấy hoặc tạo đơn hàng pending
         $order = $this->getPendingOrder($userId, $sessionId);
         if (!$order) {
             $order = $this->createPendingOrder($userId, $sessionId);
         }
         $orderId = $order['id'];
-        // Kiểm tra sản phẩm đã có trong order_details chưa
+        // Chuẩn hóa selectedOptions
         $optionsJson = $selectedOptions ? json_encode($selectedOptions, JSON_UNESCAPED_UNICODE) : null;
-        $sql = "SELECT * FROM order_details WHERE order_id = ? AND product_id = ? AND ";
-        if ($selectedOptions && !empty($selectedOptions)) {
-            $sql .= "selected_options = ?";
-            $params = [$orderId, $productId, $optionsJson];
-        } else {
-            $sql .= "(selected_options IS NULL OR selected_options = 'null' OR selected_options = '{}')";
-            $params = [$orderId, $productId];
-        }
+        // Kiểm tra đã có sản phẩm này với options này chưa
+        $sql = "SELECT * FROM order_details WHERE order_id = ? AND product_id = ? AND selected_options <=> ?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute($params);
+        $stmt->execute([$orderId, $productId, $optionsJson]);
         $existing = $stmt->fetch(PDO::FETCH_ASSOC);
+        // Lấy thông tin sản phẩm
+        $stmtP = $this->conn->prepare("SELECT * FROM products WHERE id = ?");
+        $stmtP->execute([$productId]);
+        $product = $stmtP->fetch(PDO::FETCH_ASSOC);
+        if (!$product) return false;
+        $price = $product['price'] - ($product['sale'] ?? 0);
         if ($existing) {
-            // Nếu đã có thì cộng dồn số lượng
+            // Cộng dồn số lượng
             $newQty = $existing['quantity'] + $quantity;
             $stmt2 = $this->conn->prepare("UPDATE order_details SET quantity = ? WHERE id = ?");
             return $stmt2->execute([$newQty, $existing['id']]);
         } else {
-            // Lấy thông tin sản phẩm
-            $stmtP = $this->conn->prepare("SELECT * FROM products WHERE id = ?");
-            $stmtP->execute([$productId]);
-            $product = $stmtP->fetch(PDO::FETCH_ASSOC);
-            if (!$product) return false;
-            $price = $product['sale'] && $product['sale'] > 0 ? $product['sale'] : $product['price'];
             $stmt3 = $this->conn->prepare("INSERT INTO order_details (order_id, product_id, product_name, quantity, price, selected_options) VALUES (?, ?, ?, ?, ?, ?)");
             return $stmt3->execute([
                 $orderId,
@@ -86,27 +83,42 @@ class Cart {
         $order = $this->getPendingOrder($userId, $sessionId);
         if (!$order) return [];
         $orderId = $order['id'];
-        $sql = "SELECT * FROM order_details WHERE order_id = ? ORDER BY created_at DESC";
+        $sql = "SELECT od.*, 
+    p.name as product_name, 
+    p.price as product_price, 
+    p.sale as product_sale, 
+    p.stock as product_stock, 
+    p.category_id as product_category_id, 
+    p.description as product_description, 
+    p.size as product_size, 
+    p.color as product_color, 
+    p.main_images as product_main_images,
+    c.name as category_name,
+    pi.image_path as product_image
+ FROM order_details od
+ JOIN products p ON od.product_id = p.id
+ LEFT JOIN categories c ON p.category_id = c.id
+ LEFT JOIN product_images pi ON p.id = pi.product_id AND pi.image_type = 'main' AND pi.sort_order = 0
+ WHERE od.order_id = ? ORDER BY od.created_at DESC";
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([$orderId]);
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($items as &$item) {
             $item['selected_options_array'] = $item['selected_options'] ? json_decode($item['selected_options'], true) : [];
-            $item['total_price'] = $item['price'] * $item['quantity'];
         }
         return $items;
-    }
-
-    // Cập nhật số lượng sản phẩm trong giỏ
-    public function updateCartItem($orderDetailId, $quantity) {
-        $stmt = $this->conn->prepare("UPDATE order_details SET quantity = ? WHERE id = ?");
-        return $stmt->execute([$quantity, $orderDetailId]);
     }
 
     // Xóa sản phẩm khỏi giỏ
     public function removeFromCart($orderDetailId) {
         $stmt = $this->conn->prepare("DELETE FROM order_details WHERE id = ?");
         return $stmt->execute([$orderDetailId]);
+    }
+
+    // Cập nhật số lượng
+    public function updateCartItem($orderDetailId, $quantity) {
+        $stmt = $this->conn->prepare("UPDATE order_details SET quantity = ? WHERE id = ?");
+        return $stmt->execute([$quantity, $orderDetailId]);
     }
 
     // Đếm số sản phẩm trong giỏ
@@ -120,17 +132,7 @@ class Cart {
         return $result['count'] ?? 0;
     }
 
-    // Tính tổng tiền giỏ hàng
-    public function getCartTotal($userId = null, $sessionId = null) {
-        $items = $this->getCart($userId, $sessionId);
-        $total = 0;
-        foreach ($items as $item) {
-            $total += $item['total_price'];
-        }
-        return $total;
-    }
-
-    // Kiểm tra stock
+    // Kiểm tra stock sản phẩm chính
     public function checkStock($productId, $quantity) {
         $sql = "SELECT stock FROM products WHERE id = ?";
         $stmt = $this->conn->prepare($sql);
@@ -138,27 +140,6 @@ class Cart {
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$product) return false;
         return $product['stock'] >= $quantity;
-    }
-
-    // Đổi trạng thái đơn hàng (checkout)
-    public function checkout($userId = null, $sessionId = null, $status = 'confirmed', $data = []) {
-        $order = $this->getPendingOrder($userId, $sessionId);
-        if (!$order) return false;
-        $orderId = $order['id'];
-        $sql = "UPDATE orders SET status = ?, payment_status = ?, total = ?, subtotal = ?, guest_name = ?, guest_email = ?, guest_phone = ?, delivery_address = ?, notes = ?, updated_at = NOW() WHERE id = ?";
-        $stmt = $this->conn->prepare($sql);
-        return $stmt->execute([
-            $status,
-            $data['payment_status'] ?? 'pending',
-            $data['total'] ?? $order['total'],
-            $data['subtotal'] ?? $order['subtotal'],
-            $data['guest_name'] ?? null,
-            $data['guest_email'] ?? null,
-            $data['guest_phone'] ?? null,
-            $data['delivery_address'] ?? null,
-            $data['notes'] ?? null,
-            $orderId
-        ]);
     }
 }
 ?> 
