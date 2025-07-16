@@ -13,60 +13,70 @@ class UserController extends BaseController {
         $this->userModel = new User($this->conn);
     }
     
-    // Hiển thị form đăng ký và xử lý đăng ký
+    // Xử lý đăng ký
     public function register() {
         global $conn;
-        $error = '';
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'register') {
             $userModel = new User($conn);
             $data = [
-                'email' => $_POST['email'] ?? '',
-                'phone' => $_POST['phone'] ?? '',
+                'email' => trim($_POST['email'] ?? ''),
+                'phone' => trim($_POST['phone'] ?? ''),
                 'password' => $_POST['password'] ?? '',
-                'name' => $_POST['name'] ?? '',
-                'address' => $_POST['address'] ?? '',
-                'role_id' => 2 // user
+                'name' => trim($_POST['name'] ?? ''),
+                'address' => trim($_POST['address'] ?? ''),
+                'role_id' => 2
             ];
-            if (!$data['email'] && !$data['phone']) {
-                $error = 'Vui lòng nhập email hoặc số điện thoại';
-            } elseif (!$data['password'] || !$data['name']) {
-                $error = 'Vui lòng nhập đầy đủ thông tin';
-            } else {
-                $result = $userModel->register($data);
-                if ($result['success']) {
-                    header('Location: index.php?page=login&registered=1');
-                    exit;
-                } else {
-                    $error = $result['message'];
-                }
+            
+            // Validation
+            if (empty($data['email']) && empty($data['phone'])) {
+                echo json_encode(['success' => false, 'message' => 'Vui lòng nhập email hoặc số điện thoại']);
+                return;
             }
+            if (empty($data['password']) || empty($data['name'])) {
+                echo json_encode(['success' => false, 'message' => 'Vui lòng nhập đầy đủ thông tin']);
+                return;
+            }
+            if (strlen($data['password']) < 6) {
+                echo json_encode(['success' => false, 'message' => 'Mật khẩu phải có ít nhất 6 ký tự']);
+                return;
+            }
+            
+            $result = $userModel->register($data);
+            echo json_encode($result);
+            return;
         }
-        include __DIR__ . '/../pages/register.php';
+        echo json_encode(['success' => false, 'message' => 'Invalid request']);
     }
 
-    // Hiển thị form đăng nhập và xử lý đăng nhập
+    // Xử lý đăng nhập
     public function login() {
         global $conn;
-        $error = '';
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action']) && $_POST['action'] === 'login') {
             $userModel = new User($conn);
-            $emailOrPhone = $_POST['email_or_phone'] ?? '';
+            $emailOrPhone = trim($_POST['email_or_phone'] ?? '');
             $password = $_POST['password'] ?? '';
-            if (!$emailOrPhone || !$password) {
-                $error = 'Vui lòng nhập đầy đủ thông tin';
-            } else {
-                $user = $userModel->login($emailOrPhone, $password);
-                if ($user) {
-                    $_SESSION['user_id'] = $user['id'];
-                    $_SESSION['user_name'] = $user['name'];
-                    header('Location: index.php');
-                    exit;
-                } else {
-                    $error = 'Sai thông tin đăng nhập';
-                }
+            
+            // Debug log
+            error_log("Login attempt - Email/Phone: " . $emailOrPhone);
+            
+            if (empty($emailOrPhone) || empty($password)) {
+                echo json_encode(['success' => false, 'message' => 'Vui lòng nhập đầy đủ thông tin']);
+                return;
             }
+            
+            $user = $userModel->login($emailOrPhone, $password);
+            if ($user) {
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_name'] = $user['name'];
+                error_log("Login successful for user: " . $user['name']);
+                echo json_encode(['success' => true, 'message' => 'Đăng nhập thành công']);
+            } else {
+                error_log("Login failed for: " . $emailOrPhone);
+                echo json_encode(['success' => false, 'message' => 'Sai thông tin đăng nhập']);
+            }
+            return;
         }
-        include __DIR__ . '/../pages/login.php';
+        echo json_encode(['success' => false, 'message' => 'Invalid request']);
     }
 
     // Đăng xuất

@@ -56,18 +56,13 @@ require_once __DIR__ . '/helpers.php';
                     <!-- User Actions - Redesigned -->
                     <div class="col-lg-3 col-md-3">
                         <div class="user-actions d-flex justify-content-end align-items-center gap-3">
-                            <!-- 3D House Button -->
-                            <a href="#" class="btn btn-outline-primary btn-sm">
-                                <i class="fas fa-cube me-1"></i>3D HOUSE
-                            </a>
-                            
                             <!-- User Account -->
                             <?php if(isset($_SESSION['user_id'])): ?>
                                 <div class="dropdown">
-                                    <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="dropdown">
+                                    <button class="btn btn-link text-dark p-0 text-decoration-none" type="button" data-bs-toggle="dropdown">
                                         <i class="fas fa-user-circle fs-5"></i>
                                         <span class="ms-1 fw-semibold">
-                                            <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Tài khoản'); ?>
+                                            <?php echo htmlspecialchars(str_replace('_', ' ', $_SESSION['user_name'] ?? 'Tài khoản')); ?>
                                         </span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
@@ -78,13 +73,13 @@ require_once __DIR__ . '/helpers.php';
                                     </ul>
                                 </div>
                             <?php else: ?>
-                                <a href="#" class="btn btn-link text-dark p-0" data-bs-toggle="modal" data-bs-target="#authModal">
+                                <a href="#" class="btn btn-link text-dark p-0 text-decoration-none" data-bs-toggle="modal" data-bs-target="#authModal">
                                     <i class="fas fa-user-circle fs-5"></i> <span class="ms-1">Đăng nhập</span>
                                 </a>
                             <?php endif; ?>
                             
                             <!-- Cart -->
-                            <a href="index.php?page=cart" class="btn btn-link text-dark p-0 position-relative">
+                            <a href="index.php?page=cart" class="btn btn-link text-dark p-0 text-decoration-none position-relative">
                                 <i class="fas fa-shopping-cart fs-5"></i>
                                 <span class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="font-size: 0.6rem;">
                                     <?php
@@ -162,7 +157,6 @@ require_once __DIR__ . '/helpers.php';
   <div class="modal-dialog">
     <div class="modal-content auth-form-container">
       <div class="modal-header border-0 pb-0">
-        <h5 class="modal-title fw-bold" id="authModalLabel">Tài khoản khách hàng</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
       </div>
       <div class="modal-body pt-0">
@@ -177,41 +171,64 @@ require_once __DIR__ . '/helpers.php';
         <div class="tab-content" id="authTabContentModal">
           <!-- Đăng nhập -->
           <div class="tab-pane fade show active" id="login-form-modal" role="tabpanel">
-            <form method="post" action="index.php?page=login" class="auth-form">
+            <form method="post" action="index.php" class="auth-form" id="loginForm" autocomplete="off">
+              <input type="hidden" name="action" value="login">
               <h3 class="auth-title">Chào mừng trở lại!</h3>
-              <div class="form-group">
-                <input type="text" class="form-control" name="email_or_phone" placeholder="Email hoặc Số điện thoại" required>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-user-circle text-secondary"></i></span>
+                  <input type="text" class="form-control border-0 ps-2" name="email_or_phone" placeholder="Email hoặc Số điện thoại" value="<?php echo isset($_SESSION['login_prefill']['email_or_phone']) ? htmlspecialchars($_SESSION['login_prefill']['email_or_phone']) : ''; ?>">
+                </div>
               </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+              <div class="form-group mb-4">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-lock text-secondary"></i></span>
+                  <input type="password" class="form-control border-0 ps-2" name="password" placeholder="Mật khẩu" required>
+                </div>
               </div>
-              <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
-              <div class="switch-link">
+              <button type="submit" class="btn btn-primary btn-block py-3 fw-bold" style="border-radius: 16px; font-size: 1.15rem;">Đăng nhập</button>
+              <div class="switch-link mt-3">
                 Chưa có tài khoản? <a href="#" onclick="switchToRegisterModal(event)">Đăng ký</a>
               </div>
             </form>
           </div>
           <!-- Đăng ký -->
           <div class="tab-pane fade" id="register-form-modal" role="tabpanel">
-            <form method="post" action="index.php?page=register" class="auth-form">
+            <form method="post" action="index.php" class="auth-form" id="registerForm" autocomplete="off">
+              <input type="hidden" name="action" value="register">
               <h3 class="auth-title">Tạo tài khoản mới</h3>
-              <div class="form-group">
-                <input type="email" class="form-control" name="email" placeholder="Email" required>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-envelope text-secondary"></i></span>
+                  <input type="email" class="form-control border-0 ps-2" name="email" placeholder="Email" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="phone" placeholder="Số điện thoại" required>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-phone text-secondary"></i></span>
+                  <input type="text" class="form-control border-0 ps-2" name="phone" placeholder="Số điện thoại" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="name" placeholder="Họ tên" required>
+              <div class="form-group mb-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-user text-secondary"></i></span>
+                  <input type="text" class="form-control border-0 ps-2" name="name" placeholder="Họ tên" required>
+                </div>
               </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="address" placeholder="Địa chỉ">
+              <div class="form-group mb-3">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-map-marker-alt text-secondary"></i></span>
+                  <input type="text" class="form-control border-0 ps-2" name="address" placeholder="Địa chỉ">
+                </div>
               </div>
-              <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+              <div class="form-group mb-4">
+                <div class="input-group input-group-lg">
+                  <span class="input-group-text bg-white border-0 ps-3"><i class="fas fa-lock text-secondary"></i></span>
+                  <input type="password" class="form-control border-0 ps-2" name="password" placeholder="Mật khẩu" required>
+                </div>
               </div>
-              <button type="submit" class="btn btn-success btn-block">Đăng ký</button>
-              <div class="switch-link">
+              <button type="submit" class="btn btn-primary btn-block py-3 fw-bold" style="border-radius: 16px; font-size: 1.15rem;">Đăng ký</button>
+              <div class="switch-link mt-3">
                 Đã có tài khoản? <a href="#" onclick="switchToLoginModal(event)">Đăng nhập</a>
               </div>
             </form>
@@ -224,6 +241,36 @@ require_once __DIR__ . '/helpers.php';
 <?php endif; ?>
 
 <script>
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  var formData = new FormData(this);
+  
+  fetch('index.php', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => response.text())
+  .then(data => {
+    // Nếu đăng ký thành công, chuyển sang tab đăng nhập
+    if (data.includes('success')) {
+      // Chuyển sang tab đăng nhậpimage.png
+      document.querySelector('#login-tab-modal').click();
+      
+      // Điền sẵn email/phone vào form đăng nhập
+      var emailOrPhone = formData.get('email') || formData.get('phone');
+      document.querySelector('input[name="email_or_phone"]').value = emailOrPhone;
+      
+    } else {
+      // Hiển thị lỗi
+      alert('Có lỗi xảy ra: ' + data);
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Có lỗi xảy ra khi đăng ký');
+  });
+});
 function switchToRegisterModal(e) {
   e.preventDefault();
   var tab = document.querySelector('#register-tab-modal');
@@ -242,8 +289,100 @@ document.addEventListener('DOMContentLoaded', function() {
       modal.show();
     });
   }
+  <?php if (!empty($_SESSION['show_login_modal'])): unset($_SESSION['show_login_modal']); ?>
+    var modal = new bootstrap.Modal(document.getElementById('authModal'));
+    modal.show();
+    document.querySelector('#login-tab-modal').click();
+  <?php endif; ?>
+  <?php if (!empty($_SESSION['show_register_modal'])): unset($_SESSION['show_register_modal']); ?>
+    var modal = new bootstrap.Modal(document.getElementById('authModal'));
+    modal.show();
+    document.querySelector('#register-tab-modal').click();
+  <?php endif; ?>
+
+  // Khi modal đóng, xóa backdrop nếu còn sót
+  var authModalEl = document.getElementById('authModal');
+  if (authModalEl) {
+    authModalEl.addEventListener('hidden.bs.modal', function () {
+      // Xóa backdrop nếu còn
+      var backdrops = document.querySelectorAll('.modal-backdrop');
+      backdrops.forEach(function(bd) { bd.parentNode.removeChild(bd); });
+      // Xóa class 'modal-open' trên body nếu còn
+      document.body.classList.remove('modal-open');
+      document.body.style = '';
+    });
+  }
+
+  // Xử lý form đăng ký bằng AJAX
+  document.getElementById('registerForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var formData = new FormData(this);
+    
+    fetch('index.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        // Chuyển sang tab đăng nhập
+        document.querySelector('#login-tab-modal').click();
+        
+        // Điền sẵn email/phone vào form đăng nhập
+        var emailOrPhone = formData.get('email') || formData.get('phone');
+        document.querySelector('input[name="email_or_phone"]').value = emailOrPhone;
+        
+        // Hiển thị thông báo thành công
+        alert('Đăng ký thành công! Vui lòng đăng nhập.');
+      } else {
+        // Hiển thị lỗi
+        alert(result.message || 'Đăng ký thất bại');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Có lỗi xảy ra khi đăng ký');
+    });
+  });
+
+  // Xử lý form đăng nhập bằng AJAX
+  document.getElementById('loginForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var formData = new FormData(this);
+    
+    fetch('index.php', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => response.json())
+    .then(result => {
+      if (result.success) {
+        // Đăng nhập thành công - đóng modal và reload trang để cập nhật header
+        var modal = bootstrap.Modal.getInstance(document.getElementById('authModal'));
+        modal.hide();
+        location.reload();
+      } else {
+        // Hiển thị lỗi
+        alert(result.message || 'Đăng nhập thất bại');
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Có lỗi xảy ra khi đăng nhập');
+    });
+  });
 });
 </script>
 
 <!-- Bootstrap JS + Popper (nên dùng CDN) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<?php if (!empty($_SESSION['login_error'])): ?>
+  <div class="alert alert-danger"><?php echo $_SESSION['login_error']; unset($_SESSION['login_error']); ?></div>
+<?php endif; ?>
+<?php if (!empty($_SESSION['register_error'])): ?>
+  <div class="alert alert-danger"><?php echo $_SESSION['register_error']; unset($_SESSION['register_error']); ?></div>
+<?php endif; ?>
+<?php unset($_SESSION['login_prefill']); ?>

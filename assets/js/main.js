@@ -95,23 +95,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return emailRegex.test(email);
     }
     
-    // Add loading states to buttons
-    const buttons = document.querySelectorAll('button[type="submit"]');
-    buttons.forEach(button => {
-        button.addEventListener('click', function() {
-            if (!this.classList.contains('loading')) {
-                this.classList.add('loading');
-                this.innerHTML = '<span class="loading"></span> Đang xử lý...';
-                
-                // Reset after 3 seconds (for demo purposes)
-                setTimeout(() => {
-                    this.classList.remove('loading');
-                    this.innerHTML = this.getAttribute('data-original-text') || 'Gửi';
-                }, 3000);
-            }
-        });
-    });
-    
     // Store original button text
     buttons.forEach(button => {
         button.setAttribute('data-original-text', button.innerHTML);

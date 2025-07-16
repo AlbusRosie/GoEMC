@@ -19,22 +19,48 @@ class User {
             $stmt->execute([$emailOrPhone, $emailOrPhone]);
             $user = $stmt->fetch();
             
+            // Debug log
+            error_log("User lookup result: " . ($user ? "Found user ID: " . $user['id'] : "No user found"));
+            
             if ($user && password_verify($password, $user['password'])) {
+                error_log("Password verification successful");
                 return $user;
+            } else {
+                error_log("Password verification failed");
             }
             return false;
         } catch(PDOException $e) {
+            error_log("Database error in login: " . $e->getMessage());
             return false;
         }
     }
     
     public function register($data) {
         try {
-            // Kiểm tra email hoặc phone đã tồn tại
-            $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = ? OR phone = ?");
-            $stmt->execute([$data['email'], $data['phone']]);
-            if ($stmt->fetch()) {
-                return ['success' => false, 'message' => 'Email hoặc số điện thoại đã tồn tại'];
+            // Xử lý email và phone - ít nhất một trong hai phải có giá trị
+            $email = !empty($data['email']) ? $data['email'] : null;
+            $phone = !empty($data['phone']) ? $data['phone'] : null;
+            
+            if (empty($email) && empty($phone)) {
+                return ['success' => false, 'message' => 'Vui lòng nhập email hoặc số điện thoại'];
+            }
+            
+            // Kiểm tra email đã tồn tại
+            if (!empty($email)) {
+                $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = ?");
+                $stmt->execute([$email]);
+                if ($stmt->fetch()) {
+                    return ['success' => false, 'message' => 'Email đã tồn tại'];
+                }
+            }
+            
+            // Kiểm tra phone đã tồn tại
+            if (!empty($phone)) {
+                $stmt = $this->pdo->prepare("SELECT * FROM users WHERE phone = ?");
+                $stmt->execute([$phone]);
+                if ($stmt->fetch()) {
+                    return ['success' => false, 'message' => 'Số điện thoại đã tồn tại'];
+                }
             }
 
             $stmt = $this->pdo->prepare("
@@ -43,17 +69,22 @@ class User {
             ");
             
             $hashedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
-            
-            return $stmt->execute([
+            $success = $stmt->execute([
                 2, // role_id = 2 (user)
                 $hashedPassword,
-                $data['email'],
-                $data['phone'],
+                $email,
+                $phone,
                 $data['name'],
                 $data['address']
             ]);
+            
+            if ($success) {
+                return ['success' => true, 'message' => 'Đăng ký thành công'];
+            } else {
+                return ['success' => false, 'message' => 'Đăng ký thất bại, vui lòng thử lại'];
+            }
         } catch(PDOException $e) {
-            return false;
+            return ['success' => false, 'message' => 'Lỗi hệ thống: ' . $e->getMessage()];
         }
     }
     
