@@ -8,15 +8,15 @@ class User {
         $this->pdo = $pdo;
     }
     
-    public function login($email, $password) {
+    public function login($emailOrPhone, $password) {
         try {
             $stmt = $this->pdo->prepare("
                 SELECT u.*, r.name as role_name 
                 FROM users u 
                 JOIN roles r ON u.role_id = r.id 
-                WHERE u.email = ? AND u.status = 'active'
+                WHERE (u.email = ? OR u.phone = ?) AND u.status = 'active'
             ");
-            $stmt->execute([$email]);
+            $stmt->execute([$emailOrPhone, $emailOrPhone]);
             $user = $stmt->fetch();
             
             if ($user && password_verify($password, $user['password'])) {
@@ -30,6 +30,13 @@ class User {
     
     public function register($data) {
         try {
+            // Kiểm tra email hoặc phone đã tồn tại
+            $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = ? OR phone = ?");
+            $stmt->execute([$data['email'], $data['phone']]);
+            if ($stmt->fetch()) {
+                return ['success' => false, 'message' => 'Email hoặc số điện thoại đã tồn tại'];
+            }
+
             $stmt = $this->pdo->prepare("
                 INSERT INTO users (role_id, password, email, phone, name, address, status) 
                 VALUES (?, ?, ?, ?, ?, ?, 'active')

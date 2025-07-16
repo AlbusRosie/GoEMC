@@ -13,82 +13,67 @@ class UserController extends BaseController {
         $this->userModel = new User($this->conn);
     }
     
-    // Hiển thị trang đăng nhập
+    // Hiển thị form đăng ký và xử lý đăng ký
+    public function register() {
+        global $conn;
+        $error = '';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $userModel = new User($conn);
+            $data = [
+                'email' => $_POST['email'] ?? '',
+                'phone' => $_POST['phone'] ?? '',
+                'password' => $_POST['password'] ?? '',
+                'name' => $_POST['name'] ?? '',
+                'address' => $_POST['address'] ?? '',
+                'role_id' => 2 // user
+            ];
+            if (!$data['email'] && !$data['phone']) {
+                $error = 'Vui lòng nhập email hoặc số điện thoại';
+            } elseif (!$data['password'] || !$data['name']) {
+                $error = 'Vui lòng nhập đầy đủ thông tin';
+            } else {
+                $result = $userModel->register($data);
+                if ($result['success']) {
+                    header('Location: index.php?page=login&registered=1');
+                    exit;
+                } else {
+                    $error = $result['message'];
+                }
+            }
+        }
+        include __DIR__ . '/../pages/register.php';
+    }
+
+    // Hiển thị form đăng nhập và xử lý đăng nhập
     public function login() {
-        if ($this->isLoggedIn()) {
-            $this->redirect('admin/index.php');
+        global $conn;
+        $error = '';
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $userModel = new User($conn);
+            $emailOrPhone = $_POST['email_or_phone'] ?? '';
+            $password = $_POST['password'] ?? '';
+            if (!$emailOrPhone || !$password) {
+                $error = 'Vui lòng nhập đầy đủ thông tin';
+            } else {
+                $user = $userModel->login($emailOrPhone, $password);
+                if ($user) {
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_name'] = $user['name'];
+                    header('Location: index.php');
+                    exit;
+                } else {
+                    $error = 'Sai thông tin đăng nhập';
+                }
+            }
         }
-        
-        $data = [
-            'error' => $_SESSION['error'] ?? null,
-            'old_data' => $_SESSION['old_data'] ?? []
-        ];
-        
-        // Clear session messages
-        unset($_SESSION['error'], $_SESSION['old_data']);
-        
-        $this->render('admin/login', $data);
+        include __DIR__ . '/../pages/login.php';
     }
-    
-    // Xử lý đăng nhập
-    public function authenticate() {
-        if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            $this->redirect('admin/login.php');
-        }
-        
-        $data = $this->getPostData();
-        $data = $this->sanitize($data);
-        
-        // Validate required fields
-        $requiredFields = ['username', 'password'];
-        $errors = $this->validateRequired($data, $requiredFields);
-        
-        if (!empty($errors)) {
-            $_SESSION['error'] = implode(', ', $errors);
-            $_SESSION['old_data'] = $data;
-            $this->redirect('admin/login.php');
-        }
-        
-        // Authenticate user
-        $user = $this->userModel->authenticate($data['username'], $data['password']);
-        
-        if ($user) {
-            // Set session
-            $_SESSION['user_id'] = $user['id'];
-            $_SESSION['username'] = $user['username'];
-            $_SESSION['user_role'] = $user['role'];
-            $_SESSION['user_name'] = $user['name'];
-            
-            $this->redirect('admin/index.php');
-        } else {
-            $_SESSION['error'] = 'Invalid username or password';
-            $_SESSION['old_data'] = $data;
-            $this->redirect('admin/login.php');
-        }
-    }
-    
+
     // Đăng xuất
     public function logout() {
         session_destroy();
-        $this->redirect('admin/login.php');
-    }
-    
-    // Hiển thị trang đăng ký
-    public function register() {
-        if ($this->isLoggedIn()) {
-            $this->redirect('index.php?page=home');
-        }
-        
-        $data = [
-            'error' => $_SESSION['error'] ?? null,
-            'success' => $_SESSION['success'] ?? null,
-            'old_data' => $_SESSION['old_data'] ?? []
-        ];
-        
-        // Clear session messages
-        unset($_SESSION['error'], $_SESSION['success'], $_SESSION['old_data']);
-        
-        $this->render('register', $data);
+        header('Location: index.php');
+        exit;
     }
     
     // Xử lý đăng ký

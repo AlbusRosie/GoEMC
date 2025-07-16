@@ -21,6 +21,9 @@ $success_message = '';
 
 // Xử lý form submit
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Debug: Log POST data
+    error_log("POST data received: " . json_encode($_POST));
+    
     $data = [
         'category_id' => $_POST['category_id'],
         'name' => trim($_POST['name']),
@@ -100,6 +103,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
+    // Debug: Log detail_products
+    error_log("Detail products to add: " . json_encode($detail_products));
+    
     // Validation
     if (empty($data['name'])) {
         $error_message = 'Tên sản phẩm không được để trống.';
@@ -109,13 +115,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $error_message = 'Số lượng tồn kho không được âm.';
     } else {
         // Thêm sản phẩm
-        if ($productModel->create($data)) {
-            $product_id = $pdo->lastInsertId();
+        $product_id = $productModel->create($data);
+        if ($product_id && $product_id > 0) {
+            // Debug: Log product_id
+            error_log("Product created successfully with ID: " . $product_id);
             
             // Thêm detail products
             if (!empty($detail_products)) {
                 foreach ($detail_products as $detail) {
-                    $productModel->addDetail($product_id, $detail);
+                    try {
+                        $productModel->addDetail($product_id, $detail);
+                        error_log("Detail added successfully for product ID: " . $product_id);
+                    } catch (Exception $e) {
+                        error_log("Error adding detail for product ID " . $product_id . ": " . $e->getMessage());
+                        throw $e;
+                    }
                 }
             }
             

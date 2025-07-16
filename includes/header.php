@@ -66,17 +66,20 @@ require_once __DIR__ . '/helpers.php';
                                 <div class="dropdown">
                                     <button class="btn btn-link text-dark p-0" type="button" data-bs-toggle="dropdown">
                                         <i class="fas fa-user-circle fs-5"></i>
+                                        <span class="ms-1 fw-semibold">
+                                            <?php echo htmlspecialchars($_SESSION['user_name'] ?? 'Tài khoản'); ?>
+                                        </span>
                                     </button>
                                     <ul class="dropdown-menu dropdown-menu-end">
                                         <li><a class="dropdown-item" href="index.php?page=profile"><i class="fas fa-user me-2"></i>Hồ sơ</a></li>
                                         <li><a class="dropdown-item" href="index.php?page=orders"><i class="fas fa-shopping-bag me-2"></i>Đơn hàng</a></li>
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item text-danger" href="logout.php"><i class="fas fa-sign-out-alt me-2"></i>Đăng xuất</a></li>
+                                        <li><a class="dropdown-item text-danger" href="index.php?page=logout"><i class="fas fa-sign-out-alt me-2"></i>Đăng xuất</a></li>
                                     </ul>
                                 </div>
                             <?php else: ?>
-                                <a href="index.php?page=login" class="btn btn-link text-dark p-0">
-                                    <i class="fas fa-user-circle fs-5"></i>
+                                <a href="#" class="btn btn-link text-dark p-0" data-bs-toggle="modal" data-bs-target="#authModal">
+                                    <i class="fas fa-user-circle fs-5"></i> <span class="ms-1">Đăng nhập</span>
                                 </a>
                             <?php endif; ?>
                             
@@ -152,3 +155,95 @@ require_once __DIR__ . '/helpers.php';
     </header>
 
     <!-- Main Content --> 
+
+<?php if (!isset($_SESSION['user_id'])): ?>
+<!-- Modal Đăng nhập/Đăng ký -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content auth-form-container">
+      <div class="modal-header border-0 pb-0">
+        <h5 class="modal-title fw-bold" id="authModalLabel">Tài khoản khách hàng</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Đóng"></button>
+      </div>
+      <div class="modal-body pt-0">
+        <ul class="nav nav-tabs mb-3 justify-content-center" id="authTabModal" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab-modal" data-bs-toggle="tab" data-bs-target="#login-form-modal" type="button" role="tab">Đăng nhập</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="register-tab-modal" data-bs-toggle="tab" data-bs-target="#register-form-modal" type="button" role="tab">Đăng ký</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="authTabContentModal">
+          <!-- Đăng nhập -->
+          <div class="tab-pane fade show active" id="login-form-modal" role="tabpanel">
+            <form method="post" action="index.php?page=login" class="auth-form">
+              <h3 class="auth-title">Chào mừng trở lại!</h3>
+              <div class="form-group">
+                <input type="text" class="form-control" name="email_or_phone" placeholder="Email hoặc Số điện thoại" required>
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+              <div class="switch-link">
+                Chưa có tài khoản? <a href="#" onclick="switchToRegisterModal(event)">Đăng ký</a>
+              </div>
+            </form>
+          </div>
+          <!-- Đăng ký -->
+          <div class="tab-pane fade" id="register-form-modal" role="tabpanel">
+            <form method="post" action="index.php?page=register" class="auth-form">
+              <h3 class="auth-title">Tạo tài khoản mới</h3>
+              <div class="form-group">
+                <input type="email" class="form-control" name="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="phone" placeholder="Số điện thoại" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="name" placeholder="Họ tên" required>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="address" placeholder="Địa chỉ">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+              </div>
+              <button type="submit" class="btn btn-success btn-block">Đăng ký</button>
+              <div class="switch-link">
+                Đã có tài khoản? <a href="#" onclick="switchToLoginModal(event)">Đăng nhập</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+
+<script>
+function switchToRegisterModal(e) {
+  e.preventDefault();
+  var tab = document.querySelector('#register-tab-modal');
+  if(tab) tab.click();
+}
+function switchToLoginModal(e) {
+  e.preventDefault();
+  var tab = document.querySelector('#login-tab-modal');
+  if(tab) tab.click();
+}
+document.addEventListener('DOMContentLoaded', function() {
+  var loginBtn = document.querySelector('[data-bs-target="#authModal"]');
+  if(loginBtn) {
+    loginBtn.addEventListener('click', function(e) {
+      var modal = new bootstrap.Modal(document.getElementById('authModal'));
+      modal.show();
+    });
+  }
+});
+</script>
+
+<!-- Bootstrap JS + Popper (nên dùng CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

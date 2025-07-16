@@ -686,4 +686,76 @@ unset($product);
     </div>
 </section>
 
+<?php if (!isset($_SESSION['user_id'])): ?>
+<div class="auth-form-container my-5">
+  <ul class="nav nav-tabs mb-3 justify-content-center" id="authTabHome" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="login-tab-home" data-bs-toggle="tab" data-bs-target="#login-form-home" type="button" role="tab">Đăng nhập</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="register-tab-home" data-bs-toggle="tab" data-bs-target="#register-form-home" type="button" role="tab">Đăng ký</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="authTabContentHome">
+    <!-- Đăng nhập -->
+    <div class="tab-pane fade show active" id="login-form-home" role="tabpanel">
+      <form method="post" action="index.php?page=login" class="auth-form">
+        <h3 class="auth-title">Chào mừng trở lại!</h3>
+        <div class="form-group">
+          <input type="text" class="form-control" name="email_or_phone" placeholder="Email hoặc Số điện thoại" required>
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Đăng nhập</button>
+        <div class="switch-link">
+          Chưa có tài khoản? <a href="#" onclick="switchToRegisterHome(event)">Đăng ký</a>
+        </div>
+      </form>
+    </div>
+    <!-- Đăng ký -->
+    <div class="tab-pane fade" id="register-form-home" role="tabpanel">
+      <form method="post" action="index.php?page=register" class="auth-form">
+        <h3 class="auth-title">Tạo tài khoản mới</h3>
+        <div class="form-group">
+          <input type="email" class="form-control" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="phone" placeholder="Số điện thoại" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="name" placeholder="Họ tên" required>
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="address" placeholder="Địa chỉ">
+        </div>
+        <div class="form-group">
+          <input type="password" class="form-control" name="password" placeholder="Mật khẩu" required>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Đăng ký</button>
+        <div class="switch-link">
+          Đã có tài khoản? <a href="#" onclick="switchToLoginHome(event)">Đăng nhập</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+
+<script>
+function switchToRegisterHome(e) {
+  e.preventDefault();
+  var tab = document.querySelector('#register-tab-home');
+  if(tab) tab.click();
+}
+function switchToLoginHome(e) {
+  e.preventDefault();
+  var tab = document.querySelector('#login-tab-home');
+  if(tab) tab.click();
+}
+</script>
+
+<!-- Bootstrap JS + Popper (nên dùng CDN) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
  
