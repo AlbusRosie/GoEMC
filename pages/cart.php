@@ -91,27 +91,25 @@ if (empty($cartItems)) {
     }
 
     .empty-cart-btn {
-        background: linear-gradient(135deg, #ff6b35, #ff8c42);
-        color: white;
-        border: none;
-        border-radius: 12px;
-        padding: 1rem 2rem;
-        font-size: 1rem;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.75rem;
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 25px -5px rgba(255, 107, 53, 0.3);
-    }
+    background: linear-gradient(135deg, #ff6b35, #ff8c42);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 10px 25px -5px rgba(255, 107, 53, 0.3);
+}
 
-    .empty-cart-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 20px 40px -10px rgba(255, 107, 53, 0.4);
-        color: white;
-        text-decoration: none;
-    }
+.empty-cart-btn:hover {
+    box-shadow: 0 20px 40px -10px rgba(255, 107, 53, 0.4);
+    color: white;
+    text-decoration: none;
+}
 
     @media (max-width: 640px) {
         .empty-cart-card {
@@ -206,7 +204,6 @@ if (empty($cartItems)) {
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -263,7 +260,6 @@ if (empty($cartItems)) {
 .cart-item {
     padding: 2rem;
     border-bottom: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
     position: relative;
 }
 
@@ -275,14 +271,16 @@ if (empty($cartItems)) {
     background: #f8fafc;
 }
 
+/* Cart Item Grid - Cố định layout */
 .cart-item-grid {
     display: grid;
-    grid-template-columns: auto 1fr auto auto auto;
+    grid-template-columns: 100px 1fr 150px 120px 50px;
     gap: 1.5rem;
     align-items: center;
+    width: 100%;
 }
 
-/* Product Image */
+/* Product Image - Cố định kích thước */
 .product-image-container {
     position: relative;
     width: 100px;
@@ -293,17 +291,13 @@ if (empty($cartItems)) {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .product-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.cart-item:hover .product-image {
-    transform: scale(1.05);
 }
 
 .product-image-placeholder {
@@ -311,7 +305,13 @@ if (empty($cartItems)) {
     font-size: 2rem;
 }
 
-/* Product Info */
+/* Product Info - Cố định chiều rộng */
+.product-info {
+    min-width: 0;
+    max-width: 300px;
+    flex-shrink: 0;
+}
+
 .product-info h3 {
     font-size: 1.125rem;
     font-weight: 600;
@@ -323,25 +323,12 @@ if (empty($cartItems)) {
     text-overflow: ellipsis;
 }
 
-/* Selected Options Styling */
+/* Selected Options - Cố định kích thước */
 .selected-options {
     max-width: 200px;
     width: 100%;
     min-width: 0;
     word-break: break-word;
-}
-
-.product-info {
-    min-width: 0;
-}
-
-.options-title {
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: #475569;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
 }
 
 .options-list {
@@ -358,7 +345,6 @@ if (empty($cartItems)) {
     background: white;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
-    transition: all 0.3s ease;
 }
 
 .option-item:hover {
@@ -371,6 +357,7 @@ if (empty($cartItems)) {
     font-weight: 600;
     color: #64748b;
     min-width: 80px;
+    flex-shrink: 0;
 }
 
 .option-value {
@@ -420,15 +407,20 @@ if (empty($cartItems)) {
     border: 1px solid #e2e8f0;
 }
 
-/* Quantity Controls */
+/* Quantity Controls - Cố định hoàn toàn */
 .quantity-controls {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40px 70px 40px;
     align-items: center;
     background: #f8fafc;
     border-radius: 8px;
     border: 1px solid #e2e8f0;
     overflow: hidden;
-    transition: all 0.3s ease;
+    width: 150px;
+    min-width: 150px;
+    max-width: 150px;
+    height: 44px;
+    flex-shrink: 0;
 }
 
 .quantity-controls:hover {
@@ -439,14 +431,14 @@ if (empty($cartItems)) {
 .quantity-btn {
     background: white;
     border: none;
-    padding: 0.75rem;
+    padding: 0;
     color: #64748b;
     cursor: pointer;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 40px;
+    width: 40px;
+    height: 44px;
     font-size: 1rem;
     font-weight: 600;
     user-select: none;
@@ -486,14 +478,18 @@ if (empty($cartItems)) {
     border: none;
     background: transparent;
     text-align: center;
-    width: 60px;
+    width: 70px;
+    height: 44px;
     font-weight: 600;
     color: #1e293b;
     font-size: 1rem;
-    transition: all 0.3s ease;
     -webkit-appearance: none;
     -moz-appearance: textfield;
     margin: 0;
+    padding: 0;
+    font-family: inherit;
+    box-sizing: border-box;
+    grid-column: 2;
 }
 
 .quantity-input::-webkit-outer-spin-button,
@@ -505,16 +501,19 @@ if (empty($cartItems)) {
 .quantity-input:focus {
     outline: none;
     background: rgba(255, 107, 53, 0.05);
-    transform: scale(1.02);
 }
 
 .quantity-input:hover {
     background: rgba(255, 107, 53, 0.02);
 }
 
-/* Price Section */
+/* Price Section - Cố định kích thước */
 .price-section {
     text-align: right;
+    width: 120px;
+    min-width: 120px;
+    max-width: 120px;
+    flex-shrink: 0;
 }
 
 .price-original {
@@ -522,12 +521,14 @@ if (empty($cartItems)) {
     color: #94a3b8;
     font-size: 0.875rem;
     margin-bottom: 0.25rem;
+    will-change: auto;
 }
 
 .price-current {
     font-size: 1.125rem;
     font-weight: 700;
     color: #1e293b;
+    will-change: auto;
 }
 
 .price-sale {
@@ -535,7 +536,7 @@ if (empty($cartItems)) {
     font-weight: 700;
 }
 
-/* Remove Button */
+/* Remove Button - Cố định kích thước */
 .remove-btn {
     background: transparent;
     border: none;
@@ -543,10 +544,12 @@ if (empty($cartItems)) {
     cursor: pointer;
     padding: 0.5rem;
     border-radius: 8px;
-    transition: all 0.3s ease;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 50px;
+    height: 50px;
+    flex-shrink: 0;
 }
 
 .remove-btn:hover {
@@ -607,7 +610,6 @@ if (empty($cartItems)) {
     font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -616,7 +618,6 @@ if (empty($cartItems)) {
 }
 
 .checkout-btn:hover {
-    transform: translateY(-2px);
     box-shadow: 0 10px 25px -5px rgba(255, 107, 53, 0.3);
 }
 
@@ -640,10 +641,22 @@ if (empty($cartItems)) {
     z-index: 10;
 }
 
-/* Loading States */
-.loading {
-    opacity: 0.6;
-    pointer-events: none;
+/* Cart items */
+.cart-item:hover {
+    background: #f8fafc;
+}
+
+/* Quantity button */
+.quantity-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Quantity input focus */
+.quantity-input:focus {
+    outline: none;
+    background: rgba(255, 107, 53, 0.05);
+    box-shadow: 0 0 0 2px rgba(255, 107, 53, 0.2);
 }
 
 /* Responsive Design */
@@ -842,7 +855,15 @@ if (empty($cartItems)) {
                 </div>
                 
                 <?php foreach ($cartItems as $item): ?>
-                <div class="cart-item" data-cart-id="<?php echo $item['id']; ?>">
+                <?php 
+                $price = floatval($item['product_price']);
+                $sale = floatval($item['product_sale']);
+                $currentPrice = $sale > 0 ? $price - $sale : $price;
+                $originalPrice = isset($item['original_price']) ? floatval($item['original_price']) : $price;
+                ?>
+                <div class="cart-item" data-cart-id="<?php echo $item['id']; ?>" 
+                     data-price-original="<?php echo $originalPrice; ?>" 
+                     data-price-current="<?php echo $currentPrice; ?>">
                     <?php if (isset($item['sale_amount']) && $item['sale_amount'] > 0): ?>
                     <div class="sale-badge">
                         -<?php echo round(($item['sale_amount'] / $item['original_price']) * 100); ?>%
@@ -950,11 +971,7 @@ if (empty($cartItems)) {
                         <!-- Price -->
                         <div class="price-section">
                             <?php 
-                            $price = floatval($item['product_price']);
-                            $sale = floatval($item['product_sale']);
-                            $currentPrice = $sale > 0 ? $price - $sale : $price;
                             $totalPrice = $currentPrice * $item['quantity'];
-                            $originalPrice = isset($item['original_price']) ? floatval($item['original_price']) : $price;
                             $totalOriginalPrice = $originalPrice * $item['quantity'];
                             ?>
                             <!-- Luôn hiển thị giá gốc -->
@@ -1017,19 +1034,26 @@ if (empty($cartItems)) {
 // Cập nhật số lượng sản phẩm
 function updateQuantity(cartId, change, isDirectInput = false) {
     let quantity;
+    let oldQuantity;
+    
+    const input = document.querySelector(`[data-cart-id="${cartId}"] .quantity-input`);
+    const cartItem = document.querySelector(`[data-cart-id="${cartId}"]`);
     
     if (isDirectInput) {
         quantity = parseInt(change);
+        oldQuantity = parseInt(input.value);
     } else {
-        const input = document.querySelector(`[data-cart-id="${cartId}"] .quantity-input`);
-        quantity = parseInt(input.value) + parseInt(change);
+        oldQuantity = parseInt(input.value);
+        quantity = oldQuantity + parseInt(change);
     }
     
     if (quantity < 1) quantity = 1;
     if (quantity > 99) quantity = 99;
     
-    // Cập nhật input
-    const input = document.querySelector(`[data-cart-id="${cartId}"] .quantity-input`);
+    // Nếu số lượng không thay đổi, không làm gì
+    if (quantity === oldQuantity) return;
+    
+    // Cập nhật input ngay lập tức để tránh giật
     input.value = quantity;
     
     console.log('Updating quantity:', { cartId, quantity });
@@ -1052,16 +1076,71 @@ function updateQuantity(cartId, change, isDirectInput = false) {
     .then(data => {
         console.log('Response data:', data);
         if (data.success) {
-            // Reload trang để cập nhật tổng tiền
-            location.reload();
+            // Cập nhật giá tiền của item này ngay lập tức
+            updateItemPrice(cartId, quantity);
+            
+            // Cập nhật tổng tiền từ response
+            if (data.cart_total !== undefined) {
+                updateCartTotal(data.cart_total);
+            }
+            
+            // Cập nhật cart count nếu có
+            if (data.cart_count !== undefined) {
+                const cartCountElement = document.querySelector('.cart-count');
+                if (cartCountElement) {
+                    cartCountElement.textContent = data.cart_count + ' sản phẩm';
+                }
+            }
         } else {
+            // Khôi phục giá trị cũ nếu có lỗi
+            input.value = oldQuantity;
             alert('Lỗi: ' + data.message);
         }
     })
     .catch(error => {
         console.error('Error:', error);
+        // Khôi phục giá trị cũ nếu có lỗi
+        input.value = oldQuantity;
         alert('Có lỗi xảy ra khi cập nhật số lượng');
+    })
+    .finally(() => {
+        // Hoàn thành
     });
+}
+
+// Cập nhật giá tiền của item
+function updateItemPrice(cartId, quantity) {
+    const cartItem = document.querySelector(`[data-cart-id="${cartId}"]`);
+    const priceSection = cartItem.querySelector('.price-section');
+    
+    // Lấy giá đơn vị từ data attributes hoặc tính toán
+    const priceOriginal = parseFloat(cartItem.dataset.priceOriginal || 0);
+    const priceCurrent = parseFloat(cartItem.dataset.priceCurrent || 0);
+    
+    if (priceOriginal > 0 && priceCurrent > 0) {
+        const totalOriginal = priceOriginal * quantity;
+        const totalCurrent = priceCurrent * quantity;
+        
+        // Cập nhật giá gốc ngay lập tức
+        const originalElement = priceSection.querySelector('.price-original');
+        if (originalElement) {
+            originalElement.textContent = number_format(totalOriginal) + '₫';
+        }
+        
+        // Cập nhật giá hiện tại ngay lập tức
+        const currentElement = priceSection.querySelector('.price-current');
+        if (currentElement) {
+            currentElement.textContent = number_format(totalCurrent) + '₫';
+        }
+    }
+}
+
+// Cập nhật tổng tiền
+function updateCartTotal(newTotal) {
+    const totalElement = document.getElementById('total-amount');
+    if (totalElement) {
+        totalElement.textContent = number_format(newTotal) + '₫';
+    }
 }
 
 // Xóa sản phẩm khỏi giỏ hàng
@@ -1084,26 +1163,24 @@ function removeFromCart(cartId) {
     .then(response => response.json())
     .then(data => {
         if (data.success) {
-            // Animation xóa item
-            cartItem.style.transform = 'translateX(100%)';
-            cartItem.style.opacity = '0';
-            setTimeout(() => {
-                cartItem.remove();
-                
-                // Cập nhật cart count trong header
-                const cartCountElement = document.querySelector('.cart-count');
-                if (cartCountElement) {
-                    cartCountElement.textContent = data.cart_count;
+            // Xóa item ngay lập tức
+            cartItem.remove();
+            
+            // Cập nhật cart count trong header
+            const cartCountElement = document.querySelector('.cart-count');
+            if (cartCountElement) {
+                cartCountElement.textContent = data.cart_count + ' sản phẩm';
+            }
+            
+            // Reload trang nếu giỏ hàng trống
+            if (data.cart_count == 0) {
+                location.reload();
+            } else {
+                // Cập nhật tổng tiền từ response
+                if (data.cart_total !== undefined) {
+                    updateCartTotal(data.cart_total);
                 }
-                
-                // Reload trang nếu giỏ hàng trống
-                if (data.cart_count == 0) {
-                    location.reload();
-                } else {
-                    // Cập nhật tổng tiền
-                    location.reload();
-                }
-            }, 300);
+            }
         } else {
             alert('Lỗi: ' + data.message);
         }

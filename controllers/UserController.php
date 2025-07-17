@@ -56,9 +56,6 @@ class UserController extends BaseController {
             $emailOrPhone = trim($_POST['email_or_phone'] ?? '');
             $password = $_POST['password'] ?? '';
             
-            // Debug log
-            error_log("Login attempt - Email/Phone: " . $emailOrPhone);
-            
             if (empty($emailOrPhone) || empty($password)) {
                 echo json_encode(['success' => false, 'message' => 'Vui lòng nhập đầy đủ thông tin']);
                 return;
@@ -68,10 +65,8 @@ class UserController extends BaseController {
             if ($user) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
-                error_log("Login successful for user: " . $user['name']);
                 echo json_encode(['success' => true, 'message' => 'Đăng nhập thành công']);
             } else {
-                error_log("Login failed for: " . $emailOrPhone);
                 echo json_encode(['success' => false, 'message' => 'Sai thông tin đăng nhập']);
             }
             return;

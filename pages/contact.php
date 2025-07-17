@@ -1,19 +1,68 @@
 <?php
-    require_once __DIR__ . '/../controllers/ContactsController.php';
-    $p = new Gcontacts();
-    if(isset($_REQUEST["btn_lienhe"])){
+require_once __DIR__ . '/../controllers/ContactsController.php';
+require_once __DIR__ . '/../phpmailer/PHPMailer.php';
+require_once __DIR__ . '/../phpmailer/SMTP.php';
+require_once __DIR__ . '/../phpmailer/Exception.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$p = new Gcontacts();
+
+if (isset($_REQUEST["btn_lienhe"])) {
     $tenKH = $_REQUEST["name"];
     $emailKH = $_REQUEST["email"];
     $sdt = $_REQUEST["phone"];
     $tieude = $_REQUEST["subject"];
     $noidung = $_REQUEST["message"];
-    $ngaytao = date("Y-m-d");  // ✅ Lấy ngày hiện tại
-    $con = $p -> getthemLH($tenKH,$emailKH,$sdt,$tieude,$noidung,$ngaytao,0);
-    if($con == true){
-        echo '<script>alert("Gửi liên hệ thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.")</script>';
-        echo '<script>window.location.href="index.php?page=contact"</script>';
-    } else {
-        echo '<script>alert("Gửi liên hệ thất bại!")</script>';
+    $ngaytao = date("Y-m-d");
+
+    // Gửi email trước
+    $mail = new PHPMailer(true);
+    try {
+        $mail->CharSet = 'UTF-8';  // ✔ Thêm dòng này để hỗ trợ tiếng Việt
+        // Cấu hình SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.gmail.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'hngocphu281003@gmail.com';          // ✅ Email của bạn
+        $mail->Password = 'nnzokgligvfzsqmk';                      // ✅ App password
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Gửi từ đâu, đến đâu
+        $mail->setFrom('hngocphu1508281003@gmail.com', 'Website Gỗ');
+        $mail->addAddress('ngocphu1508281003@gmail.com', 'Admin'); // ✅ Email admin nhận
+        $mail->addReplyTo($emailKH, $tenKH); // Cho phép trả lời khách
+
+        // Nội dung mail
+        $mail->isHTML(true);
+        $mail->Subject = "Liên hệ mới từ $tenKH";
+        $mail->Body = "
+            <h3>Thông tin liên hệ:</h3>
+            <p><strong>Họ tên:</strong> $tenKH</p>
+            <p><strong>Email:</strong> $emailKH</p>
+            <p><strong>Điện thoại:</strong> $sdt</p>
+            <p><strong>Tiêu đề:</strong> $tieude</p>
+            <p><strong>Nội dung:</strong><br>$noidung</p>
+            <p><strong>Ngày gửi:</strong> $ngaytao</p>
+        ";
+
+        // Gửi mail
+        $mail->send();
+
+        // Nếu gửi thành công, mới lưu vào DB
+        $con = $p->getthemLH($tenKH, $emailKH, $sdt, $tieude, $noidung, $ngaytao, 0);
+
+        if ($con == true) {
+            echo '<script>alert("Gửi liên hệ thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.")</script>';
+            echo '<script>window.location.href="index.php?page=contact"</script>';
+        } else {
+            echo '<script>alert("Gửi mail thành công nhưng lưu liên hệ thất bại!")</script>';
+        }
+
+    } catch (Exception $e) {
+        echo '<script>alert("Gửi email thất bại: ' . $mail->ErrorInfo . '")</script>';
     }
 }
 ?>
@@ -416,7 +465,13 @@
     }
     
     .contact-hero {
-        padding: 6rem 0;
+        padding: 0;
+    }
+    
+    .contact-description {
+        padding-left: 12px;
+        padding-right: 12px;
+        text-align: left;
     }
     
     .contact-form-section,
@@ -444,6 +499,23 @@
     
     .contact-map-full iframe {
         height: 350px;
+    }
+    .contact-form .btn-primary {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-hero,
+    .contact-hero-content,
+    .contact-hero .container,
+    .contact-hero .row,
+    .contact-hero .col-lg-6,
+    .contact-content,
+    .contact-badge,
+    .contact-title,
+    .contact-subtitle {
+        margin-top: 0 !important;
+        padding-top: 0.25rem;
     }
 }
 </style>
@@ -498,7 +570,6 @@
                     <div class="contact-form-section">
                         <h2 class="contact-form-title">Gửi tin nhắn cho chúng tôi</h2>
                         <p class="contact-form-subtitle">Điền thông tin bên dưới, chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất!</p>
-                        
                         <form method="POST" action="" class="contact-form">
                         <div class="row">
                                 <div class="col-md-6">

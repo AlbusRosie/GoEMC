@@ -122,7 +122,29 @@ class CartController extends BaseController {
         }
         $result = $this->cart->removeFromCart($orderDetailId);
         if ($result) {
-            echo json_encode(['success' => true, 'message' => 'Đã xóa sản phẩm khỏi giỏ hàng']);
+            // Lấy thông tin cập nhật để trả về frontend
+            $userId = $_SESSION['user_id'] ?? null;
+            $sessionId = session_id();
+            $cartCount = $this->cart->getCartCount($userId, $sessionId);
+            
+            // Tính tổng tiền mới nếu còn sản phẩm
+            $cartTotal = 0;
+            if ($cartCount > 0) {
+                $cartItems = $this->cart->getCart($userId, $sessionId);
+                foreach ($cartItems as $item) {
+                    $price = floatval($item['product_price']);
+                    $sale = floatval($item['product_sale']);
+                    $currentPrice = $sale > 0 ? $price - $sale : $price;
+                    $cartTotal += $currentPrice * $item['quantity'];
+                }
+            }
+            
+            echo json_encode([
+                'success' => true, 
+                'message' => 'Đã xóa sản phẩm khỏi giỏ hàng',
+                'cart_count' => $cartCount,
+                'cart_total' => $cartTotal
+            ]);
         } else {
             echo json_encode(['success' => false, 'message' => 'Có lỗi xảy ra']);
         }
@@ -139,7 +161,27 @@ class CartController extends BaseController {
         }
         $result = $this->cart->updateCartItem($orderDetailId, $quantity);
         if ($result) {
-            echo json_encode(['success' => true, 'message' => 'Đã cập nhật giỏ hàng']);
+            // Lấy thông tin cập nhật để trả về frontend
+            $userId = $_SESSION['user_id'] ?? null;
+            $sessionId = session_id();
+            $cartCount = $this->cart->getCartCount($userId, $sessionId);
+            $cartItems = $this->cart->getCart($userId, $sessionId);
+            
+            // Tính tổng tiền mới
+            $cartTotal = 0;
+            foreach ($cartItems as $item) {
+                $price = floatval($item['product_price']);
+                $sale = floatval($item['product_sale']);
+                $currentPrice = $sale > 0 ? $price - $sale : $price;
+                $cartTotal += $currentPrice * $item['quantity'];
+            }
+            
+            echo json_encode([
+                'success' => true, 
+                'message' => 'Đã cập nhật giỏ hàng',
+                'cart_count' => $cartCount,
+                'cart_total' => $cartTotal
+            ]);
         } else {
             echo json_encode(['success' => false, 'message' => 'Có lỗi xảy ra']);
         }

@@ -107,10 +107,6 @@ class Router {
     
     // Dispatch request
     public function dispatch($page = null, $action = null) {
-        // Debug logging
-        file_put_contents('logs/router_debug.log', "=== Dispatch Request ===\n", FILE_APPEND);
-        file_put_contents('logs/router_debug.log', "GET params: " . json_encode($_GET) . "\n", FILE_APPEND);
-        
         // Get page from URL if not provided
         if (!$page) {
             $page = isset($_GET['page']) ? $_GET['page'] : 'home';
@@ -121,19 +117,14 @@ class Router {
             $action = isset($_GET['action']) ? $_GET['action'] : null;
         }
         
-        file_put_contents('logs/router_debug.log', "Page: $page, Action: " . ($action ?? 'NULL') . "\n", FILE_APPEND);
-        
         // Build route key
         $routeKey = $page;
         if ($action) {
             $routeKey .= '/' . $action;
         }
         
-        file_put_contents('logs/router_debug.log', "Route key: $routeKey\n", FILE_APPEND);
-        
         // Check if this is an API route
         if (strpos($routeKey, 'api/') === 0) {
-            file_put_contents('logs/router_debug.log', "Detected API route, handling...\n", FILE_APPEND);
             $this->handleApiRoute($routeKey);
             return;
         }
@@ -182,9 +173,6 @@ class Router {
     private function handleApiRoute($routeKey) {
         global $conn;
         
-        // Debug logging
-        file_put_contents('logs/router_debug.log', "Handling API route: $routeKey\n", FILE_APPEND);
-        
         // Ensure session is started for API routes
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
@@ -210,37 +198,23 @@ class Router {
             return;
         }
         
-        file_put_contents('logs/router_debug.log', "Available API routes: " . json_encode(array_keys($apiRoutes)) . "\n", FILE_APPEND);
-        
         if (isset($apiRoutes[$routeKey])) {
             $controllerName = $apiRoutes[$routeKey][0];
             $actionName = $apiRoutes[$routeKey][1];
             
-            file_put_contents('logs/router_debug.log', "Found route: $controllerName::$actionName\n", FILE_APPEND);
-            
             if (class_exists($controllerName)) {
-                file_put_contents('logs/router_debug.log', "Controller class exists\n", FILE_APPEND);
                 $controller = new $controllerName($conn);
                 if (method_exists($controller, $actionName)) {
-                    file_put_contents('logs/router_debug.log', "Method exists, executing...\n", FILE_APPEND);
                     try {
                         $controller->$actionName();
-                        file_put_contents('logs/router_debug.log', "Method executed successfully\n", FILE_APPEND);
                         return;
                     } catch (Exception $e) {
-                        file_put_contents('logs/router_debug.log', "Error executing method: " . $e->getMessage() . "\n", FILE_APPEND);
                         http_response_code(500);
                         echo json_encode(['success' => false, 'message' => $e->getMessage()]);
                         return;
                     }
-                } else {
-                    file_put_contents('logs/router_debug.log', "Method does not exist: $actionName\n", FILE_APPEND);
                 }
-            } else {
-                file_put_contents('logs/router_debug.log', "Controller class does not exist: $controllerName\n", FILE_APPEND);
             }
-        } else {
-            file_put_contents('logs/router_debug.log', "API route not found: $routeKey\n", FILE_APPEND);
         }
         
         // API route not found

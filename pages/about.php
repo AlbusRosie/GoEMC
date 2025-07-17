@@ -442,6 +442,12 @@
         padding: 6rem 0;
     }
     
+    .about-description {
+        padding-left: 18px;
+        padding-right: 18px;
+        text-align: left;
+    }
+    
     .section-title {
         font-size: 2rem;
     }
@@ -460,7 +466,7 @@
     .services-section,
     .why-choose-section,
     .cta-section {
-        padding: 2rem 1.5rem;
+        margin-bottom: 1.5rem;
     }
 }
 </style>
