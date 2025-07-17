@@ -1,28 +1,19 @@
 <?php
-$success_message = '';
-$error_message = '';
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name = trim($_POST['name'] ?? '');
-    $email = trim($_POST['email'] ?? '');
-    $phone = trim($_POST['phone'] ?? '');
-    $subject = trim($_POST['subject'] ?? '');
-    $message = trim($_POST['message'] ?? '');
-    
-    // Validation
-    if (empty($name) || empty($email) || empty($message)) {
-        $error_message = 'Vui lòng điền đầy đủ thông tin bắt buộc.';
-    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $error_message = 'Email không hợp lệ.';
+    require_once __DIR__ . '/../controllers/ContactsController.php';
+    $p = new Gcontacts();
+    if(isset($_REQUEST["btn_lienhe"])){
+    $tenKH = $_REQUEST["name"];
+    $emailKH = $_REQUEST["email"];
+    $sdt = $_REQUEST["phone"];
+    $tieude = $_REQUEST["subject"];
+    $noidung = $_REQUEST["message"];
+    $ngaytao = date("Y-m-d");  // ✅ Lấy ngày hiện tại
+    $con = $p -> getthemLH($tenKH,$emailKH,$sdt,$tieude,$noidung,$ngaytao,0);
+    if($con == true){
+        echo '<script>alert("Gửi liên hệ thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.")</script>';
+        echo '<script>window.location.href="index.php?page=contact"</script>';
     } else {
-        try {
-            $stmt = $pdo->prepare("INSERT INTO contacts (name, email, phone, subject, message) VALUES (?, ?, ?, ?, ?)");
-            $stmt->execute([$name, $email, $phone, $subject, $message]);
-            $success_message = 'Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất có thể.';
-            $name = $email = $phone = $subject = $message = '';
-        } catch(PDOException $e) {
-            $error_message = 'Có lỗi xảy ra. Vui lòng thử lại sau.';
-        }
+        echo '<script>alert("Gửi liên hệ thất bại!")</script>';
     }
 }
 ?>
@@ -507,21 +498,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <div class="contact-form-section">
                         <h2 class="contact-form-title">Gửi tin nhắn cho chúng tôi</h2>
                         <p class="contact-form-subtitle">Điền thông tin bên dưới, chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất!</p>
-            
-            <?php if($success_message): ?>
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-                <i class="fas fa-check-circle me-2"></i><?php echo $success_message; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php endif; ?>
-            
-            <?php if($error_message): ?>
-            <div class="alert alert-danger alert-dismissible fade show" role="alert">
-                <i class="fas fa-exclamation-circle me-2"></i><?php echo $error_message; ?>
-                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-            </div>
-            <?php endif; ?>
-            
+                        
                         <form method="POST" action="" class="contact-form">
                         <div class="row">
                                 <div class="col-md-6">
@@ -547,7 +524,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                                 <label for="message">Nội dung <span class="text-danger">*</span></label>
                                 <textarea class="form-control" id="message" name="message" rows="6" required><?php echo htmlspecialchars($message ?? ''); ?></textarea>
                             </div>
-                        <button type="submit" class="btn btn-primary btn-lg">
+                        <button type="submit" class="btn btn-primary btn-lg" name="btn_lienhe">
                                 <span><i class="fas fa-paper-plane me-2"></i>Gửi tin nhắn</span>
                         </button>
                     </form>

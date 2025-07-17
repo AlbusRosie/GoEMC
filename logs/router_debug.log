@@ -2430,3 +2430,52 @@ Found route: CartController::getCart
 Controller class exists
 Method exists, executing...
 Method executed successfully
+=== Dispatch Request ===
+GET params: []
+Page: home, Action: NULL
+Route key: home
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"contact"}
+Page: contact, Action: NULL
+Route key: contact
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
+=== Dispatch Request ===
+GET params: {"page":"contact"}
+Page: contact, Action: NULL
+Route key: contact
+=== Dispatch Request ===
+GET params: {"page":"contact"}
+Page: contact, Action: NULL
+Route key: contact
+=== Dispatch Request ===
+GET params: {"page":"api\/cart\/get"}
+Page: api/cart/get, Action: NULL
+Route key: api/cart/get
+Detected API route, handling...
+Handling API route: api/cart/get
+Available API routes: ["api\/cart\/add","api\/cart\/update","api\/cart\/remove","api\/cart\/get","api\/cart\/clear","api\/order\/create","api\/order\/apply-coupon","api\/order\/calculate-shipping","api\/order\/cancel"]
+Found route: CartController::getCart
+Controller class exists
+Method exists, executing...
+Method executed successfully
