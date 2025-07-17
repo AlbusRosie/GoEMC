@@ -1,3 +1,5 @@
+<!-- SweetAlert2 CDN -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
 require_once __DIR__ . '/../controllers/ContactsController.php';
 require_once __DIR__ . '/../phpmailer/PHPMailer.php';
@@ -55,14 +57,37 @@ if (isset($_REQUEST["btn_lienhe"])) {
         $con = $p->getthemLH($tenKH, $emailKH, $sdt, $tieude, $noidung, $ngaytao, 0);
 
         if ($con == true) {
-            echo '<script>alert("Gửi liên hệ thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.")</script>';
-            echo '<script>window.location.href="index.php?page=contact"</script>';
+            echo '
+                <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                <script>
+                Swal.fire({
+                    title: "Gửi thành công!",
+                    text: "Chúng tôi sẽ liên hệ với bạn sớm nhất.",
+                    icon: "success",
+                    confirmButtonText: "OK"
+                }).then(() => {
+                    window.location.href = "index.php?page=contact";
+                });
+                </script>
+                ';
+
         } else {
             echo '<script>alert("Gửi mail thành công nhưng lưu liên hệ thất bại!")</script>';
         }
 
     } catch (Exception $e) {
-        echo '<script>alert("Gửi email thất bại: ' . $mail->ErrorInfo . '")</script>';
+        echo '
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script>
+            Swal.fire({
+                title: "Lỗi gửi email",
+                text: "'. addslashes($mail->ErrorInfo) .'",
+                icon: "error",
+                confirmButtonText: "Thử lại"
+            });
+            </script>
+            ';
+
     }
 }
 ?>
