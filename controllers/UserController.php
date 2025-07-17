@@ -29,22 +29,27 @@ class UserController extends BaseController {
             
             // Validation
             if (empty($data['email']) && empty($data['phone'])) {
+                header('Content-Type: application/json');
                 echo json_encode(['success' => false, 'message' => 'Vui lòng nhập email hoặc số điện thoại']);
                 return;
             }
             if (empty($data['password']) || empty($data['name'])) {
+                header('Content-Type: application/json');
                 echo json_encode(['success' => false, 'message' => 'Vui lòng nhập đầy đủ thông tin']);
                 return;
             }
             if (strlen($data['password']) < 6) {
+                header('Content-Type: application/json');
                 echo json_encode(['success' => false, 'message' => 'Mật khẩu phải có ít nhất 6 ký tự']);
                 return;
             }
             
             $result = $userModel->register($data);
+            header('Content-Type: application/json');
             echo json_encode($result);
             return;
         }
+        header('Content-Type: application/json');
         echo json_encode(['success' => false, 'message' => 'Invalid request']);
     }
 
@@ -57,6 +62,7 @@ class UserController extends BaseController {
             $password = $_POST['password'] ?? '';
             
             if (empty($emailOrPhone) || empty($password)) {
+                header('Content-Type: application/json');
                 echo json_encode(['success' => false, 'message' => 'Vui lòng nhập đầy đủ thông tin']);
                 return;
             }
@@ -65,12 +71,15 @@ class UserController extends BaseController {
             if ($user) {
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['user_name'] = $user['name'];
+                header('Content-Type: application/json');
                 echo json_encode(['success' => true, 'message' => 'Đăng nhập thành công']);
             } else {
+                header('Content-Type: application/json');
                 echo json_encode(['success' => false, 'message' => 'Sai thông tin đăng nhập']);
             }
             return;
         }
+        header('Content-Type: application/json');
         echo json_encode(['success' => false, 'message' => 'Invalid request']);
     }
 

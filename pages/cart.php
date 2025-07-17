@@ -1,16 +1,14 @@
 <?php
-// Debug cart data
-$logDir = 'logs';
-if (!is_dir($logDir)) {
-    mkdir($logDir, 0755, true);
-}
 
-file_put_contents($logDir . '/cart_debug.log', "=== Cart Page Debug ===\n", FILE_APPEND);
-file_put_contents($logDir . '/cart_debug.log', "cartItems type: " . gettype($cartItems) . "\n", FILE_APPEND);
-file_put_contents($logDir . '/cart_debug.log', "cartItems value: " . json_encode($cartItems) . "\n", FILE_APPEND);
-file_put_contents($logDir . '/cart_debug.log', "cartTotal: $cartTotal\n", FILE_APPEND);
-file_put_contents($logDir . '/cart_debug.log', "cartCount: $cartCount\n", FILE_APPEND);
-file_put_contents($logDir . '/cart_debug.log', "empty(cartItems): " . (empty($cartItems) ? 'true' : 'false') . "\n", FILE_APPEND);
+// Hiển thị thông báo cho guest users
+if (isset($isGuest) && $isGuest) {
+    ?>
+    <div class="guest-notice" style="background: linear-gradient(135deg, #ff6b35, #ff8c42); color: white; padding: 1rem; text-align: center; margin-bottom: 1rem;">
+        <i class="fas fa-info-circle me-2"></i>
+        <strong>Khách hàng: </strong> Vui lòng nhập thông tin chính xác khi đặt đơn để chúng tôi có thể hỗ trợ bạn nhanh nhất.
+    </div>
+    <?php
+}
 
 // Kiểm tra nếu không có sản phẩm nào trong giỏ hàng
 if (empty($cartItems)) {
@@ -138,7 +136,7 @@ if (empty($cartItems)) {
             </div>
             <h1 class="empty-cart-title">Giỏ hàng trống</h1>
             <p class="empty-cart-subtitle">Bạn chưa có sản phẩm nào trong giỏ hàng. Hãy khám phá bộ sưu tập nội thất gỗ cao cấp của chúng tôi!</p>
-            <a href="index.php?page=products" class="empty-cart-btn">
+            <a href="index.php?page=home" class="empty-cart-btn">
                 <i class="fas fa-arrow-right"></i>
                 Tiếp tục mua sắm
             </a>
@@ -833,7 +831,7 @@ if (empty($cartItems)) {
                     <h1>Giỏ hàng <span class="cart-count"><?php echo $cartCount; ?> sản phẩm</span></h1>
                 </div>
                 <div class="cart-actions">
-                    <a href="index.php?page=products" class="continue-shopping-btn">
+                    <a href="index.php?page=home" class="continue-shopping-btn">
                         <i class="fas fa-arrow-left"></i>
                         Tiếp tục mua sắm
                     </a>
@@ -1056,7 +1054,7 @@ function updateQuantity(cartId, change, isDirectInput = false) {
     // Cập nhật input ngay lập tức để tránh giật
     input.value = quantity;
     
-    console.log('Updating quantity:', { cartId, quantity });
+    
     
     // Gửi request cập nhật
     fetch('index.php?page=api/cart/update', {
@@ -1069,12 +1067,10 @@ function updateQuantity(cartId, change, isDirectInput = false) {
             quantity: quantity
         })
     })
-    .then(response => {
-        console.log('Response status:', response.status);
-        return response.json();
-    })
-    .then(data => {
-        console.log('Response data:', data);
+            .then(response => {
+            return response.json();
+        })
+            .then(data => {
         if (data.success) {
             // Cập nhật giá tiền của item này ngay lập tức
             updateItemPrice(cartId, quantity);
@@ -1098,7 +1094,6 @@ function updateQuantity(cartId, change, isDirectInput = false) {
         }
     })
     .catch(error => {
-        console.error('Error:', error);
         // Khôi phục giá trị cũ nếu có lỗi
         input.value = oldQuantity;
         alert('Có lỗi xảy ra khi cập nhật số lượng');
@@ -1186,7 +1181,6 @@ function removeFromCart(cartId) {
         }
     })
     .catch(error => {
-        console.error('Error:', error);
         alert('Có lỗi xảy ra khi xóa sản phẩm');
     });
 }
@@ -1204,7 +1198,6 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Kiểm tra element tồn tại trước khi sử dụng
     if (!shippingFeeElement || !totalAmountElement) {
-        console.log('Shipping elements not found, skipping shipping calculation');
         return;
     }
     

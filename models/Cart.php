@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__ . '/../includes/helpers.php';
+
 
 class Cart {
     private $conn;
@@ -41,29 +41,18 @@ class Cart {
 
     // Thêm sản phẩm vào giỏ
     public function addToCart($productId, $quantity, $selectedOptions = null, $userId = null, $sessionId = null) {
-        $logDir = 'logs';
-        if (!is_dir($logDir)) {
-            mkdir($logDir, 0755, true);
-        }
-        file_put_contents($logDir . '/cart_debug.log', "=== AddToCart Debug ===\n", FILE_APPEND);
-        file_put_contents($logDir . '/cart_debug.log', "Product ID: " . $productId . "\n", FILE_APPEND);
-        file_put_contents($logDir . '/cart_debug.log', "Quantity: " . $quantity . "\n", FILE_APPEND);
-        file_put_contents($logDir . '/cart_debug.log', "Selected Options (raw): " . json_encode($selectedOptions) . "\n", FILE_APPEND);
-        
         // Lấy hoặc tạo đơn hàng pending
         $order = $this->getPendingOrder($userId, $sessionId);
         if (!$order) {
             $order = $this->createPendingOrder($userId, $sessionId);
         }
         $orderId = $order['id'];
-        file_put_contents($logDir . '/cart_debug.log', "Order ID: " . $orderId . "\n", FILE_APPEND);
         
         // Chuẩn hóa selectedOptions: sort key để so sánh chính xác
         if ($selectedOptions && is_array($selectedOptions)) {
             ksort($selectedOptions);
         }
         $optionsJson = $selectedOptions ? json_encode($selectedOptions, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) : null;
-        file_put_contents($logDir . '/cart_debug.log', "Options JSON: " . $optionsJson . "\n", FILE_APPEND);
         
         // Kiểm tra đã có sản phẩm này với options này chưa
         if ($optionsJson) {
@@ -77,11 +66,6 @@ class Cart {
         }
         $existing = $stmt->fetch(PDO::FETCH_ASSOC);
         
-        file_put_contents($logDir . '/cart_debug.log', "Existing item found: " . ($existing ? 'YES' : 'NO') . "\n", FILE_APPEND);
-        if ($existing) {
-            file_put_contents($logDir . '/cart_debug.log', "Existing item ID: " . $existing['id'] . ", Current quantity: " . $existing['quantity'] . "\n", FILE_APPEND);
-        }
-        
         // Lấy thông tin sản phẩm
         $stmtP = $this->conn->prepare("SELECT * FROM products WHERE id = ?");
         $stmtP->execute([$productId]);
@@ -91,13 +75,10 @@ class Cart {
         if ($existing) {
             // Cộng dồn số lượng
             $newQty = $existing['quantity'] + $quantity;
-            file_put_contents($logDir . '/cart_debug.log', "Updating quantity to: " . $newQty . "\n", FILE_APPEND);
             $stmt2 = $this->conn->prepare("UPDATE order_details SET quantity = ? WHERE id = ?");
             $result = $stmt2->execute([$newQty, $existing['id']]);
-            file_put_contents($logDir . '/cart_debug.log', "Update result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n", FILE_APPEND);
             return $result;
         } else {
-            file_put_contents($logDir . '/cart_debug.log', "Creating new item\n", FILE_APPEND);
             $stmt3 = $this->conn->prepare("INSERT INTO order_details (order_id, product_id, product_name, quantity, price, selected_options) VALUES (?, ?, ?, ?, ?, ?)");
             $result = $stmt3->execute([
                 $orderId,
@@ -107,7 +88,6 @@ class Cart {
                 $price,
                 $optionsJson
             ]);
-            file_put_contents($logDir . '/cart_debug.log', "Insert result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n", FILE_APPEND);
             return $result;
         }
     }
@@ -128,7 +108,9 @@ class Cart {
     p.color as product_color, 
     p.main_images as product_main_images,
     c.name as category_name,
-    pi.image_path as product_image
+    pi.image_path as product_image,
+    (od.price * od.quantity) as total_price,
+    od.price as current_price
  FROM order_details od
  JOIN products p ON od.product_id = p.id
  LEFT JOIN categories c ON p.category_id = c.id
@@ -139,6 +121,9 @@ class Cart {
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         foreach ($items as &$item) {
             $item['selected_options_array'] = $item['selected_options'] ? json_decode($item['selected_options'], true) : [];
+            // Đảm bảo có đủ các trường cần thiết
+            $item['total_price'] = floatval($item['price']) * intval($item['quantity']);
+            $item['current_price'] = floatval($item['price']);
         }
         return $items;
     }
@@ -174,6 +159,36 @@ class Cart {
         $product = $stmt->fetch(PDO::FETCH_ASSOC);
         if (!$product) return false;
         return $product['stock'] >= $quantity;
+    }
+
+    // Tính tổng tiền giỏ hàng
+    public function getCartTotal($userId = null, $sessionId = null) {
+        $cartItems = $this->getCart($userId, $sessionId);
+        $total = 0;
+        
+        foreach ($cartItems as $item) {
+            $price = floatval($item['price']);
+            $quantity = intval($item['quantity']);
+            $total += $price * $quantity;
+        }
+        
+        return $total;
+    }
+
+    // Xóa toàn bộ giỏ hàng
+    public function clearCart($userId = null, $sessionId = null) {
+        $order = $this->getPendingOrder($userId, $sessionId);
+        if (!$order) return false;
+        
+        $orderId = $order['id'];
+        
+        // Xóa tất cả order_details
+        $stmt = $this->conn->prepare("DELETE FROM order_details WHERE order_id = ?");
+        $stmt->execute([$orderId]);
+        
+        // Xóa order
+        $stmt2 = $this->conn->prepare("DELETE FROM orders WHERE id = ?");
+        return $stmt2->execute([$orderId]);
     }
 }
 ?> 

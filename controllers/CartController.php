@@ -12,19 +12,34 @@ class CartController extends BaseController {
         if (session_status() === PHP_SESSION_NONE) {
             session_start();
         }
+        
+        // Start output buffering to prevent headers already sent error
+        if (!ob_get_level()) {
+            ob_start();
+        }
+        
         $this->cart = new Cart($conn);
         $this->product = new Product($conn);
         $this->productOptionModel = new ProductOption($conn);
     }
     // Thêm sản phẩm vào giỏ hàng
     public function addToCart() {
+        
         header('Content-Type: application/json');
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
             http_response_code(405);
             echo json_encode(['success' => false, 'message' => 'Method not allowed']);
             return;
         }
-        $input = json_decode(file_get_contents('php://input'), true);
+        
+        // Đảm bảo session được start
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
+        $rawInput = file_get_contents('php://input');
+        
+        $input = json_decode($rawInput, true);
 
         $productId = (int)($input['product_id'] ?? 0);
         $quantity = (int)($input['quantity'] ?? 1);
@@ -34,6 +49,7 @@ class CartController extends BaseController {
             echo json_encode(['success' => false, 'message' => 'Dữ liệu không hợp lệ']);
             return;
         }
+        
         // Lấy tất cả options của sản phẩm để kiểm tra
         $productOptions = $this->productOptionModel->getByProductId($productId);
         $missingRequired = [];
@@ -59,6 +75,7 @@ class CartController extends BaseController {
             echo json_encode(['success' => false, 'message' => 'Vui lòng chọn: ' . implode(', ', $missingRequired)]);
             return;
         }
+        
         // Kiểm tra tồn kho option nếu có selectedOptions
         if ($selectedOptions && is_array($selectedOptions)) {
             foreach ($selectedOptions as $optionName => $optionValue) {
@@ -79,15 +96,20 @@ class CartController extends BaseController {
                 return;
             }
         }
+        
+        // Cho phép cả user đã đăng nhập và guest user
         $userId = $_SESSION['user_id'] ?? null;
         $sessionId = session_id();
+        
         $result = $this->cart->addToCart($productId, $quantity, $selectedOptions, $userId, $sessionId);
+        
         if ($result) {
             $cartCount = $this->cart->getCartCount($userId, $sessionId);
             $response = [
                 'success' => true,
                 'message' => 'Đã thêm sản phẩm vào giỏ hàng!',
-                'cart_count' => $cartCount
+                'cart_count' => $cartCount,
+                'is_guest' => !isset($_SESSION['user_id'])
             ];
             echo json_encode($response);
         } else {
@@ -188,19 +210,27 @@ class CartController extends BaseController {
     }
 
     public function showCart() {
+        // Đảm bảo session được start
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+        
         $userId = $_SESSION['user_id'] ?? null;
         $sessionId = session_id();
-        $cartItems = $this->cart->getCart($userId, $sessionId); // Phải trả về đầy đủ thông tin sản phẩm
+        $cartItems = $this->cart->getCart($userId, $sessionId);
         $cartTotal = 0;
         $cartCount = 0;
+        
         foreach ($cartItems as $item) {
             $cartTotal += $item['price'] * $item['quantity'];
             $cartCount += $item['quantity'];
         }
+        
         $this->render('cart', [
             'cartItems' => $cartItems,
             'cartTotal' => $cartTotal,
-            'cartCount' => $cartCount
+            'cartCount' => $cartCount,
+            'isGuest' => !isset($_SESSION['user_id'])
         ]);
     }
 } 

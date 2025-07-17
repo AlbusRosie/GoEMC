@@ -10,30 +10,6 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        // Initialize theme from session
-        const currentTheme = '<?php echo isset($_SESSION['theme']) ? $_SESSION['theme'] : 'light'; ?>';
-        document.documentElement.classList.toggle('dark-theme', currentTheme === 'dark');
-        
-        // Theme toggle handler
-        window.toggleTheme = function() {
-            fetch('<?php echo BASE_URL; ?>/includes/header.php', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: 'toggle_theme=1'
-            })
-            .then(response => response.json())
-            .then(data => {
-                document.documentElement.classList.toggle('dark-theme', data.theme === 'dark');
-            })
-            .catch(error => console.error('Error:', error));
-        };
-    });
-    </script>
 </head>
 <body>
     <?php include 'includes/header.php'; ?>

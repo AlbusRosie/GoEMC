@@ -131,8 +131,8 @@ unset($relatedProduct);
 }
 
 .color-option.selected {
-    border: 2px solid #333;
-    box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+    border: 4px solid rgb(255, 77, 0);
+    box-shadow: 0 0 0 1px rgba(255, 77, 0, 0.5);
 }
 
 /* Product Detail Styles */
@@ -1645,15 +1645,17 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function addToCart() {
-    console.log('addToCart called!');
+    
     const quantity = document.getElementById('quantity').value;
     const productId = <?php echo $product_id; ?>;
+    
     // Lấy màu sắc
     let selectedColor = null;
     const colorEl = document.querySelector('.color-option.selected');
     if (colorEl) {
         selectedColor = colorEl.getAttribute('data-color');
     }
+    
     // Lấy các option khác
     let selectedOptions = {};
     if (selectedColor) {
@@ -1667,6 +1669,7 @@ function addToCart() {
             }
         });
     }
+    
     // Chuẩn hóa selectedOptions: sort key trước khi gửi
     selectedOptions = Object.keys(selectedOptions).sort().reduce((obj, key) => {
         obj[key] = selectedOptions[key];
@@ -1674,11 +1677,7 @@ function addToCart() {
     }, {});
 
     // Kiểm tra thiếu màu sắc
-    console.log('=== FRONTEND VALIDATION ===');
-    console.log('selectedColor:', selectedColor);
-    console.log('color-option exists:', !!document.querySelector('.color-option'));
     if (!selectedColor && document.querySelector('.color-option')) {
-        console.log('Missing color - showing warning');
         Swal.fire({
             icon: 'warning',
             title: 'Vui lòng chọn màu sắc!',
@@ -1705,8 +1704,12 @@ function addToCart() {
         return;
     }
 
-    // Gửi request
-    console.log('Gửi request addToCart:', {productId, quantity, selectedOptions});
+    // Gửi request trực tiếp đến CartController
+    
+    // Thêm timeout để tránh vòng lặp vô hạn
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 giây timeout
+    
     fetch('index.php?page=api/cart/add', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -1714,18 +1717,15 @@ function addToCart() {
             product_id: productId,
             quantity: parseInt(quantity),
             selected_options: selectedOptions
-        })
+        }),
+        signal: controller.signal
     })
-    .then(response => response.json())
+        .then(response => {
+        clearTimeout(timeoutId);
+        return response.json();
+    })
     .then(data => {
-        console.log('=== DEBUG SWEETALERT ===');
-        console.log('Raw data:', data);
-        console.log('data.success:', data.success);
-        console.log('data.message:', data.message);
-        console.log('=======================');
-        
         if (data.success) {
-            console.log('Hiển thị SweetAlert thành công');
             Swal.fire({
                 icon: 'success',
                 title: 'Đã thêm vào giỏ hàng!',
@@ -1735,9 +1735,7 @@ function addToCart() {
             document.querySelectorAll('.cart-count').forEach(function(el) {
                 el.textContent = data.cart_count;
             });
-            if (typeof updateCartCount === 'function') updateCartCount();
         } else {
-            console.log('Hiển thị SweetAlert lỗi');
             Swal.fire({
                 icon: 'error',
                 title: 'Lỗi',
@@ -1746,12 +1744,20 @@ function addToCart() {
         }
     })
     .catch(error => {
-        console.log('Lỗi fetch addToCart:', error);
-        Swal.fire({
-            icon: 'error',
-            title: 'Lỗi',
-            text: 'Không thể thêm vào giỏ hàng! (Lỗi JSON hoặc server)'
-        });
+        clearTimeout(timeoutId);
+        if (error.name === 'AbortError') {
+            Swal.fire({
+                icon: 'error',
+                title: 'Lỗi',
+                text: 'Request timeout - có thể có vòng lặp vô hạn!'
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Lỗi',
+                text: 'Không thể thêm vào giỏ hàng! (Lỗi JSON hoặc server)'
+            });
+        }
     });
 }
 

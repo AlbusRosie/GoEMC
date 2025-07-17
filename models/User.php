@@ -20,17 +20,17 @@ class User {
             $user = $stmt->fetch();
             
             // Debug log
-            error_log("User lookup result: " . ($user ? "Found user ID: " . $user['id'] : "No user found"));
+    
             
             if ($user && password_verify($password, $user['password'])) {
-                error_log("Password verification successful");
+
                 return $user;
             } else {
-                error_log("Password verification failed");
+
             }
             return false;
         } catch(PDOException $e) {
-            error_log("Database error in login: " . $e->getMessage());
+
             return false;
         }
     }

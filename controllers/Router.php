@@ -32,11 +32,7 @@ class Router {
             'product' => ['controller' => 'ProductController', 'action' => 'show'],
             'category' => ['controller' => 'CategoryController', 'action' => 'show'],
             
-            // User routes
-            'login' => ['controller' => 'UserController', 'action' => 'login'],
-            'register' => ['controller' => 'UserController', 'action' => 'register'],
-            'profile' => ['controller' => 'UserController', 'action' => 'profile'],
-            'logout' => ['controller' => 'UserController', 'action' => 'logout'],
+
             
             // API routes
             'api/products/search' => ['controller' => 'ApiController', 'action' => 'searchProducts'],
@@ -83,14 +79,10 @@ class Router {
             'admin/users/update' => ['controller' => 'UserController', 'action' => 'adminUpdate'],
             'admin/users/delete' => ['controller' => 'UserController', 'action' => 'adminDelete'],
             
-            // User authentication routes
+            // Admin authentication routes
             'admin/login' => ['controller' => 'UserController', 'action' => 'login'],
             'admin/authenticate' => ['controller' => 'UserController', 'action' => 'authenticate'],
             'admin/logout' => ['controller' => 'AdminController', 'action' => 'logout'],
-            'user/register' => ['controller' => 'UserController', 'action' => 'register'],
-            'user/store' => ['controller' => 'UserController', 'action' => 'store'],
-            'user/profile' => ['controller' => 'UserController', 'action' => 'profile'],
-            'user/update-profile' => ['controller' => 'UserController', 'action' => 'updateProfile'],
             
             // Cart routes
             'cart' => ['controller' => 'CartController', 'action' => 'showCart'],
@@ -161,9 +153,14 @@ class Router {
             return;
         }
         
-        // Execute action
+        // Execute action with parameters
         try {
-            $controller->$actionName();
+            // Check if this is a parameterized route (like order with ID)
+            if ($routeKey === 'order' && isset($_GET['id'])) {
+                $controller->$actionName($_GET['id']);
+            } else {
+                $controller->$actionName();
+            }
         } catch (Exception $e) {
             $this->handleError($e->getMessage());
         }
@@ -188,15 +185,10 @@ class Router {
             'api/order/create' => ['OrderController', 'createOrder'],
             'api/order/apply-coupon' => ['OrderController', 'applyCoupon'],
             'api/order/calculate-shipping' => ['OrderController', 'calculateShipping'],
+            'api/order/check-payment' => ['OrderController', 'checkPayment'],
+            'api/order/update-payment-status' => ['OrderController', 'updatePaymentStatus'],
             'api/order/cancel' => ['OrderController', 'cancelOrder']
         ];
-        // Chỉ cho phép POST với api/cart/add
-        if ($routeKey === 'api/cart/add' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
-            http_response_code(405);
-            header('Content-Type: application/json');
-            echo json_encode(['success' => false, 'message' => 'Method not allowed']);
-            return;
-        }
         
         if (isset($apiRoutes[$routeKey])) {
             $controllerName = $apiRoutes[$routeKey][0];
@@ -210,6 +202,7 @@ class Router {
                         return;
                     } catch (Exception $e) {
                         http_response_code(500);
+                        header('Content-Type: application/json');
                         echo json_encode(['success' => false, 'message' => $e->getMessage()]);
                         return;
                     }
@@ -219,6 +212,7 @@ class Router {
         
         // API route not found
         http_response_code(404);
+        header('Content-Type: application/json');
         echo json_encode(['success' => false, 'message' => 'API endpoint not found']);
     }
     
@@ -247,7 +241,7 @@ class Router {
     // Handle errors
     private function handleError($message) {
         // Log error
-        error_log("Router Error: " . $message);
+
         
         // Show error page
         global $conn;
@@ -290,7 +284,8 @@ class Router {
         return [
             'page' => $page,
             'action' => $action,
-            'is_admin' => $this->isAdminRoute($page, $action)
+            'is_admin' => $this->isAdminRoute($page, $action),
+            'is_api' => strpos($page, 'api/') === 0
         ];
     }
 } 

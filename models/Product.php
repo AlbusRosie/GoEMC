@@ -79,7 +79,7 @@ class Product {
         
         try {
             // Debug: Log data being inserted
-            error_log("Creating product with data: " . json_encode($data));
+    
             
             $sql = "INSERT INTO products (category_id, name, price, stock, description, 
                     image_des, image_, main_images, description_images, is_available, status, size, color, sale) 
@@ -103,7 +103,7 @@ class Product {
             ]);
             
             $product_id = $this->pdo->lastInsertId();
-            error_log("Product inserted with ID: " . $product_id);
+
             
             // Lưu hình ảnh vào bảng product_images
             if (!empty($data['main_images_array'])) {
@@ -119,11 +119,11 @@ class Product {
             }
             
             $this->pdo->commit();
-            error_log("Transaction committed successfully. Returning product_id: " . $product_id);
+
             return $product_id; // Trả về product_id thay vì true
         } catch (Exception $e) {
             $this->pdo->rollBack();
-            error_log("Transaction rolled back due to error: " . $e->getMessage());
+
             throw $e;
         }
     }

@@ -286,6 +286,8 @@ INSERT INTO `product_option_values` (`id`, `option_id`, `value`, `price_adjustme
 	(5, 7, 'Milan', 0.00, 12, 0, 0, '2025-07-16 09:52:49'),
 	(6, 7, 'ABC', 0.00, 1, 0, 0, '2025-07-16 09:52:49');
 
+
+
 /*!40103 SET TIME_ZONE=IFNULL(@OLD_TIME_ZONE, 'system') */;
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IFNULL(@OLD_FOREIGN_KEY_CHECKS, 1) */;

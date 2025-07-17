@@ -1,4 +1,7 @@
 <?php
+// Start output buffering to prevent headers already sent error
+ob_start();
+
 session_start();
 require_once 'config/database.php';
 require_once 'config/config.php';
@@ -11,23 +14,7 @@ global $conn;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-// Xử lý các action POST trước khi routing
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $action = $_POST['action'] ?? '';
-    
-    if ($action === 'login' || $action === 'register') {
-        require_once 'controllers/UserController.php';
-        $controller = new UserController($conn);
-        
-        if ($action === 'login') {
-            $controller->login();
-            exit;
-        } elseif ($action === 'register') {
-            $controller->register();
-            exit;
-        }
-    }
-}
+
 
 // Nếu là POST và Content-Type là application/json thì parse body vào $_POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
@@ -42,7 +29,7 @@ $router = new Router();
 $currentRoute = $router->getCurrentRoute();
 
 // Nếu là API thì không include header/footer
-if (strpos($currentRoute['page'], 'api/') === 0) {
+if ($currentRoute['is_api']) {
     $router->dispatch();
 } elseif ($currentRoute['is_admin']) {
     $router->dispatch();
@@ -51,4 +38,7 @@ if (strpos($currentRoute['page'], 'api/') === 0) {
     $router->dispatch();
     include 'includes/footer.php';
 }
+
+// Flush output buffer
+ob_end_flush();
 ?> 

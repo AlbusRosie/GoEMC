@@ -612,6 +612,16 @@ $recent_contacts = [];
                             </a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="fake-payment-test.php">
+                                <i class="fas fa-flask me-2"></i>Test Thanh Toán
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fake-payment-logs.php">
+                                <i class="fas fa-list-alt me-2"></i>Log Giao Dịch
+                            </a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="settings.php">
                                 <i class="fas fa-cog me-2"></i>Cài đặt
                             </a>

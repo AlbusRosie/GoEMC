@@ -102,75 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// Product Detail Page Specific Functions
-if (window.location.href.includes('page=product')) {
-    // Product Image Gallery
-    let currentImageIndex = 0;
-    const images = [
-        // This will be populated by PHP
-    ];
-    
-    function setMainImage(thumbnail, imageSrc) {
-        document.getElementById('mainImage').src = imageSrc;
-        
-        // Update active thumbnail
-        document.querySelectorAll('.thumbnail-image').forEach(img => img.classList.remove('active'));
-        thumbnail.classList.add('active');
-        
-        // Update current index
-        currentImageIndex = images.indexOf(imageSrc);
-    }
-    
-    function changeImage(direction) {
-        if (direction === 'next') {
-            currentImageIndex = (currentImageIndex + 1) % images.length;
-        } else {
-            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-        }
-        
-        const newImageSrc = images[currentImageIndex];
-        document.getElementById('mainImage').src = newImageSrc;
-        
-        // Update active thumbnail
-        document.querySelectorAll('.thumbnail-image').forEach((img, index) => {
-            if (index === currentImageIndex) {
-                img.classList.add('active');
-            } else {
-                img.classList.remove('active');
-            }
-        });
-    }
-    
-    // Quantity Controls
-    function changeQuantity(delta) {
-        const quantityInput = document.getElementById('quantity');
-        let currentQuantity = parseInt(quantityInput.value);
-        currentQuantity = Math.max(1, currentQuantity + delta);
-        quantityInput.value = currentQuantity;
-    }
-    
-    // Color Selection
-    document.querySelectorAll('.color-option').forEach(option => {
-        option.addEventListener('click', function() {
-            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('active'));
-            this.classList.add('active');
-            
-            const colorName = this.getAttribute('data-color');
-            document.querySelector('.selected-color strong').textContent = colorName;
-        });
-    });
-    
-    function buyNow() {
-        const quantity = document.getElementById('quantity').value;
-        // alert('Chuyển đến trang thanh toán với ' + quantity + ' sản phẩm!');
-    }
-    
-    // Make functions globally available
-    window.setMainImage = setMainImage;
-    window.changeImage = changeImage;
-    window.changeQuantity = changeQuantity;
-    window.buyNow = buyNow;
-} 
 
 function updateCartCount() {
     fetch('index.php?page=api/cart/get')
@@ -184,5 +115,9 @@ function updateCartCount() {
         });
 }
 
-// Sau khi thêm vào giỏ hàng thành công:
-updateCartCount(); 
+// Cập nhật cart count khi trang load
+document.addEventListener('DOMContentLoaded', function() {
+    updateCartCount();
+});
+
+
