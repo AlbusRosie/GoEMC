@@ -1142,11 +1142,11 @@ unset($relatedProduct);
                                     'Xanh dương' => '#0000FF',
                                     'Tím' => '#800080',
                                     'Cam' => '#FFA500',
-                                    'Khác' => 'linear-gradient(45deg, #ff0000, #00ff00, #0000ff)'
+                                    'Khác' => 'linear-gradient(45deg, #ff0000, #0000ff)'
                                 ];
                                 foreach ($productColors as $index => $colorName): 
                                     $hexColor = $colorMap[$colorName] ?? '#808080';
-                                    $isActive = ($index === 0) ? 'selected' : '';
+                                    $isActive = '';
                                     $borderStyle = ($colorName === 'Trắng' || $colorName === 'Kem') ? 'border: 1px solid #ddd;' : '';
                                 ?>
                                 <div class="color-option <?php echo $isActive; ?>" 
@@ -1529,6 +1529,7 @@ unset($relatedProduct);
     transition: opacity 0.3s;
 "></div>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 // Đảm bảo các hàm ở phạm vi global
 
@@ -1654,7 +1655,7 @@ function addToCart() {
         selectedColor = colorEl.getAttribute('data-color');
     }
     // Lấy các option khác
-    const selectedOptions = {};
+    let selectedOptions = {};
     if (selectedColor) {
         selectedOptions['Màu sắc'] = selectedColor;
     }
@@ -1666,25 +1667,44 @@ function addToCart() {
             }
         });
     }
-    // Validate
+    // Chuẩn hóa selectedOptions: sort key trước khi gửi
+    selectedOptions = Object.keys(selectedOptions).sort().reduce((obj, key) => {
+        obj[key] = selectedOptions[key];
+        return obj;
+    }, {});
+
+    // Kiểm tra thiếu màu sắc
+    console.log('=== FRONTEND VALIDATION ===');
+    console.log('selectedColor:', selectedColor);
+    console.log('color-option exists:', !!document.querySelector('.color-option'));
     if (!selectedColor && document.querySelector('.color-option')) {
-        console.log('Chưa chọn màu sắc!');
+        console.log('Missing color - showing warning');
+        Swal.fire({
+            icon: 'warning',
+            title: 'Vui lòng chọn màu sắc!',
+            showConfirmButton: true
+        });
         return;
     }
-    // Validate required options
+
+    // Kiểm tra thiếu tất cả options (không chỉ is_required = 1)
     let missingOptions = [];
     if (Array.isArray(productOptions)) {
         productOptions.forEach(option => {
-            if (option.is_required) {
-                const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
-                if (!selectedValue) missingOptions.push(option.name);
-            }
+            const selectedValue = document.querySelector(`input[name="option_${option.id}"]:checked`);
+            if (!selectedValue) missingOptions.push(option.name);
         });
     }
     if (missingOptions.length > 0) {
-        console.log('Thiếu option bắt buộc:', missingOptions);
+        Swal.fire({
+            icon: 'warning',
+            title: 'Thiếu tùy chọn!',
+            text: 'Vui lòng chọn: ' + missingOptions.join(', '),
+            showConfirmButton: true
+        });
         return;
     }
+
     // Gửi request
     console.log('Gửi request addToCart:', {productId, quantity, selectedOptions});
     fetch('index.php?page=api/cart/add', {
@@ -1696,25 +1716,42 @@ function addToCart() {
             selected_options: selectedOptions
         })
     })
-    .then(response => response.text())
-    .then(text => {
-      console.log('Raw response:', text);
-      return JSON.parse(text);
-    })
+    .then(response => response.json())
     .then(data => {
-        console.log('Kết quả addToCart:', data);
+        console.log('=== DEBUG SWEETALERT ===');
+        console.log('Raw data:', data);
+        console.log('data.success:', data.success);
+        console.log('data.message:', data.message);
+        console.log('=======================');
+        
         if (data.success) {
+            console.log('Hiển thị SweetAlert thành công');
+            Swal.fire({
+                icon: 'success',
+                title: 'Đã thêm vào giỏ hàng!',
+                showConfirmButton: false,
+                timer: 1500
+            });
             document.querySelectorAll('.cart-count').forEach(function(el) {
                 el.textContent = data.cart_count;
-                console.log('Cập nhật cart-count:', el, el.textContent);
             });
             if (typeof updateCartCount === 'function') updateCartCount();
         } else {
-            console.log('Lỗi khi thêm vào giỏ hàng:', data.message);
+            console.log('Hiển thị SweetAlert lỗi');
+            Swal.fire({
+                icon: 'error',
+                title: 'Lỗi',
+                text: data.message || 'Có lỗi xảy ra khi thêm vào giỏ hàng!'
+            });
         }
     })
     .catch(error => {
         console.log('Lỗi fetch addToCart:', error);
+        Swal.fire({
+            icon: 'error',
+            title: 'Lỗi',
+            text: 'Không thể thêm vào giỏ hàng! (Lỗi JSON hoặc server)'
+        });
     });
 }
 

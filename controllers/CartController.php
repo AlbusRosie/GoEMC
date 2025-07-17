@@ -25,16 +25,42 @@ class CartController extends BaseController {
             return;
         }
         $input = json_decode(file_get_contents('php://input'), true);
+
         $productId = (int)($input['product_id'] ?? 0);
         $quantity = (int)($input['quantity'] ?? 1);
         $selectedOptions = $input['selected_options'] ?? null;
+
         if (!$productId || $quantity <= 0) {
             echo json_encode(['success' => false, 'message' => 'Dữ liệu không hợp lệ']);
             return;
         }
-        // Kiểm tra tồn kho option nếu có
+        // Lấy tất cả options của sản phẩm để kiểm tra
+        $productOptions = $this->productOptionModel->getByProductId($productId);
+        $missingRequired = [];
+
+        // Kiểm tra tất cả options có sẵn (không chỉ is_required = 1)
+        if (!empty($productOptions)) {
+            foreach ($productOptions as $opt) {
+                if (!$selectedOptions || !is_array($selectedOptions) || !isset($selectedOptions[$opt['name']]) || $selectedOptions[$opt['name']] === '') {
+                    $missingRequired[] = $opt['name'];
+                }
+            }
+        }
+
+        // Kiểm tra màu sắc nếu sản phẩm có màu
+        $product = $this->product->getById($productId);
+        if (!empty($product['color'])) {
+            if (!$selectedOptions || !isset($selectedOptions['Màu sắc']) || $selectedOptions['Màu sắc'] === '') {
+                $missingRequired[] = 'Màu sắc';
+            }
+        }
+
+        if (!empty($missingRequired)) {
+            echo json_encode(['success' => false, 'message' => 'Vui lòng chọn: ' . implode(', ', $missingRequired)]);
+            return;
+        }
+        // Kiểm tra tồn kho option nếu có selectedOptions
         if ($selectedOptions && is_array($selectedOptions)) {
-            $productOptions = $this->productOptionModel->getByProductId($productId);
             foreach ($selectedOptions as $optionName => $optionValue) {
                 foreach ($productOptions as $opt) {
                     if ($opt['name'] == $optionName) {
@@ -47,6 +73,7 @@ class CartController extends BaseController {
                 }
             }
         } else {
+            // Nếu không có options, kiểm tra stock sản phẩm chính
             if (!$this->cart->checkStock($productId, $quantity)) {
                 echo json_encode(['success' => false, 'message' => 'Sản phẩm không đủ số lượng']);
                 return;
@@ -57,13 +84,18 @@ class CartController extends BaseController {
         $result = $this->cart->addToCart($productId, $quantity, $selectedOptions, $userId, $sessionId);
         if ($result) {
             $cartCount = $this->cart->getCartCount($userId, $sessionId);
-            echo json_encode([
+            $response = [
                 'success' => true,
                 'message' => 'Đã thêm sản phẩm vào giỏ hàng!',
                 'cart_count' => $cartCount
-            ]);
+            ];
+            echo json_encode($response);
         } else {
-            echo json_encode(['success' => false, 'message' => 'Có lỗi xảy ra khi thêm vào giỏ hàng']);
+            $response = [
+                'success' => false,
+                'message' => 'Có lỗi xảy ra khi thêm vào giỏ hàng'
+            ];
+            echo json_encode($response);
         }
     }
     // Lấy giỏ hàng

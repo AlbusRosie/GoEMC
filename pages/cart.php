@@ -318,15 +318,21 @@ if (empty($cartItems)) {
     color: #1e293b;
     margin: 0 0 0.5rem 0;
     line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Selected Options Styling */
 .selected-options {
-    margin-top: 1rem;
-    padding: 1rem;
-    background: linear-gradient(135deg, #f8fafc, #f1f5f9);
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
+    max-width: 200px;
+    width: 100%;
+    min-width: 0;
+    word-break: break-word;
+}
+
+.product-info {
+    min-width: 0;
 }
 
 .options-title {
@@ -451,14 +457,24 @@ if (empty($cartItems)) {
 
 .quantity-btn:hover {
     background: #ff6b35;
-    color: white;
-    transform: scale(1.05);
+    color: #fff;
     box-shadow: 0 2px 8px rgba(255, 107, 53, 0.3);
+    border: none;
 }
 
 .quantity-btn:active {
-    transform: scale(0.95);
     background: #e55a2b;
+    color: #fff;
+}
+
+.quantity-btn:first-child:hover {
+    background: #ff6b35;
+    color: #fff;
+}
+
+.quantity-btn:last-child:hover {
+    background: #ff8c42;
+    color: #fff;
 }
 
 .quantity-btn:focus {
@@ -470,12 +486,20 @@ if (empty($cartItems)) {
     border: none;
     background: transparent;
     text-align: center;
-    padding: 0.75rem;
     width: 60px;
     font-weight: 600;
     color: #1e293b;
     font-size: 1rem;
     transition: all 0.3s ease;
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    margin: 0;
+}
+
+.quantity-input::-webkit-outer-spin-button,
+.quantity-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 .quantity-input:focus {
@@ -693,7 +717,7 @@ if (empty($cartItems)) {
     
     .quantity-input {
         width: 50px;
-        padding: 0.6rem;
+        padding: 0.5rem;
     }
     
     .price-section {
@@ -856,7 +880,6 @@ if (empty($cartItems)) {
                             <!-- Selected Options Display -->
                             <?php if (!empty($item['selected_options_array'])): ?>
                             <div class="selected-options">
-                                <div class="options-title">Tùy chọn đã chọn:</div>
                                 <div class="options-list">
                                     <?php foreach ($item['selected_options_array'] as $optionName => $optionValue): ?>
                                     <div class="option-item">
@@ -931,11 +954,15 @@ if (empty($cartItems)) {
                             $sale = floatval($item['product_sale']);
                             $currentPrice = $sale > 0 ? $price - $sale : $price;
                             $totalPrice = $currentPrice * $item['quantity'];
+                            $originalPrice = isset($item['original_price']) ? floatval($item['original_price']) : $price;
+                            $totalOriginalPrice = $originalPrice * $item['quantity'];
                             ?>
-                            <?php if (isset($item['sale_amount']) && $item['sale_amount'] > 0): ?>
-                                <div class="price-original">
-                                    <?php echo number_format((isset($item['original_price']) ? $item['original_price'] : 0) * $item['quantity']); ?>₫
-                                </div>
+                            <!-- Luôn hiển thị giá gốc -->
+                            <div class="price-original" style="text-decoration: line-through; color: #94a3b8; font-size: 0.875rem; margin-bottom: 0.25rem;">
+                                <?php echo number_format($totalOriginalPrice); ?>₫
+                            </div>
+                            <!-- Hiển thị giá hiện tại -->
+                            <?php if ($sale > 0): ?>
                                 <div class="price-current price-sale">
                                     <?php echo number_format($totalPrice); ?>₫
                                 </div>

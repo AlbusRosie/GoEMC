@@ -1,0 +1,138 @@
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Trắng"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Tr\u1eafng"}}
+Product ID: 9, Quantity: 1
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Kem"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"Kem"}}
+Product ID: 9, Quantity: 1
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"3"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"4"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Kem"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"Kem"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"3"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"1"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"2"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"3"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"4"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"1"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"2"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"3"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Product options found: [{"id":6,"product_id":9,"name":"Lo\u1ea1i","description":null,"is_required":0,"sort_order":0,"created_at":"2025-07-15 16:46:53","values":[{"id":3,"option_id":6,"value":"Milan","price_adjustment":"0.00","stock_quantity":1,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"},{"id":4,"option_id":6,"value":"OSLO","price_adjustment":"0.00","stock_quantity":3,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"}]}]
+Selected options: {"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}
+Checking option: Loại
+Missing option: Loại
+Product color: ["N\u00e2u \u0111\u1eadm","Tr\u1eafng","Kem"]
+Missing required options: Loại
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Product options found: [{"id":6,"product_id":9,"name":"Lo\u1ea1i","description":null,"is_required":0,"sort_order":0,"created_at":"2025-07-15 16:46:53","values":[{"id":3,"option_id":6,"value":"Milan","price_adjustment":"0.00","stock_quantity":1,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"},{"id":4,"option_id":6,"value":"OSLO","price_adjustment":"0.00","stock_quantity":3,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"}]}]
+Selected options: {"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}
+Checking option: Loại
+Missing option: Loại
+Product color: ["N\u00e2u \u0111\u1eadm","Tr\u1eafng","Kem"]
+Missing required options: Loại
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Product options found: [{"id":6,"product_id":9,"name":"Lo\u1ea1i","description":null,"is_required":0,"sort_order":0,"created_at":"2025-07-15 16:46:53","values":[{"id":3,"option_id":6,"value":"Milan","price_adjustment":"0.00","stock_quantity":1,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"},{"id":4,"option_id":6,"value":"OSLO","price_adjustment":"0.00","stock_quantity":3,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"}]}]
+Selected options: {"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}
+Checking option: Loại
+Product color: ["N\u00e2u \u0111\u1eadm","Tr\u1eafng","Kem"]
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"1"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Loại":"Milan","Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Product options found: [{"id":6,"product_id":9,"name":"Lo\u1ea1i","description":null,"is_required":0,"sort_order":0,"created_at":"2025-07-15 16:46:53","values":[{"id":3,"option_id":6,"value":"Milan","price_adjustment":"0.00","stock_quantity":1,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"},{"id":4,"option_id":6,"value":"OSLO","price_adjustment":"0.00","stock_quantity":3,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"}]}]
+Selected options: {"Lo\u1ea1i":"Milan","M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}
+Checking option: Loại
+Product color: ["N\u00e2u \u0111\u1eadm","Tr\u1eafng","Kem"]
+Success response: {"success":true,"message":"\u0110\u00e3 th\u00eam s\u1ea3n ph\u1ea9m v\u00e0o gi\u1ecf h\u00e0ng!","cart_count":"2"}
+=== CartController addToCart ===
+Request Method: POST
+Raw input: {"product_id":9,"quantity":1,"selected_options":{"Màu sắc":"Nâu đậm"}}
+Decoded input: {"product_id":9,"quantity":1,"selected_options":{"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}}
+Product ID: 9, Quantity: 1
+Product options found: [{"id":6,"product_id":9,"name":"Lo\u1ea1i","description":null,"is_required":0,"sort_order":0,"created_at":"2025-07-15 16:46:53","values":[{"id":3,"option_id":6,"value":"Milan","price_adjustment":"0.00","stock_quantity":1,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"},{"id":4,"option_id":6,"value":"OSLO","price_adjustment":"0.00","stock_quantity":3,"is_default":0,"sort_order":0,"created_at":"2025-07-15 16:46:53"}]}]
+Selected options: {"M\u00e0u s\u1eafc":"N\u00e2u \u0111\u1eadm"}
+Checking option: Loại
+Missing option: Loại
+Product color: ["N\u00e2u \u0111\u1eadm","Tr\u1eafng","Kem"]
+Missing required options: Loại

@@ -41,19 +41,47 @@ class Cart {
 
     // Thêm sản phẩm vào giỏ
     public function addToCart($productId, $quantity, $selectedOptions = null, $userId = null, $sessionId = null) {
+        $logDir = 'logs';
+        if (!is_dir($logDir)) {
+            mkdir($logDir, 0755, true);
+        }
+        file_put_contents($logDir . '/cart_debug.log', "=== AddToCart Debug ===\n", FILE_APPEND);
+        file_put_contents($logDir . '/cart_debug.log', "Product ID: " . $productId . "\n", FILE_APPEND);
+        file_put_contents($logDir . '/cart_debug.log', "Quantity: " . $quantity . "\n", FILE_APPEND);
+        file_put_contents($logDir . '/cart_debug.log', "Selected Options (raw): " . json_encode($selectedOptions) . "\n", FILE_APPEND);
+        
         // Lấy hoặc tạo đơn hàng pending
         $order = $this->getPendingOrder($userId, $sessionId);
         if (!$order) {
             $order = $this->createPendingOrder($userId, $sessionId);
         }
         $orderId = $order['id'];
-        // Chuẩn hóa selectedOptions
-        $optionsJson = $selectedOptions ? json_encode($selectedOptions, JSON_UNESCAPED_UNICODE) : null;
+        file_put_contents($logDir . '/cart_debug.log', "Order ID: " . $orderId . "\n", FILE_APPEND);
+        
+        // Chuẩn hóa selectedOptions: sort key để so sánh chính xác
+        if ($selectedOptions && is_array($selectedOptions)) {
+            ksort($selectedOptions);
+        }
+        $optionsJson = $selectedOptions ? json_encode($selectedOptions, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES) : null;
+        file_put_contents($logDir . '/cart_debug.log', "Options JSON: " . $optionsJson . "\n", FILE_APPEND);
+        
         // Kiểm tra đã có sản phẩm này với options này chưa
-        $sql = "SELECT * FROM order_details WHERE order_id = ? AND product_id = ? AND selected_options <=> ?";
-        $stmt = $this->conn->prepare($sql);
-        $stmt->execute([$orderId, $productId, $optionsJson]);
+        if ($optionsJson) {
+            $sql = "SELECT * FROM order_details WHERE order_id = ? AND product_id = ? AND JSON_CONTAINS(selected_options, ?)";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$orderId, $productId, $optionsJson]);
+        } else {
+            $sql = "SELECT * FROM order_details WHERE order_id = ? AND product_id = ? AND selected_options IS NULL";
+            $stmt = $this->conn->prepare($sql);
+            $stmt->execute([$orderId, $productId]);
+        }
         $existing = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        file_put_contents($logDir . '/cart_debug.log', "Existing item found: " . ($existing ? 'YES' : 'NO') . "\n", FILE_APPEND);
+        if ($existing) {
+            file_put_contents($logDir . '/cart_debug.log', "Existing item ID: " . $existing['id'] . ", Current quantity: " . $existing['quantity'] . "\n", FILE_APPEND);
+        }
+        
         // Lấy thông tin sản phẩm
         $stmtP = $this->conn->prepare("SELECT * FROM products WHERE id = ?");
         $stmtP->execute([$productId]);
@@ -63,11 +91,15 @@ class Cart {
         if ($existing) {
             // Cộng dồn số lượng
             $newQty = $existing['quantity'] + $quantity;
+            file_put_contents($logDir . '/cart_debug.log', "Updating quantity to: " . $newQty . "\n", FILE_APPEND);
             $stmt2 = $this->conn->prepare("UPDATE order_details SET quantity = ? WHERE id = ?");
-            return $stmt2->execute([$newQty, $existing['id']]);
+            $result = $stmt2->execute([$newQty, $existing['id']]);
+            file_put_contents($logDir . '/cart_debug.log', "Update result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n", FILE_APPEND);
+            return $result;
         } else {
+            file_put_contents($logDir . '/cart_debug.log', "Creating new item\n", FILE_APPEND);
             $stmt3 = $this->conn->prepare("INSERT INTO order_details (order_id, product_id, product_name, quantity, price, selected_options) VALUES (?, ?, ?, ?, ?, ?)");
-            return $stmt3->execute([
+            $result = $stmt3->execute([
                 $orderId,
                 $productId,
                 $product['name'],
@@ -75,6 +107,8 @@ class Cart {
                 $price,
                 $optionsJson
             ]);
+            file_put_contents($logDir . '/cart_debug.log', "Insert result: " . ($result ? 'SUCCESS' : 'FAILED') . "\n", FILE_APPEND);
+            return $result;
         }
     }
 
