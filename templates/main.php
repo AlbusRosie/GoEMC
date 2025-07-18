@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="vi" class="<?php echo isset($_SESSION['theme']) ? $_SESSION['theme'] . '-theme' : 'light-theme'; ?>">
 <head>
-<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Go - Thanh Lý Gỗ Việt Nam</title>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title><?php echo isset($pageTitle) ? $pageTitle . ' - ' . SITE_NAME : SITE_NAME . ' - Thanh lý gỗ chất lượng cao'; ?></title>
+    <meta name="description" content="<?php echo isset($pageDescription) ? $pageDescription : META_DESCRIPTION; ?>">
+    <meta name="keywords" content="<?php echo META_KEYWORDS; ?>">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <?php include 'includes/header.php'; ?>
@@ -19,5 +29,38 @@
     </main>
     
     <?php include 'includes/footer.php'; ?>
+    
+    <!-- Bootstrap JS + Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+    // JavaScript cho các chức năng khác
+    document.addEventListener('DOMContentLoaded', function() {
+      // Khởi tạo Bootstrap dropdowns
+      var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
+      var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl);
+      });
+      
+      // Xử lý responsive menu
+      var navbarToggler = document.querySelector('.navbar-toggler');
+      var navbarCollapse = document.querySelector('.navbar-collapse');
+      
+      if (navbarToggler && navbarCollapse) {
+        navbarToggler.addEventListener('click', function() {
+          navbarCollapse.classList.toggle('show');
+        });
+      }
+      
+      // Đóng menu khi click bên ngoài
+      document.addEventListener('click', function(event) {
+        if (!event.target.closest('.navbar')) {
+          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+            navbarCollapse.classList.remove('show');
+          }
+        }
+      });
+    });
+    </script>
 </body>
 </html>

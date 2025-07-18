@@ -23,6 +23,7 @@ class Router {
         $this->routes = [
             // Home routes
             'home' => ['controller' => 'HomeController', 'action' => 'index'],
+            'store' => ['controller' => 'HomeController', 'action' => 'store'],
             'about' => ['controller' => 'HomeController', 'action' => 'about'],
             'contact' => ['controller' => 'HomeController', 'action' => 'contact'],
             'send-contact' => ['controller' => 'HomeController', 'action' => 'sendContact'],

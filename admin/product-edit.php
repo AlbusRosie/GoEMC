@@ -37,24 +37,24 @@ if (!$product) {
 
 // Xử lý form submit
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Xử lý màu sắc nhiều màu
-    $selectedColors = isset($_POST['colors']) ? $_POST['colors'] : [];
-    $customColor = trim($_POST['custom_color'] ?? '');
-    
-    // Nếu có màu tùy chỉnh, thêm vào danh sách
-    if (!empty($customColor)) {
-        $selectedColors[] = $customColor;
+    // Xử lý màu sắc
+    $colors = [];
+    if (isset($_POST['colors']) && is_array($_POST['colors'])) {
+        $colors = array_filter($_POST['colors'], function($color) {
+            return !empty(trim($color));
+        });
     }
     
-    // Chuyển đổi thành JSON nếu có nhiều màu, hoặc string đơn nếu chỉ có 1 màu
-    $colorValue = '';
-    if (!empty($selectedColors)) {
-        if (count($selectedColors) === 1) {
-            $colorValue = $selectedColors[0];
-        } else {
-            $colorValue = json_encode($selectedColors);
+    // Xử lý màu tùy chỉnh nếu có
+    if (isset($_POST['custom_color']) && !empty(trim($_POST['custom_color']))) {
+        $customColor = trim($_POST['custom_color']);
+        if (!in_array($customColor, $colors)) {
+            $colors[] = $customColor;
         }
     }
+    
+    // Lưu dưới dạng JSON để nhất quán
+    $colorValue = !empty($colors) ? json_encode($colors) : null;
     
     $data = [
         'category_id' => $_POST['category_id'],
@@ -167,14 +167,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 $result = $productOptionModel->saveProductOptions($product_id, $options_data);
                 
                 if ($result) {
-                    error_log("Product options saved successfully for product ID: $product_id");
+                    // Product options saved successfully
                 } else {
-                    error_log("Failed to save product options for product ID: $product_id");
+                    // Failed to save product options
                 }
             } catch (Exception $e) {
                 // Log lỗi nhưng không dừng quá trình cập nhật sản phẩm
-                error_log("Lỗi khi lưu product options: " . $e->getMessage());
-                error_log("Stack trace: " . $e->getTraceAsString());
             }
             
             $success_message = 'Cập nhật sản phẩm thành công!';
@@ -590,16 +588,8 @@ $current_options = $productOptionModel->getByProductId($product_id);
                                                 <div class="color-selection">
                                                     <div class="color-options d-flex flex-wrap gap-2 mb-2">
                                                         <?php 
-                                                        $currentColors = [];
-                                                        if (!empty($product['color'])) {
-                                                            // Nếu color là JSON array
-                                                            if (strpos($product['color'], '[') === 0) {
-                                                                $currentColors = json_decode($product['color'], true) ?: [];
-                                                            } else {
-                                                                // Nếu color là string đơn
-                                                                $currentColors = [$product['color']];
-                                                            }
-                                                        }
+                                                        // Sử dụng colors_array từ model đã được xử lý
+                                                        $currentColors = $product['colors_array'] ?? [];
                                                         ?>
                                                         <div class="color-option" data-color="Nâu tự nhiên" data-hex="#8B4513" style="background-color: #8B4513;" title="Nâu tự nhiên">
                                                             <input type="checkbox" class="color-checkbox" name="colors[]" value="Nâu tự nhiên" <?php echo in_array('Nâu tự nhiên', $currentColors) ? 'checked' : ''; ?>>
@@ -652,18 +642,29 @@ $current_options = $productOptionModel->getByProductId($product_id);
                                                     <div class="selected-colors-info mt-2">
                                                         <div class="selected-colors-list">
                                                             <?php 
-                                                            if (!empty($currentColors) && $currentColors[0] !== ''): 
+                                                            if (!empty($currentColors)): 
                                                                 foreach($currentColors as $color): ?>
                                                                 <span class="selected-color-badge"><?php echo htmlspecialchars($color); ?></span>
                                                             <?php endforeach; endif; ?>
-                                                            <span class="no-colors-text" <?php echo empty($currentColors) || $currentColors[0] === '' ? '' : 'style="display:none;"'; ?>>Chưa chọn màu nào</span>
+                                                            <span class="no-colors-text" <?php echo empty($currentColors) ? '' : 'style="display:none;"'; ?>>Chưa chọn màu nào</span>
                                                         </div>
                                                     </div>
                                                     
                                                     <!-- Custom Color Input -->
                                                     <div id="customColorInput" class="mt-2" style="display: none;">
                                                         <input type="text" class="form-control" id="custom_color" name="custom_color" 
-                                                               value="<?php echo htmlspecialchars($product['custom_color'] ?? ''); ?>" 
+                                                               value="<?php 
+                                                               // Tìm màu tùy chỉnh (không có trong danh sách mặc định)
+                                                               $defaultColors = ['Nâu tự nhiên', 'Nâu đậm', 'Nâu sáng', 'Đen', 'Trắng', 'Xám', 'Kem', 'Vàng', 'Đỏ', 'Hồng', 'Xanh lá', 'Xanh dương', 'Tím', 'Cam', 'Khác'];
+                                                               $customColor = '';
+                                                               foreach ($currentColors as $color) {
+                                                                   if (!in_array($color, $defaultColors)) {
+                                                                       $customColor = $color;
+                                                                       break;
+                                                                   }
+                                                               }
+                                                               echo htmlspecialchars($customColor);
+                                                               ?>" 
                                                                placeholder="Nhập màu sắc tùy chỉnh...">
                                                         <small class="text-muted">Nhập màu sắc khác nếu không có trong danh sách</small>
                                                     </div>
@@ -1198,6 +1199,60 @@ $current_options = $productOptionModel->getByProductId($product_id);
             }
         }
         
+        function updateSelectedColors() {
+            const selectedColors = [];
+            const checkboxes = document.querySelectorAll('.color-checkbox:checked');
+            
+            checkboxes.forEach(checkbox => {
+                if (checkbox.value !== 'Khác') { // Không thêm "Khác" vào danh sách
+                    selectedColors.push(checkbox.value);
+                }
+            });
+            
+            // Thêm màu tùy chỉnh nếu có
+            const customColorInput = document.getElementById('custom_color');
+            if (customColorInput && customColorInput.value.trim()) {
+                selectedColors.push(customColorInput.value.trim());
+            }
+            
+            // Update display
+            const selectedColorsList = document.querySelector('.selected-colors-list');
+            const noColorsText = document.querySelector('.no-colors-text');
+            
+            // Clear existing badges
+            const existingBadges = selectedColorsList.querySelectorAll('.selected-color-badge');
+            existingBadges.forEach(badge => badge.remove());
+            
+            // Add new badges
+            selectedColors.forEach(color => {
+                const badge = document.createElement('span');
+                badge.className = 'selected-color-badge';
+                badge.textContent = color;
+                selectedColorsList.appendChild(badge);
+            });
+            
+            // Show/hide no colors text
+            if (selectedColors.length === 0) {
+                noColorsText.style.display = 'inline';
+            } else {
+                noColorsText.style.display = 'none';
+            }
+            
+            // Handle custom color option
+            const customColorInputDiv = document.getElementById('customColorInput');
+            const hasOtherOption = Array.from(checkboxes).some(cb => cb.value === 'Khác' && cb.checked);
+            if (hasOtherOption) {
+                customColorInputDiv.style.display = 'block';
+            } else {
+                customColorInputDiv.style.display = 'none';
+                if (customColorInput) {
+                    customColorInput.value = '';
+                }
+            }
+            
+
+        }
+        
         // Initialize color selection on page load
         document.addEventListener('DOMContentLoaded', function() {
             // Add change event to all color checkboxes
@@ -1206,6 +1261,21 @@ $current_options = $productOptionModel->getByProductId($product_id);
                     updateSelectedColors();
                 });
             });
+            
+            // Add input event to custom color input
+            const customColorInput = document.getElementById('custom_color');
+            if (customColorInput) {
+                customColorInput.addEventListener('input', function() {
+                    updateSelectedColors();
+                });
+            }
+            
+            // Check if custom color input should be shown initially
+            const customColorInputDiv = document.getElementById('customColorInput');
+            const hasOtherOption = document.querySelector('.color-checkbox[value="Khác"]:checked');
+            if (hasOtherOption) {
+                customColorInputDiv.style.display = 'block';
+            }
             
             // Initial update
             updateSelectedColors();

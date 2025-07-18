@@ -50,11 +50,9 @@ class CartController extends BaseController {
             return;
         }
         
-        // Lấy tất cả options của sản phẩm để kiểm tra
         $productOptions = $this->productOptionModel->getByProductId($productId);
         $missingRequired = [];
 
-        // Kiểm tra tất cả options có sẵn (không chỉ is_required = 1)
         if (!empty($productOptions)) {
             foreach ($productOptions as $opt) {
                 if (!$selectedOptions || !is_array($selectedOptions) || !isset($selectedOptions[$opt['name']]) || $selectedOptions[$opt['name']] === '') {
@@ -63,7 +61,6 @@ class CartController extends BaseController {
             }
         }
 
-        // Kiểm tra màu sắc nếu sản phẩm có màu
         $product = $this->product->getById($productId);
         if (!empty($product['color'])) {
             if (!$selectedOptions || !isset($selectedOptions['Màu sắc']) || $selectedOptions['Màu sắc'] === '') {

@@ -56,6 +56,16 @@ class HomeController extends BaseController {
         $this->render('home', $data);
     }
     
+    // Hiển thị trang Store
+    public function store() {
+        $data = [
+            'pageTitle' => 'EMCwood Store - Cửa hàng gỗ chất lượng cao',
+            'pageDescription' => 'Khám phá bộ sưu tập gỗ chất lượng cao với giá tốt nhất tại EMCwood Store'
+        ];
+        
+        $this->render('store', $data);
+    }
+    
     // Hiển thị trang About
     public function about() {
         $data = [

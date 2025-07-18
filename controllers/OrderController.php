@@ -622,32 +622,48 @@ class OrderController {
                     font-weight: 600; 
                     font-size: 1.1rem;
                 }
+                
+                /* Thiết kế mới cho khung tổng thanh toán */
                 .summary-card {
-                    background: linear-gradient(135deg, #1a1a1a, #333) !important;
-                    color: white !important;
-                    border-radius: 12px;
-                    padding: 25px;
-                    margin-top: 20px;
+                    background: #2c3e50 !important;
+                    border: 2px solid #34495e !important;
+                    border-radius: 8px !important;
+                    padding: 20px !important;
+                    margin-top: 15px !important;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
                 }
+                
                 .summary-table { 
-                    width: 100%; 
+                    width: 100% !important; 
+                    border-collapse: collapse !important;
                 }
+                
                 .summary-table td { 
-                    padding: 8px 0; 
+                    padding: 10px 0 !important; 
+                    border-bottom: 1px solid #34495e !important;
                 }
+                
+                .summary-table tr:last-child td {
+                    border-bottom: none !important;
+                }
+                
                 .summary-table .label { 
-                    color: rgba(255,255,255,0.8) !important; 
+                    color: #ecf0f1 !important; 
+                    font-weight: 500 !important;
                 }
+                
                 .summary-table .value { 
-                    color: white !important; 
-                    font-weight: 500; 
-                    text-align: right; 
+                    color: #ffffff !important; 
+                    font-weight: 600 !important; 
+                    text-align: right !important; 
                 }
+                
                 .summary-table .total { 
                     color: #ff6b35 !important; 
-                    font-size: 1.3em; 
-                    font-weight: 700; 
+                    font-size: 1.2em !important; 
+                    font-weight: 700 !important; 
                 }
+
                 .alert-card { 
                     background: linear-gradient(135deg, #fff3cd, #ffeaa7) !important; 
                     color: #856404 !important; 
@@ -688,6 +704,7 @@ class OrderController {
                         background: inherit !important;
                         color: inherit !important;
                     }
+
                 }
             </style>
         </head>
@@ -753,7 +770,7 @@ class OrderController {
         if ($orderData['discount_amount'] > 0) {
             $html .= '<tr><td class="label">Giảm giá:</td><td class="value">-' . number_format($orderData['discount_amount']) . '₫</td></tr>';
         }
-        $html .= '<tr><td class="label total">Tổng cộng:</td><td class="value total">' . number_format($orderData['total']) . '₫</td></tr>
+        $html .= '<tr><td class="label total" style="color:#ff6b35 !important;">Tổng cộng:</td><td class="value total" style="color:#ff6b35 !important;">' . number_format($orderData['total']) . '₫</td></tr>
                             </table>
                         </div>
                     </div>
@@ -812,7 +829,6 @@ class OrderController {
                     margin: 0 !important; 
                     padding: 20px !important;
                     color-scheme: light only !important;
-                    forced-color-adjust: none !important;
                 }
                 
                 .container { 
@@ -980,37 +996,48 @@ class OrderController {
                     font-size: 1.1rem !important;
                 }
                 
+                /* Thiết kế mới cho khung tổng thanh toán */
                 .summary-card {
-                    background: linear-gradient(135deg, #1a1a1a, #333333) !important;
-                    color: #ffffff !important;
-                    border-radius: 12px !important;
-                    padding: 25px !important;
-                    margin-top: 20px !important;
+                    background:rgb(255, 255, 255) !important;
+                    border: 2px solidrgb(49, 49, 49) !important;
+                    border-radius: 8px !important;
+                    padding: 20px !important;
+                    margin-top: 15px !important;
+                    box-shadow: 0 4px 12px rgba(0,0,0,0.1) !important;
                 }
                 
                 .summary-table { 
                     width: 100% !important; 
+                    border-collapse: collapse !important;
                 }
                 
                 .summary-table td { 
-                    padding: 8px 0 !important; 
+                    padding: 10px 0 !important; 
+                    border-bottom: 1px solid #34495e !important;
+                }
+                
+                .summary-table tr:last-child td {
+                    border-bottom: none !important;
                 }
                 
                 .summary-table .label { 
-                    color: rgba(255,255,255,0.8) !important; 
+                    color:rgb(0, 0, 0) !important; 
+                    font-weight: 500 !important;
                 }
                 
                 .summary-table .value { 
-                    color: #ffffff !important; 
-                    font-weight: 500 !important; 
+                    color:rgb(0, 0, 0) !important; 
+                    font-weight: 600 !important; 
                     text-align: right !important; 
                 }
                 
                 .summary-table .total { 
                     color: #ff6b35 !important; 
-                    font-size: 1.3em !important; 
+                    font-size: 1.2em !important; 
                     font-weight: 700 !important; 
                 }
+                
+
                 
                 .thank-card { 
                     background: linear-gradient(135deg, #d4edda, #c3e6cb) !important; 
@@ -1057,6 +1084,20 @@ class OrderController {
                     body, .container, .content, .info-card, .order-items, .order-item, .footer {
                         background: inherit !important;
                         color: inherit !important;
+                    }
+                    /* Đảm bảo khung tổng thanh toán luôn hiển thị đúng */
+                    .summary-card {
+                        background: #2c3e50 !important;
+                        border-color: #34495e !important;
+                    }
+                    .summary-table .label {
+                        color: #ecf0f1 !important;
+                    }
+                    .summary-table .value {
+                        color: #ffffff !important;
+                    }
+                    .summary-table .total {
+                        color: #ff6b35 !important;
                     }
                 }
                 
@@ -1121,9 +1162,9 @@ class OrderController {
                                 <tr><td class="label">Tạm tính:</td><td class="value">' . number_format($orderData['subtotal']) . '₫</td></tr>
                                 <tr><td class="label">Phí vận chuyển:</td><td class="value">' . number_format($orderData['shipping_fee']) . '₫</td></tr>';
         if ($orderData['discount_amount'] > 0) {
-            $html .= '<tr><td class="label">Giảm giá:</td><td class="value" style="color:#ffffff !important;">-' . number_format($orderData['discount_amount']) . '₫</td></tr>';
+            $html .= '<tr><td class="label">Giảm giá:</td><td class="value">-' . number_format($orderData['discount_amount']) . '₫</td></tr>';
         }
-        $html .= '<tr><td class="label total">Tổng cộng:</td><td class="value total" style="color:#ff6b35 !important;">' . number_format($orderData['total']) . '₫</td></tr>
+        $html .= '<tr><td class="label total" style="color:#ff6b35 !important;">Tổng cộng:</td><td class="value total" style="color:#ff6b35 !important;">' . number_format($orderData['total']) . '₫</td></tr>
                             </table>
                         </div>
                     </div>

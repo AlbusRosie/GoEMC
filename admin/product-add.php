@@ -21,8 +21,21 @@ $success_message = '';
 
 // Xử lý form submit
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Debug: Log POST data
-    error_log("POST data received: " . json_encode($_POST));
+    // Xử lý màu sắc
+    $colors = [];
+    if (isset($_POST['colors']) && is_array($_POST['colors'])) {
+        $colors = array_filter($_POST['colors'], function($color) {
+            return !empty(trim($color));
+        });
+    }
+    
+    // Xử lý màu tùy chỉnh nếu có
+    if (isset($_POST['custom_color']) && !empty(trim($_POST['custom_color']))) {
+        $customColor = trim($_POST['custom_color']);
+        if (!in_array($customColor, $colors)) {
+            $colors[] = $customColor;
+        }
+    }
     
     $data = [
         'category_id' => $_POST['category_id'],
@@ -31,8 +44,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         'stock' => (int)$_POST['stock'],
         'description' => trim($_POST['description']),
         'size' => trim($_POST['size']),
-        'colors' => isset($_POST['colors']) ? $_POST['colors'] : [],
-        'color' => isset($_POST['colors']) ? implode(', ', $_POST['colors']) : '', // For backward compatibility
+        'colors' => $colors,
+        'color' => !empty($colors) ? json_encode($colors) : null, // Lưu dưới dạng JSON để dễ xử lý
         'sale' => !empty($_POST['sale']) ? (float)$_POST['sale'] : null,
         'is_available' => isset($_POST['is_available']) ? 1 : 0,
         'status' => $_POST['status']
@@ -103,10 +116,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
     
-    // Debug: Log detail_products
-    error_log("Detail products to add: " . json_encode($detail_products));
-    
-    // Validation
+                // Validation
     if (empty($data['name'])) {
         $error_message = 'Tên sản phẩm không được để trống.';
     } elseif ($data['price'] <= 0) {
@@ -117,21 +127,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Thêm sản phẩm
         $product_id = $productModel->create($data);
         if ($product_id && $product_id > 0) {
-            // Debug: Log product_id
-            error_log("Product created successfully with ID: " . $product_id);
-            
-            // Thêm detail products
-            if (!empty($detail_products)) {
-                foreach ($detail_products as $detail) {
-                    try {
-                        $productModel->addDetail($product_id, $detail);
-                        error_log("Detail added successfully for product ID: " . $product_id);
-                    } catch (Exception $e) {
-                        error_log("Error adding detail for product ID " . $product_id . ": " . $e->getMessage());
-                        throw $e;
-                    }
+                    // Thêm detail products
+        if (!empty($detail_products)) {
+            foreach ($detail_products as $detail) {
+                try {
+                    $productModel->addDetail($product_id, $detail);
+                } catch (Exception $e) {
+                    throw $e;
                 }
             }
+        }
             
             // Xử lý product options
             $options_data = [];
@@ -161,19 +166,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 try {
                     $result = $productOptionModel->saveProductOptions($product_id, $options_data);
                     
-                    if ($result) {
-                        error_log("Product options saved successfully for product ID: $product_id");
-                    } else {
-                        error_log("Failed to save product options for product ID: $product_id");
-                    }
-                } catch (Exception $e) {
-                    // Log lỗi nhưng không dừng quá trình thêm sản phẩm
-                    error_log("Lỗi khi lưu product options: " . $e->getMessage());
-                    error_log("Stack trace: " . $e->getTraceAsString());
+                                    if ($result) {
+                    // Product options saved successfully
+                } else {
+                    // Failed to save product options
                 }
-            } else {
-                error_log("No product options data to save");
+            } catch (Exception $e) {
+                // Log lỗi nhưng không dừng quá trình thêm sản phẩm
             }
+        } else {
+            // No product options data to save
+        }
             
             $success_message = 'Thêm sản phẩm thành công!';
             // Reset form
@@ -854,8 +857,16 @@ $categories = $categoryModel->getAll();
             const checkboxes = document.querySelectorAll('.color-checkbox:checked');
             
             checkboxes.forEach(checkbox => {
-                selectedColors.push(checkbox.value);
+                if (checkbox.value !== 'Khác') { // Không thêm "Khác" vào danh sách
+                    selectedColors.push(checkbox.value);
+                }
             });
+            
+            // Thêm màu tùy chỉnh nếu có
+            const customColorInput = document.getElementById('custom_color');
+            if (customColorInput && customColorInput.value.trim()) {
+                selectedColors.push(customColorInput.value.trim());
+            }
             
             // Update display
             const selectedColorsList = document.querySelector('.selected-colors-list');
@@ -881,12 +892,18 @@ $categories = $categoryModel->getAll();
             }
             
             // Handle custom color option
-            const customColorInput = document.getElementById('customColorInput');
-            if (selectedColors.includes('Khác')) {
-                customColorInput.style.display = 'block';
+            const customColorInputDiv = document.getElementById('customColorInput');
+            const hasOtherOption = Array.from(checkboxes).some(cb => cb.value === 'Khác' && cb.checked);
+            if (hasOtherOption) {
+                customColorInputDiv.style.display = 'block';
             } else {
-                customColorInput.style.display = 'none';
+                customColorInputDiv.style.display = 'none';
+                if (customColorInput) {
+                    customColorInput.value = '';
+                }
             }
+            
+
         }
         
         // Detail Products Functions
@@ -1124,6 +1141,14 @@ $categories = $categoryModel->getAll();
                     updateSelectedColors();
                 });
             });
+            
+            // Add input event to custom color input
+            const customColorInput = document.getElementById('custom_color');
+            if (customColorInput) {
+                customColorInput.addEventListener('input', function() {
+                    updateSelectedColors();
+                });
+            }
             
             // Initial update
             updateSelectedColors();

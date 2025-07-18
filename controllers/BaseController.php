@@ -7,11 +7,6 @@ class BaseController {
     protected $conn;
     
     public function __construct() {
-        // Start output buffering to prevent headers already sent error
-        if (!ob_get_level()) {
-            ob_start();
-        }
-        
         $this->db = new Database();
         $this->conn = $this->db->getConnection();
     }

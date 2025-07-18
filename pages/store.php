@@ -15,17 +15,24 @@ $categoryModel = new Category($conn);
 // Lấy sản phẩm nổi bật cho hero section
 $featuredProduct = $productModel->getFeaturedProduct();
 
-// Lấy sản phẩm bán chạy
-$bestSellers = $productModel->getBestSellers(8);
+// Lấy sản phẩm bán chạy (nhiều hơn trang home)
+$bestSellers = $productModel->getBestSellers(16);
 
-// Lấy sản phẩm gợi ý
-$suggestedProducts = $productModel->getSuggestedProducts(8);
+// Lấy sản phẩm gợi ý (nhiều hơn trang home)
+$suggestedProducts = $productModel->getSuggestedProducts(16);
 
-// Lấy sản phẩm hot deal
-$hotDeals = $productModel->getHotDeals(8);
+// Lấy sản phẩm hot deal (nhiều hơn trang home)
+$hotDeals = $productModel->getHotDeals(16);
 
-// Lấy sản phẩm mới
-$newProducts = $productModel->getNewProducts(4);
+// Lấy sản phẩm mới (nhiều hơn trang home)
+$newProducts = $productModel->getNewProducts(16);
+
+// Lấy sản phẩm theo danh mục
+$categories = $categoryModel->getAll();
+$productsByCategory = [];
+foreach ($categories as $category) {
+    $productsByCategory[$category['id']] = $productModel->getByCategory($category['id'], 8);
+}
 
 // Lấy gallery ảnh cho từng sản phẩm
 if ($featuredProduct) {
@@ -51,10 +58,19 @@ foreach ($hotDeals as &$product) {
     $product['gallery'] = $productModel->getProductImages($product['id'], 'main');
 }
 unset($product);
+
+// Lấy gallery cho sản phẩm theo danh mục
+foreach ($productsByCategory as $categoryId => &$products) {
+    foreach ($products as &$product) {
+        $product['gallery'] = $productModel->getProductImages($product['id'], 'main');
+    }
+    unset($product);
+}
+unset($products);
 ?>
 
 <style>
-/* Hero Section */
+/* Hero Section - Giống home */
 .hero-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 30%, #fafafa 70%, #f8f9fa 100%);
     padding: 10px 0;
@@ -149,7 +165,7 @@ unset($product);
     object-fit: cover;
 }
 
-/* Section Styles */
+/* Section Styles - Giống home */
 .section-title {
     font-family: 'Playfair Display', serif;
     font-size: 3rem;
@@ -157,15 +173,6 @@ unset($product);
     color: #1a1a1a;
     margin-bottom: 1.5rem;
     letter-spacing: -1px;
-}
-
-.section-subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 5rem;
-    font-weight: 300;
-    line-height: 1.8;
-    letter-spacing: 0.5px;
 }
 
 .view-more-link {
@@ -187,7 +194,7 @@ unset($product);
     border-bottom-color: #ff6b35;
 }
 
-/* Product Card */
+/* Product Card - Giống home */
 .product-card {
     background: white;
     border-radius: 0;
@@ -196,103 +203,6 @@ unset($product);
     transition: box-shadow 0.3s ease;
     height: 100%;
     border: 1px solid #f0f0f0;
-}
-
-/* Store Feature Cards */
-.store-feature-card {
-    background: white;
-    border-radius: 0;
-    padding: 2rem;
-    text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    transition: all 0.3s ease;
-    height: 100%;
-    border: 1px solid #f0f0f0;
-    position: relative;
-    overflow: hidden;
-}
-
-.store-feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ff6b35, #f7931e);
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-}
-
-.store-feature-card:hover::before {
-    transform: scaleX(1);
-}
-
-.store-feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-}
-
-.store-feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.5rem;
-    transition: all 0.3s ease;
-}
-
-.store-feature-card:hover .store-feature-icon {
-    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-    color: white;
-    transform: scale(1.1);
-}
-
-.store-feature-icon i {
-    font-size: 2rem;
-    color: #666;
-    transition: color 0.3s ease;
-}
-
-.store-feature-card:hover .store-feature-icon i {
-    color: white;
-}
-
-.store-feature-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.5px;
-}
-
-.store-feature-subtitle {
-    font-size: 0.9rem;
-    color: #666;
-    margin-bottom: 1.5rem;
-    line-height: 1.6;
-}
-
-.store-feature-link {
-    color: #1a1a1a;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    border-bottom: 1px solid #1a1a1a;
-    padding-bottom: 2px;
-    transition: all 0.3s ease;
-}
-
-.store-feature-link:hover {
-    color: #ff6b35;
-    border-bottom-color: #ff6b35;
-    text-decoration: none;
 }
 
 .product-card:hover {
@@ -343,6 +253,34 @@ unset($product);
     text-transform: uppercase;
 }
 
+.hot-deal-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #e74c3c;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.new-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #27ae60;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
 .product-info {
     padding: 2rem;
 }
@@ -384,142 +322,133 @@ unset($product);
     text-transform: uppercase;
 }
 
-/* Service Cards */
-.service-card {
+/* Category Section - Giống home */
+.category-section {
     background: white;
-    padding: 3rem 2rem;
-    border-radius: 0;
-    text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    transition: box-shadow 0.3s ease;
-    height: 100%;
-    border: 1px solid #f0f0f0;
-    position: relative;
+    padding: 80px 0;
 }
 
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: #1a1a1a;
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
 }
 
-.service-card:hover::before {
-    transform: scaleX(1);
-}
-
-.service-card:hover {
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-.service-icon {
-    width: 80px;
-    height: 80px;
+.category-card {
     background: #f8f9fa;
     border-radius: 0;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.category-card:hover {
+    background: white;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    transform: translateY(-3px);
+}
+
+.category-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.category-product-count {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.category-products {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.category-product {
+    background: white;
+    border-radius: 0;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.category-product:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.category-product img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 0;
+    margin-bottom: 0.5rem;
+}
+
+.category-product-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.category-product-price {
+    font-size: 0.9rem;
+    color: #ff6b35;
+    font-weight: 600;
+}
+
+.category-product-more {
+    background: white;
+    border-radius: 0;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 2rem;
-    transition: background-color 0.3s ease;
-    border: 1px solid #e0e0e0;
+    min-height: 80px;
 }
 
-.service-card:hover .service-icon {
-    background: #1a1a1a;
+.category-product-more:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background: #f8f9fa;
 }
 
-.service-icon i {
-    font-size: 1.8rem;
-    color: #1a1a1a;
-    transition: color 0.3s ease;
+.more-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.service-card:hover .service-icon i {
-    color: white;
-}
-
-.service-title {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 1rem;
-    letter-spacing: 0.5px;
-    font-family: 'Playfair Display', serif;
-}
-
-.service-subtitle {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0;
-    font-weight: 300;
-    line-height: 1.6;
-    letter-spacing: 0.3px;
-}
-
-/* Review Cards */
-.review-card {
-    background: white;
-    padding: 3rem 2.5rem;
-    border-radius: 0;
-    text-align: center;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.08);
-    transition: box-shadow 0.3s ease;
-    height: 100%;
-    border: 1px solid #f0f0f0;
-    position: relative;
-}
-
-.review-card::before {
-    content: '"';
-    position: absolute;
-    top: 30px;
-    left: 40px;
-    font-size: 5rem;
-    color: #f0f0f0;
-    font-family: 'Playfair Display', serif;
+.more-icon {
+    font-size: 1.5rem;
+    color: #ccc;
     font-weight: 300;
     line-height: 1;
 }
 
-.review-card:hover {
-    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-}
-
-.review-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 0;
-    object-fit: cover;
-    margin: 0 auto 2rem;
-    border: 2px solid #1a1a1a;
-}
-
-.reviewer-name {
-    font-size: 1.3rem;
+.more-text {
+    font-size: 0.7rem;
+    color: #999;
     font-weight: 400;
-    color: #1a1a1a;
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.5px;
-    font-family: 'Playfair Display', serif;
+    text-align: center;
+    line-height: 1.2;
 }
-
-.review-text {
-    font-size: 1rem;
-    color: #666;
-    line-height: 1.8;
-    font-style: italic;
-    margin: 0;
-    font-weight: 300;
-    letter-spacing: 0.3px;
-}
-
-
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -547,38 +476,41 @@ unset($product);
         padding: 6rem 0;
     }
     
-    .service-card,
-    .review-card {
-        padding: 2.5rem 2rem;
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .category-products {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 </style>
 
-<!-- Hero Section -->
+<!-- Hero Section - Giống home -->
 <section class="hero-section">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="hero-content">
                     <?php if($featuredProduct): ?>
-                        <div class="hero-badge">Sản phẩm mới</div>
+                        <div class="hero-badge">Sản phẩm nổi bật</div>
                         <h1 class="hero-title">Crafted To IMPRESS</h1>
-                        <h2 class="hero-subtitle">AURORA</h2>
+                        <h2 class="hero-subtitle"><?php echo htmlspecialchars($featuredProduct['name']); ?></h2>
                         <div class="hero-price"><?php echo number_format($productModel->getCurrentPrice($featuredProduct)); ?>₫</div>
                         <div class="hero-original-price"><?php echo number_format($productModel->getOriginalPrice($featuredProduct)); ?>₫</div>
-                        <div class="hero-expiry">23% OFF – Valid this month</div>
+                        <div class="hero-expiry"><?php echo $productModel->getDiscountPercent($featuredProduct); ?>% OFF – Valid this month</div>
                         <a href="index.php?page=product&id=<?php echo $featuredProduct['id']; ?>" class="btn btn-primary btn-lg">
                             Mua ngay
                         </a>
                     <?php else: ?>
-                        <div class="hero-badge">Sản phẩm mới</div>
+                        <div class="hero-badge">EMCwood Store</div>
                         <h1 class="hero-title">Crafted To IMPRESS</h1>
-                        <h2 class="hero-subtitle">AURORA</h2>
-                        <div class="hero-price">32,990,000₫</div>
-                        <div class="hero-original-price">42,897,000₫</div>
-                        <div class="hero-expiry">23% OFF – Valid this month</div>
+                        <h2 class="hero-subtitle">Khám phá bộ sưu tập gỗ</h2>
+                        <div class="hero-price">Chất lượng cao</div>
+                        <div class="hero-original-price">Giá tốt nhất</div>
+                        <div class="hero-expiry">Nhiều sản phẩm đa dạng</div>
                         <a href="index.php?page=products" class="btn btn-primary btn-lg">
-                            Mua ngay
+                            Khám phá ngay
                         </a>
                     <?php endif; ?>
                 </div>
@@ -592,7 +524,7 @@ unset($product);
                             <img src="<?php echo $featuredProduct['image_'] ?: 'assets/uploads/hero-sofa.jpg'; ?>" alt="<?php echo htmlspecialchars($featuredProduct['name']); ?>" class="hero-image">
                         <?php endif; ?>
                     <?php else: ?>
-                        <img src="assets/uploads/hero-sofa.jpg" alt="Aurora Sofa" class="hero-image">
+                        <img src="assets/uploads/product_1752552835_des_0.jpg" alt="EMCwood Store" class="hero-image">
                     <?php endif; ?>
                 </div>
             </div>
@@ -600,15 +532,66 @@ unset($product);
     </div>
 </section>
 
-<!-- New Products Section -->
+<!-- Hot Deals Section -->
 <section class="py-5">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3 class="section-title">Hot Deals</h3>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="index.php?page=products&sale=1" class="view-more-link">Xem thêm</a>
+            </div>
+        </div>
+        
+        <div class="row">
+            <?php foreach($hotDeals as $product): ?>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="product-card" data-product-id="<?php echo $product['id']; ?>">
+                    <a href="index.php?page=product&id=<?php echo $product['id']; ?>" class="product-link">
+                        <div class="product-image">
+                            <?php if (!empty($product['gallery'])): ?>
+                                <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <img src="assets/uploads/product-default.jpg" alt="No image">
+                            <?php endif; ?>
+                            
+                            <?php 
+                            $discountPercent = $productModel->getDiscountPercent($product);
+                            if($discountPercent > 0): 
+                            ?>
+                            <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
+                            <?php endif; ?>
+                            <div class="hot-deal-badge">Hot Deal</div>
+                        </div>
+                        
+                        <div class="product-info">
+                            <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
+                            <div class="product-price">
+                                <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
+                                <?php if($productModel->getDiscountPercent($product) > 0): ?>
+                                <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+    </div>
+</section>
+
+<!-- New Products Section -->
+<section class="py-5" style="background: #f8f9fa;">
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-md-6">
                 <h3 class="section-title">Sản phẩm mới</h3>
             </div>
             <div class="col-md-6 text-end">
-                <a href="index.php?page=products&new=1" class="view-more-link">Xem thêm <i class="fas fa-arrow-right ms-1"></i></a>
+                <a href="index.php?page=products&new=1" class="view-more-link">Xem thêm</a>
             </div>
         </div>
         
@@ -630,6 +613,7 @@ unset($product);
                             ?>
                             <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
                             <?php endif; ?>
+                            <div class="new-badge">Mới</div>
                         </div>
                         
                         <div class="product-info">
@@ -651,14 +635,14 @@ unset($product);
 </section>
 
 <!-- Best Sellers Section -->
-<section class="py-5" style="background: #f8f9fa;">
+<section class="py-5">
     <div class="container">
         <div class="row align-items-center mb-5">
             <div class="col-md-6">
                 <h3 class="section-title">Bán chạy nhất</h3>
             </div>
             <div class="col-md-6 text-end">
-                <a href="index.php?page=products&bestseller=1" class="view-more-link">Xem thêm <i class="fas fa-arrow-right ms-1"></i></a>
+                <a href="index.php?page=products&bestseller=1" class="view-more-link">Xem thêm</a>
             </div>
         </div>
         
@@ -700,151 +684,101 @@ unset($product);
     </div>
 </section>
 
-<!-- Store Introduction Section -->
+<!-- Suggested Products Section -->
 <section class="py-5" style="background: #f8f9fa;">
     <div class="container">
-        <div class="section-header text-center mb-5">
-            <h3 class="section-title">EMCwood Store</h3>
-            <p class="section-subtitle">Khám phá bộ sưu tập gỗ chất lượng cao với nhiều danh mục sản phẩm đa dạng</p>
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3 class="section-title">Gợi ý cho bạn</h3>
+            </div>
+            <div class="col-md-6 text-end">
+                <a href="index.php?page=products&suggested=1" class="view-more-link">Xem thêm</a>
+            </div>
         </div>
         
         <div class="row">
+            <?php foreach($suggestedProducts as $product): ?>
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="store-feature-card">
-                    <div class="store-feature-icon">
-                        <i class="fas fa-fire"></i>
-                    </div>
-                    <h5 class="store-feature-title">Hot Deals</h5>
-                    <p class="store-feature-subtitle">Giảm giá sốc hàng ngày</p>
-                    <a href="index.php?page=store" class="store-feature-link">Xem ngay <i class="fas fa-arrow-right ms-1"></i></a>
+                <div class="product-card" data-product-id="<?php echo $product['id']; ?>">
+                    <a href="index.php?page=product&id=<?php echo $product['id']; ?>" class="product-link">
+                        <div class="product-image">
+                            <?php if (!empty($product['gallery'])): ?>
+                                <img src="<?php echo htmlspecialchars($product['gallery'][0]['image_path']); ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <img src="assets/uploads/product-default.jpg" alt="No image">
+                            <?php endif; ?>
+                            
+                            <?php 
+                            $discountPercent = $productModel->getDiscountPercent($product);
+                            if($discountPercent > 0): 
+                            ?>
+                            <div class="discount-badge">-<?php echo $discountPercent; ?>%</div>
+                            <?php endif; ?>
+                        </div>
+                        
+                        <div class="product-info">
+                            <h5 class="product-name"><?php echo htmlspecialchars($product['name']); ?></h5>
+                            <div class="product-price">
+                                <span class="current-price"><?php echo number_format($productModel->getCurrentPrice($product)); ?>₫</span>
+                                <?php if($productModel->getDiscountPercent($product) > 0): ?>
+                                <span class="original-price"><?php echo number_format($productModel->getOriginalPrice($product)); ?>₫</span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="product-sales">Đã bán <?php echo $product['sold_count'] ?? 0; ?></div>
+                        </div>
+                    </a>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="store-feature-card">
-                    <div class="store-feature-icon">
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <h5 class="store-feature-title">Bán chạy nhất</h5>
-                    <p class="store-feature-subtitle">Sản phẩm được yêu thích</p>
-                    <a href="index.php?page=store" class="store-feature-link">Xem ngay <i class="fas fa-arrow-right ms-1"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="store-feature-card">
-                    <div class="store-feature-icon">
-                        <i class="fas fa-lightbulb"></i>
-                    </div>
-                    <h5 class="store-feature-title">Gợi ý cho bạn</h5>
-                    <p class="store-feature-subtitle">Phù hợp với sở thích</p>
-                    <a href="index.php?page=store" class="store-feature-link">Xem ngay <i class="fas fa-arrow-right ms-1"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="store-feature-card">
-                    <div class="store-feature-icon">
-                        <i class="fas fa-plus-circle"></i>
-                    </div>
-                    <h5 class="store-feature-title">Sản phẩm mới</h5>
-                    <p class="store-feature-subtitle">Cập nhật hàng ngày</p>
-                    <a href="index.php?page=store" class="store-feature-link">Xem ngay <i class="fas fa-arrow-right ms-1"></i></a>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center mt-4">
-            <a href="index.php?page=store" class="btn btn-primary btn-lg me-3">
-                <i class="fas fa-store me-2"></i>Khám phá Store
-            </a>
-            <a href="index.php?page=products" class="btn btn-outline-dark btn-lg">
-                <i class="fas fa-shopping-cart me-2"></i>Xem tất cả sản phẩm
-            </a>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
 
-<!-- Services Section -->
-<section class="py-5">
+<!-- Products by Category Section -->
+<section class="category-section">
     <div class="container">
         <div class="section-header text-center mb-5">
-            <h3 class="section-title">Dịch vụ của chúng tôi</h3>
-            <p class="section-subtitle">Cam kết mang đến trải nghiệm mua sắm tốt nhất</p>
+            <h3 class="section-title">Sản phẩm theo danh mục</h3>
+            <p class="section-subtitle">Khám phá sản phẩm theo từng danh mục cụ thể</p>
         </div>
         
-        <div class="row">
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shipping-fast"></i>
+        <div class="category-grid">
+            <?php foreach ($categories as $category): ?>
+            <div class="category-card">
+                <h3 class="category-name"><?php echo htmlspecialchars($category['name']); ?></h3>
+                <p class="category-product-count"><?php echo count($productsByCategory[$category['id']] ?? []); ?> sản phẩm</p>
+                
+                <div class="category-products">
+                    <?php 
+                    $categoryProducts = $productsByCategory[$category['id']] ?? [];
+                    if (!empty($categoryProducts)): 
+                        $product = $categoryProducts[0];
+                    ?>
+                    <div class="category-product">
+                        <a href="index.php?page=product&id=<?php echo $product['id']; ?>" class="product-link">
+                            <?php if (!empty($product['gallery'])): ?>
+                                <img src="<?php echo $product['gallery'][0]['image_path'] ?? 'assets/images/placeholder.jpg'; ?>" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php else: ?>
+                                <img src="assets/images/placeholder.jpg" alt="<?php echo htmlspecialchars($product['name']); ?>">
+                            <?php endif; ?>
+                            <div class="category-product-name"><?php echo htmlspecialchars($product['name']); ?></div>
+                            <div class="category-product-price"><?php echo number_format($product['price'] - $product['sale']); ?>₫</div>
+                        </a>
                     </div>
-                    <h5 class="service-title">Miễn phí vận chuyển</h5>
-                    <p class="service-subtitle">Cho đơn hàng từ 500k</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-certificate"></i>
+                    <div class="category-product-more">
+                        <div class="more-placeholder">
+                            <span class="more-icon">+</span>
+                            <span class="more-text"><?php echo count($categoryProducts) - 1; ?> sản phẩm khác</span>
+                        </div>
                     </div>
-                    <h5 class="service-title">Bảo hành chính hãng</h5>
-                    <p class="service-subtitle">12 tháng bảo hành</p>
+                    <?php endif; ?>
                 </div>
+                
+                <a href="index.php?page=products&category=<?php echo $category['id']; ?>" class="view-more-link mt-3">
+                    Xem tất cả sản phẩm <?php echo htmlspecialchars($category['name']); ?>
+                </a>
             </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-arrow-rotate-left"></i>
-                    </div>
-                    <h5 class="service-title">Đổi trả miễn phí</h5>
-                    <p class="service-subtitle">Trong 30 ngày</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 mb-4">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-phone-volume"></i>
-                    </div>
-                    <h5 class="service-title">Hỗ trợ 24/7</h5>
-                    <p class="service-subtitle">Hotline: 090-123-4567</p>
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
     </div>
-</section>
-
-<!-- Customer Reviews Section -->
-<section class="py-5" style="background: #f8f9fa;">
-    <div class="container">
-        <div class="section-header text-center mb-5">
-            <h3 class="section-title">Khách hàng nói gì</h3>
-            <p class="section-subtitle">Những đánh giá chân thực từ khách hàng đã sử dụng sản phẩm</p>
-        </div>
-        
-        <div class="row">
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="review-card">
-                    <img src="assets/uploads/review-1.jpg" alt="Review 1" class="review-image">
-                    <h5 class="reviewer-name">Nguyễn Văn A</h5>
-                    <p class="review-text">"Sản phẩm gỗ chất lượng rất tốt, giao hàng nhanh chóng và nhân viên phục vụ rất nhiệt tình. Tôi rất hài lòng!"</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="review-card">
-                    <img src="assets/uploads/review-2.jpg" alt="Review 2" class="review-image">
-                    <h5 class="reviewer-name">Trần Thị B</h5>
-                    <p class="review-text">"Gỗ đẹp, giá cả hợp lý. Đã mua nhiều lần và luôn hài lòng với chất lượng sản phẩm."</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="review-card">
-                    <img src="assets/uploads/review-3.jpg" alt="Review 3" class="review-image">
-                    <h5 class="reviewer-name">Lê Văn C</h5>
-                    <p class="review-text">"Chất lượng gỗ vượt trội so với giá tiền. Sẽ tiếp tục ủng hộ shop trong tương lai."</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
- 
+</section> 

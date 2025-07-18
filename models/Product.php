@@ -48,7 +48,25 @@ class Product {
         
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($params);
-        return $stmt->fetchAll();
+        $products = $stmt->fetchAll();
+        
+        // Xử lý màu sắc cho tất cả sản phẩm
+        foreach ($products as &$product) {
+            if (!empty($product['color'])) {
+                $colors = json_decode($product['color'], true);
+                if (is_array($colors)) {
+                    $product['colors_array'] = $colors;
+                } else {
+                    // Fallback cho dữ liệu cũ (chuỗi được nối bằng dấu phẩy)
+                    $product['colors_array'] = array_filter(array_map('trim', explode(',', $product['color'])));
+                }
+            } else {
+                $product['colors_array'] = [];
+            }
+        }
+        unset($product);
+        
+        return $products;
     }
     
     // Lấy sản phẩm theo ID
@@ -58,7 +76,22 @@ class Product {
                                     LEFT JOIN categories c ON p.category_id = c.id 
                                     WHERE p.id = ?");
         $stmt->execute([$id]);
-        return $stmt->fetch();
+        $product = $stmt->fetch();
+        
+        // Xử lý màu sắc từ JSON
+        if ($product && !empty($product['color'])) {
+            $colors = json_decode($product['color'], true);
+            if (is_array($colors)) {
+                $product['colors_array'] = $colors;
+            } else {
+                // Fallback cho dữ liệu cũ (chuỗi được nối bằng dấu phẩy)
+                $product['colors_array'] = array_filter(array_map('trim', explode(',', $product['color'])));
+            }
+        } else {
+            $product['colors_array'] = [];
+        }
+        
+        return $product;
     }
     
     // Lấy sản phẩm nổi bật
@@ -78,9 +111,6 @@ class Product {
         $this->pdo->beginTransaction();
         
         try {
-            // Debug: Log data being inserted
-    
-            
             $sql = "INSERT INTO products (category_id, name, price, stock, description, 
                     image_des, image_, main_images, description_images, is_available, status, size, color, sale) 
                     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
@@ -445,7 +475,20 @@ class Product {
                 ORDER BY p.id DESC LIMIT " . (int)$limit;
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll();
+        $products = $stmt->fetchAll();
+        
+        // Xử lý màu sắc cho từng sản phẩm
+        foreach ($products as &$product) {
+            if (!empty($product['color'])) {
+                $colors = json_decode($product['color'], true);
+                $product['colors_array'] = is_array($colors) ? $colors : [$product['color']];
+            } else {
+                $product['colors_array'] = [];
+            }
+        }
+        unset($product);
+        
+        return $products;
     }
     
     // Lấy sản phẩm gợi ý
@@ -457,7 +500,20 @@ class Product {
                 ORDER BY RAND() LIMIT " . (int)$limit;
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll();
+        $products = $stmt->fetchAll();
+        
+        // Xử lý màu sắc cho từng sản phẩm
+        foreach ($products as &$product) {
+            if (!empty($product['color'])) {
+                $colors = json_decode($product['color'], true);
+                $product['colors_array'] = is_array($colors) ? $colors : [$product['color']];
+            } else {
+                $product['colors_array'] = [];
+            }
+        }
+        unset($product);
+        
+        return $products;
     }
     
     // Lấy sản phẩm hot deal
@@ -469,7 +525,20 @@ class Product {
                 ORDER BY p.sale DESC LIMIT " . (int)$limit;
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll();
+        $products = $stmt->fetchAll();
+        
+        // Xử lý màu sắc cho từng sản phẩm
+        foreach ($products as &$product) {
+            if (!empty($product['color'])) {
+                $colors = json_decode($product['color'], true);
+                $product['colors_array'] = is_array($colors) ? $colors : [$product['color']];
+            } else {
+                $product['colors_array'] = [];
+            }
+        }
+        unset($product);
+        
+        return $products;
     }
     
     // Lấy sản phẩm mới
@@ -481,7 +550,20 @@ class Product {
                 ORDER BY p.id DESC LIMIT " . (int)$limit;
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute();
-        return $stmt->fetchAll();
+        $products = $stmt->fetchAll();
+        
+        // Xử lý màu sắc cho từng sản phẩm
+        foreach ($products as &$product) {
+            if (!empty($product['color'])) {
+                $colors = json_decode($product['color'], true);
+                $product['colors_array'] = is_array($colors) ? $colors : [$product['color']];
+            } else {
+                $product['colors_array'] = [];
+            }
+        }
+        unset($product);
+        
+        return $products;
     }
     
     // Lấy sản phẩm mới nhất (alias cho getNewProducts)

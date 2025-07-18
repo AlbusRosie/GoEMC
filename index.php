@@ -14,8 +14,6 @@ global $conn;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
-
 // Nếu là POST và Content-Type là application/json thì parse body vào $_POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_SERVER['CONTENT_TYPE']) && strpos($_SERVER['CONTENT_TYPE'], 'application/json') !== false) {
     $raw = file_get_contents('php://input');
@@ -34,9 +32,14 @@ if ($currentRoute['is_api']) {
 } elseif ($currentRoute['is_admin']) {
     $router->dispatch();
 } else {
-    include 'includes/header.php';
+    // Sử dụng template system
+    $content = '';
+    ob_start();
     $router->dispatch();
-    include 'includes/footer.php';
+    $content = ob_get_clean();
+    
+    // Include template với content
+    include 'templates/main.php';
 }
 
 // Flush output buffer
