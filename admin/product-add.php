@@ -1203,43 +1203,10 @@ $categories = $categoryModel->getAll();
                     language: 'vi'
                 })
                 .then(editor => {
-                    console.log('CKEditor initialized successfully');
                     
-                    // Add error handling for image upload
-                    editor.plugins.get('FileRepository').createUploadAdapter = function(loader) {
-                        return {
-                            upload: function() {
-                                return loader.file.then(function(file) {
-                                    return new Promise(function(resolve, reject) {
-                                        const formData = new FormData();
-                                        formData.append('upload', file);
-                                        
-                                        fetch('upload-image.php', {
-                                            method: 'POST',
-                                            body: formData
-                                        })
-                                        .then(response => response.json())
-                                        .then(result => {
-                                            if (result.uploaded) {
-                                                resolve({
-                                                    default: result.url
-                                                });
-                                            } else {
-                                                reject(result.error || 'Upload failed');
-                                            }
-                                        })
-                                        .catch(error => {
-                                            console.error('Upload error:', error);
-                                            reject('Upload failed');
-                                        });
-                                    });
-                                });
-                            }
-                        };
-                    };
                 })
                 .catch(error => {
-                    console.error('CKEditor error:', error);
+                    
                 });
         });
     </script>

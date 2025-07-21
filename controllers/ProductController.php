@@ -21,41 +21,16 @@ class ProductController extends BaseController {
     
     // Hiển thị trang danh sách sản phẩm
     public function index() {
-        $page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-        $limit = 12;
-        $offset = ($page - 1) * $limit;
+        // Truyền biến $pdo vào view để sử dụng trong pages/products.php
+        global $pdo;
         
-        // Lấy filters
-        $category_id = isset($_GET['category']) ? (int)$_GET['category'] : null;
-        $search = isset($_GET['search']) ? $this->sanitize($_GET['search']) : '';
-        $min_price = isset($_GET['min_price']) ? (float)$_GET['min_price'] : null;
-        $max_price = isset($_GET['max_price']) ? (float)$_GET['max_price'] : null;
-        
-        // Lấy sản phẩm
-        $products = $this->productModel->getAll($limit, $offset, $category_id, $search, $min_price, $max_price);
-        $totalProducts = $this->productModel->getTotal($category_id, $search, $min_price, $max_price);
-        
-        // Lấy categories cho filter
-        $categories = $this->categoryModel->getAll();
-        
-        // Tính pagination
-        $totalPages = ceil($totalProducts / $limit);
-        
-        $data = [
-            'products' => $products,
-            'categories' => $categories,
-            'currentPage' => $page,
-            'totalPages' => $totalPages,
-            'totalProducts' => $totalProducts,
-            'filters' => [
-                'category_id' => $category_id,
-                'search' => $search,
-                'min_price' => $min_price,
-                'max_price' => $max_price
-            ]
-        ];
-        
-        $this->render('products', $data);
+        // Include trực tiếp file products.php
+        $viewPath = __DIR__ . '/../pages/products.php';
+        if (file_exists($viewPath)) {
+            include $viewPath;
+        } else {
+            $this->renderError('Không tìm thấy trang sản phẩm');
+        }
     }
     
     // Hiển thị chi tiết sản phẩm

@@ -1,5 +1,3 @@
-<!-- SweetAlert2 CDN -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <?php
 require_once __DIR__ . '/../controllers/ContactsController.php';
 require_once __DIR__ . '/../phpmailer/PHPMailer.php';

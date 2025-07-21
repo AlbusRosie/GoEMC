@@ -229,7 +229,6 @@ $pendingOrders = $orderModel->getPendingPayments();
                 }
             })
             .catch(error => {
-                console.error('Error:', error);
                 alert('Có lỗi xảy ra');
             });
         }

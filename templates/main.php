@@ -30,36 +30,40 @@
     
     <?php include 'includes/footer.php'; ?>
     
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
     <!-- Bootstrap JS + Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+    
     <script>
-    // JavaScript cho các chức năng khác
     document.addEventListener('DOMContentLoaded', function() {
-      // Khởi tạo Bootstrap dropdowns
-      var dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-toggle'));
-      var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-        return new bootstrap.Dropdown(dropdownToggleEl);
-      });
-      
-      // Xử lý responsive menu
-      var navbarToggler = document.querySelector('.navbar-toggler');
-      var navbarCollapse = document.querySelector('.navbar-collapse');
-      
-      if (navbarToggler && navbarCollapse) {
-        navbarToggler.addEventListener('click', function() {
-          navbarCollapse.classList.toggle('show');
+        // Xóa thuộc tính style cứng trên tất cả dropdown menu (nếu có)
+        document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+            menu.removeAttribute('style');
         });
-      }
-      
-      // Đóng menu khi click bên ngoài
-      document.addEventListener('click', function(event) {
-        if (!event.target.closest('.navbar')) {
-          if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            navbarCollapse.classList.remove('show');
-          }
+
+        // Xử lý responsive menu
+        var navbarToggler = document.querySelector('.navbar-toggler');
+        var navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarToggler && navbarCollapse) {
+            navbarToggler.addEventListener('click', function() {
+                navbarCollapse.classList.toggle('show');
+            });
         }
-      });
+        
+        // Đóng menu khi click bên ngoài
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.navbar')) {
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.classList.remove('show');
+                }
+            }
+        });
+        // Đã xóa các dòng console.log test
     });
     </script>
 </body>

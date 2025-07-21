@@ -1330,7 +1330,6 @@ $current_options = $productOptionModel->getByProductId($product_id);
                     language: 'vi'
                 })
                 .then(editor => {
-                    console.log('CKEditor initialized successfully');
                     
                     // Add error handling for image upload
                     editor.plugins.get('FileRepository').createUploadAdapter = function(loader) {
@@ -1356,7 +1355,6 @@ $current_options = $productOptionModel->getByProductId($product_id);
                                             }
                                         })
                                         .catch(error => {
-                                            console.error('Upload error:', error);
                                             reject('Upload failed');
                                         });
                                     });
@@ -1366,7 +1364,7 @@ $current_options = $productOptionModel->getByProductId($product_id);
                     };
                 })
                 .catch(error => {
-                    console.error('CKEditor error:', error);
+                    
                 });
         });
     </script>
